@@ -1,0 +1,24 @@
+.switch {
+  &-list {
+    &-item {
+      padding: 15px 0;
+
+      &__label {
+        line-height: 143%;
+        font-weight: 500;
+      }
+    }
+
+    > .switch-list-item {
+      border-bottom: 1px solid map-get($color-common, 'black_10');
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    &.border-top {
+      border-top: 1px solid map-get($color-common, 'black_10');
+    }
+  }
+}

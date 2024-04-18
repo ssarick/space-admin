@@ -1,0 +1,131 @@
+.n-input {
+  &__input-el {
+    font-weight: 500;
+  }
+
+  &.base-input {
+    &--size {
+      &-small {
+        .n-input {
+          &__input-el {
+            height: $base-input-height-small;
+          }
+        }
+      }
+    }
+  }
+
+  .n-input-wrapper {
+    .n-input {
+      &__prefix {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &.base-input {
+    &--suffix-border {
+      .n-input {
+        &__suffix {
+          padding-right: 4px;
+          padding-left: 16px;
+          font-weight: 600;
+          border-left: 1px solid map-get($color-quaternary, 'main');
+        }
+      }
+    }
+  }
+
+  &.filled {
+    background-color: map-get($color-quaternary, 'light');
+
+    &:hover,
+    &.n-input--focus {
+      background-color: map-get($color-quaternary, 'main');
+    }
+
+    .n-input {
+      &__placeholder,
+      &__input-el {
+        font-weight: 500;
+        color: map-get($color-common, 'black');
+      }
+
+      &__border,
+      &__state-border {
+        display: none;
+      }
+    }
+  }
+
+  &.no-bottom-border-radius {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &.bordered {
+    border: 1px solid map-get($color-quaternary, 'main');
+  }
+}
+
+.n-date-picker {
+.n-input {
+    --n-height: 48px!important;
+  }
+}
+
+.base-input-group {
+  &__label {
+    margin-bottom: 12px;
+    font-weight: 500;
+    line-height: 1.25;
+    font-size: 1rem;
+  }
+
+  .n-space {
+    > div {
+      width: 100%;
+    }
+  }
+}
+
+.n-form-item {
+  &-label {
+    &__text {
+      font-weight: 600;
+    }
+  }
+}
+
+.form-control {
+  &_vertical {
+    .n-form-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+
+      &-label {
+        padding-bottom: 0;
+        margin-right: 16px;
+        color: map-get($color-quaternary, 'dark');
+
+        &__text {
+          font-size: 0.875rem;
+          font-weight: 500;
+          line-height: 142.85%;
+        }
+      }
+
+      &-blank {
+        width: 70%;
+      }
+
+      &-feedback-wrapper {
+        width: 70%;
+        margin-left: auto;
+      }
+    }
+  }
+}

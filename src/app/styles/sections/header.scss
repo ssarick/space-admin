@@ -1,0 +1,20 @@
+.app-header {
+  height: $header-height;
+  border-bottom: $header-border!important;
+
+  &__button {
+    padding: 0 12px;
+  }
+
+  &__row {
+    padding: 0 $header-padding-x;
+  }
+
+  .app-logo {
+    cursor: pointer;
+
+    &__mini {
+      display: none;
+    }
+  }
+}

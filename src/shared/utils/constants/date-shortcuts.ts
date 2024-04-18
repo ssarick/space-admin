@@ -1,0 +1,27 @@
+const DAYS_IN_YEAR = 365;
+const SEC_IN_MINUTE = 60;
+const MINUTES_IN_HOURS = 60;
+const MS_IN_SEC = 1000;
+const HOURS_IN_DAY = 24;
+const DAYS_IN_MONTH = 31;
+const MS_IN_MINUTE = SEC_IN_MINUTE * MS_IN_SEC;
+const MS_IN_HOURS = MS_IN_MINUTE * MINUTES_IN_HOURS;
+const MS_IN_DAY = HOURS_IN_DAY * MS_IN_HOURS;
+const MS_IN_YEAR = MS_IN_DAY * DAYS_IN_YEAR;
+const MS_IN_MONTH = DAYS_IN_MONTH * MS_IN_DAY;
+
+const dateShortcuts = {
+  DAYS_IN_MONTH,
+  SEC_IN_MINUTE,
+  MINUTES_IN_HOURS,
+  MS_IN_SEC,
+  HOURS_IN_DAY,
+  DAYS_IN_YEAR,
+  MS_IN_MONTH,
+  MS_IN_MINUTE,
+  MS_IN_HOURS,
+  MS_IN_DAY,
+  MS_IN_YEAR
+} as const;
+
+export default dateShortcuts;

@@ -1,0 +1,154 @@
+$color-primary: (
+  'lighter': #bddfff,
+  'light': '',
+  'main': #4D8DF1,
+  'dark': '',
+  'darker': '',
+  'main_15': rgba(251, 194, 0, .15),
+  'main_30': rgba(251, 194, 0, .3),
+);
+
+$color-secondary: (
+  'lighter': #FAFAFA,
+  'light': #fafafc,
+  'main': #F4F5F5,
+  'main_elements': #C5C7CA,
+  'dark_text': #808080,
+  'dark': #909090,
+  'darker': ''
+);
+
+$color-tertiary: (
+  'lighter': '',
+  'light': '',
+  'main': #FBFBFA,
+  'dark': #F6F6F3,
+  'darker': ''
+);
+
+$color-quaternary: (
+  'lighter': '',
+  'light': #F3F4F6,
+  'main': #E7E8EA,
+  'dark': #999999,
+  'darker': #4E4D4D
+);
+
+$color-info: (
+  'lighter': #F6F6F6,
+  'light': '',
+  'main': '',
+  'dark': '',
+  'darker': ''
+);
+
+$color-success: (
+  'lighter': '',
+  'light': '',
+  'main': #02904C,
+  'dark': '',
+  'darker': ''
+);
+
+$color-warning: (
+  'lighter': '',
+  'light': '',
+  'main': '',
+  'dark': '',
+  'darker': ''
+);
+
+$color-error: (
+  'lighter': '',
+  'light': '',
+  'main': #CA2027,
+  'dark': '',
+  'darker': ''
+);
+
+$color-common: (
+  'white': #ffffff,
+  'white-grey': map-get($color-tertiary, 'dark'),
+  'whitesmoke': #f3f4f6,
+  'white_90': rgba(255, 255, 255, .9),
+  'white_70': rgba(255, 255, 255, .7),
+  'white_30': rgba(255, 255, 255, .3),
+  'blue_10': rgba(32, 128, 240, .1),
+  'yellow_10': rgba(255, 211, 0, .1),
+  'gray_10': rgba(144, 144, 144, .1),
+  'gray-light_20': rgba(134, 134, 134, 0.2),
+  'black-dark': #101010,
+  'black': #222222,
+  'black_4': rgb(34, 34, 34, .04),
+  'black_7': rgb(34, 34, 34, .07),
+  'black_10': rgb(34, 34, 34, .1),
+  'black_90': rgb(34, 34, 34, .9),
+  'gray-stroke': #D1D1D1,
+  'gray-stroke_30': rgba(209, 209, 209, .3),
+  'gray-lighter': #EAEAE7,
+  'gray-light': #F0F0F0,
+  'gray-dark': #868686,
+  'blue': #2F53CD,
+  'blue-light': #C1CBF0,
+  'green': #16A000,
+  'green-light': #B9E3B2,
+  'yellow-light': #FFE89D,
+  'orange': #FF8E26,
+  'orange-light': #FFDDBE,
+  'yellow': map-get($color-primary, 'main'),
+  'silver': map-get($color-secondary, 'main_elements'),
+  'silver-light': #EBEBEB,
+  'red': map-get($color-error, 'main'),
+  'red-light': #EFBCBE,
+  'black_19': rgba(34, 34, 34, 0.19)
+);
+
+@mixin generate-color-style(
+  $color-type,
+  $color-map,
+  $color-selector,
+  $prop
+) {
+  #{$color-selector} {
+    &-#{$color-type} {
+      @each $key, $value in $color-map {
+        &_#{$key} {
+          #{$prop}: $value!important;
+        }
+      }
+    }
+  }
+}
+
+@mixin generate-color-classes($color-type, $color-map) {
+  @include generate-color-style(
+    $color-type,
+    $color-map,
+    '.color',
+    color
+  );
+
+  @include generate-color-style(
+    $color-type,
+    $color-map,
+    '.color-bg',
+    background-color
+  );
+
+  @include generate-color-style(
+    $color-type,
+    $color-map,
+    '.color-border',
+    border-color
+  );
+}
+
+@include generate-color-classes('primary', $color-primary);
+@include generate-color-classes('secondary', $color-secondary);
+@include generate-color-classes('quaternary', $color-quaternary);
+@include generate-color-classes('tertiary', $color-tertiary);
+@include generate-color-classes('info', $color-info);
+@include generate-color-classes('success', $color-success);
+@include generate-color-classes('warning', $color-warning);
+@include generate-color-classes('error', $color-error);
+@include generate-color-classes('common', $color-common);

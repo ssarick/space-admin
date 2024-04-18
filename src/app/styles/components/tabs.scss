@@ -1,0 +1,23 @@
+.base-tabs {
+  .n-tab-pane {
+    padding-top: 32px!important;
+  }
+
+  .n-tabs-tab {
+    &__label {
+      color: map-get($color-common, 'black');
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 24px;
+    }
+
+    &:not(.n-tabs-tab--active) {
+      opacity: .3;
+      transition: 200ms linear;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

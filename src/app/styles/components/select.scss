@@ -1,0 +1,191 @@
+.n-select {
+  .n-base-selection {
+    min-width: 75px;
+    border: 2px solid map-get($color-quaternary, 'main');
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color .3s var(--n-bezier);
+    --n-height: #{$select-height}!important;
+
+    &-input {
+      &__content {
+        color: map-get($color-common, 'black');
+        font-weight: 500;
+        font-size: 1rem;
+      }
+    }
+
+    &:hover {
+      border: 2px solid map-get($color-common, 'black');
+    }
+
+    &-tag-wrapper,
+    &__border,
+    &__state-border {
+      display: none;
+    }
+
+    &-tags {
+      position: static;
+    }
+
+    .n-base-clear {
+      &__placeholder {
+        padding-right: 8px;
+
+        .n-base-icon {
+          color: map-get($color-common, 'black');
+          font-size: 1.25rem;
+        }
+      }
+    }
+
+    &-placeholder {
+      &__inner {
+        font-size: 1rem!important;
+        font-weight: 500;
+        color: map-get($color-common, 'black');
+      }
+    }
+
+    // FIXME: crutch, because naive-ui removes
+    // placeholder when selecting items in list
+    &--multiple {
+      &::after {
+        content: 'Выбрать';
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 16px;
+        height: 100%;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 500;
+        color: map-get($color-common, 'black');
+      }
+    }
+  }
+
+  &.base-select {
+    &--size {
+      &-small {
+        .n-base-selection-label {
+          height: #{$select-height-small}!important;
+        }
+      }
+    }
+  }
+}
+
+.n-base-select-menu {
+  border-radius: 8px;
+
+  &--multiple {
+    .v-vl-visible-items {
+      .n-base-select-option {
+        &::after {
+          content: '';
+          display: block;
+          width: 24px;
+          height: 24px;
+          border-radius: 4px;
+          border: 2px solid map-get($color-secondary, 'main_elements');
+          background-color: map-get($color-common, 'white');
+          box-sizing: border-box;
+          position: absolute;
+          right: 4px;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: 300ms ease-in-out;
+        }
+
+        &.n-base-select-option {
+          &--selected {
+            &::after {
+              border-color: map-get($color-primary, 'main');
+              background-color: map-get($color-primary, 'main');
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.v-vl-visible-items {
+  @include px($select-option-px);
+
+  .n-base-select-option {
+    padding: 6.5px 0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &::before {
+      border-radius: 0;
+      width: calc(100% + ($select-option-px * 2));
+      left: -$select-option-px;
+    }
+
+    &:hover {
+      &::before {
+        background-color: map-get($color-quaternary, 'main');
+      }
+    }
+
+    &__content {
+      font-size: 1.125rem;
+      color: map-get($color-common, 'black');
+
+      .n-base-icon {
+        color: map-get($color-common, 'black');
+      }
+    }
+  }
+}
+
+.n-base-select-menu {
+  background-color: map-get($color-quaternary, 'light');
+
+  &--multiple {
+    .n-base-select-option {
+      &__content {
+        .n-base-icon {
+          color: map-get($color-common, 'white');
+          right: 7px;
+        }
+      }
+    }
+  }
+}
+
+.n-base-select-option {
+  min-height: 40px!important;
+
+  &__content {
+    color: map-get($color-common, 'black');
+    font-size: 0.875rem!important;
+    font-weight: 500;
+  }
+
+  &:hover {
+    &::before {
+      background-color: map-get($color-quaternary, 'main')!important;
+    }
+  }
+
+  &.n-base-select-option {
+    &--selected {
+      &::before {
+        background-color: map-get($color-quaternary, 'main')!important;
+      }
+
+      .n-base-select-option {
+        &__content {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

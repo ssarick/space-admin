@@ -1,0 +1,83 @@
+.base-card {
+  border-radius: 10px;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  &__header {
+    margin-bottom: 44px;
+  }
+
+  &.n-card--bordered {
+    padding: 24px 18px 18px;
+
+    .base-card {
+      &__header {
+        margin-bottom: 24px;
+
+        .n-text {
+          font-size: 1.125rem;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .n-card {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &__loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: map-get($color-common, 'white_70');
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    position: absolute;
+
+    &.v-enter-active,
+    &.v-leave-active {
+      transition: opacity 0.5s ease;
+    }
+
+    &.v-enter-from,
+    &.v-leave-to {
+      opacity: 0;
+    }
+  }
+
+  &--dense {
+    &.base-card.n-card {
+      padding: 24px;
+
+      .base-card {
+        &__header {
+          .n-text {
+            font-size: 1.375rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+.custom-card {
+  border-radius: 12px;
+  border: 1px solid map-get($color-quaternary, 'main');
+  padding: 24px 18px;
+
+  .n-card {
+    &__content {
+      padding: 0!important;
+    }
+  }
+}

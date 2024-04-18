@@ -1,0 +1,23 @@
+.n-button {
+  .n-base-wave {
+    display: none;
+  }
+
+  &--tertiary-type {
+    background-color: map-get($color-common, 'black');
+
+    .n-button {
+      &__border,
+      &__state-border {
+        display: none;
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: map-get($color-common, 'black_90')!important;
+      color: map-get($color-common, 'white')!important;
+    }
+  }
+}

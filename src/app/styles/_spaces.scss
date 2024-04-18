@@ -1,0 +1,16 @@
+$spaces-count: 20;
+$spaces-step: 5;
+
+@each $space in $spaces-count {
+  .w-#{$space * $spaces-step} {
+    width: 100%!important;
+  }
+
+  .h-#{$space * $spaces-step} {
+    height: 100%!important;
+  }
+}
+
+.w-auto {
+  width: auto;
+}

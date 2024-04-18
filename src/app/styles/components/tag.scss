@@ -1,0 +1,23 @@
+.n-tag {
+  border-radius: 4px;
+  padding: 6px 8px 6px 12px;
+  font-weight: 500;
+
+  &__border {
+    display: none;
+  }
+
+  &__close {
+    margin-left: 8px!important;
+  }
+
+  &.n-tag--round {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .n-base-icon {
+    color: map-get($color-common, 'black');
+    font-size: 1.125rem;
+  }
+}

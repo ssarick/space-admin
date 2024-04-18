@@ -1,0 +1,52 @@
+@mixin font($fsize: 1rem, $fweight: 500) {
+  font-size: $fsize;
+  font-weight: $fweight !important;
+  @content;
+}
+
+@mixin flex($fgap: 0 8px) {
+  display: flex;
+  align-items: center;
+  gap: $fgap;
+  @content;
+}
+
+@mixin transition($element: all, $type: linear, $duration: 300ms) {
+  transition: $element $duration $type;
+}
+
+@mixin x-or-y(
+  $x, $x-value, $y, $y-value: null
+) {
+  #{$x}: $x-value;
+
+  @if $y-value {
+    #{$y}: $y-value;
+  } @else {
+    #{$y}: $x-value;
+  }
+}
+
+@mixin mx($left, $right: null) {
+  @include x-or-y(
+    margin-left, $left, margin-right, $right
+  );
+}
+
+@mixin my($top, $bottom: null) {
+  @include x-or-y(
+    margin-top, $top, margin-bottom, $bottom
+  );
+}
+
+@mixin px($left, $right: null) {
+  @include x-or-y(
+    padding-left, $left, padding-right, $right
+  );
+}
+
+@mixin py($top, $bottom: null) {
+  @include x-or-y(
+    padding-top, $top, padding-bottom, $bottom
+  );
+}

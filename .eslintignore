@@ -1,0 +1,3 @@
+node_modules
+dist
+src/shared/locales/i18nData.js

@@ -1,0 +1,4 @@
+@use 'color.scss' as *;
+
+$gradient-white-radial: radial-gradient(circle, map-get($color-common, 'white_90') 0%, map-get($color-common, 'white_30') 100%);
+$gradien-blue-yellow-lienar: linear-gradient(0deg, map-get($color-common, 'blue_10') 0%, map-get($color-common, 'yellow_10') 100%);

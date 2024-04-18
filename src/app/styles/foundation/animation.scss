@@ -1,0 +1,10 @@
+.hideable {
+  transition: 250ms ease-in-out;
+  visibility: hidden;
+  transform: scale(0);
+
+  &.visible {
+    visibility: visible;
+    transform: scale(1);
+  }
+}

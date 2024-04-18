@@ -1,0 +1,29 @@
+.n-radio {
+  align-items: center;
+
+  &__dot {
+    box-shadow: none!important;
+    border: 2px solid map-get($color-secondary, 'main_elements');
+
+    &.n-radio__dot--checked {
+      border-color: map-get($color-primary, 'main');
+      border-width: 8px;
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  &__label {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    .n-radio {
+      &__dot {
+        border-color: map-get($color-primary, 'main');
+      }
+    }
+  }
+}

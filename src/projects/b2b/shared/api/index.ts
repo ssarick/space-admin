@@ -1,0 +1,9 @@
+export * as ApiAccount from './account';
+export * as ApiAdmin from './admin';
+export * as ApiCertificate from './certificate';
+export * as ApiClient from './client';
+export * as ApiDictionary from './dictionary';
+export * as ApiLog from './log';
+export * as ApiOperDay from './oper-day';
+export * as ApiPermission from './permission';
+export * as ApiUser from './user';

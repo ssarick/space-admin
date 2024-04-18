@@ -1,0 +1,146 @@
+@use 'sass:map';
+@import './naive';
+@import './spacing';
+@import './components';
+@import './sections';
+@import "./spaces";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  min-width: 1100px;
+}
+
+html,
+body,
+#app,
+.n-config-provider,
+.n-config-provider > .n-layout {
+  height: 100%;
+}
+
+body,
+body * {
+  scrollbar-width: thin;
+  box-sizing: border-box;
+
+  &::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    border: 1.5px solid transparent;
+    background-clip: content-box;
+    background-color: $scrollbarColor;
+    &:hover {
+      background: $scrollbarHoverColor;
+    }
+  }
+  &::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Inter,
+    Oxygen, Ubuntu, Cantarell, 'Inter', sans-serif;
+  background-color: map-get($color-secondary, 'lighter');
+  scroll-behavior: smooth;
+  overflow-x: auto;
+}
+
+::selection {
+  background-color: map-get($color-primary, 'lighter');
+}
+
+.flex {
+  display: flex;
+
+  &-column {
+    flex-direction: column;
+  }
+
+  &-1 {
+    flex: 1;
+  }
+}
+
+.align {
+  &-start {
+    align-items: start;
+  }
+
+  &-items {
+    &-end {
+      align-items: end;
+    }
+
+    &-center {
+      align-items: center;
+    }
+  }
+}
+
+.justify {
+  &-content-center {
+    justify-content: center;
+  }
+
+  &-space-between {
+    justify-content: space-between;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.text {
+  &-center {
+    text-align: center;
+  }
+
+  &-left {
+    text-align: left;
+  }
+
+  &-right {
+    text-align: right;
+  }
+}
+
+.fill {
+  &-content-height {
+    min-height: $layout-content-fill-height;
+  }
+}
+
+.container {
+  width: $container-width;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

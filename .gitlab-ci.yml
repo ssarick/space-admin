@@ -1,0 +1,8 @@
+include:
+    - project: $CICD_REPOSITORY
+      ref: main
+      file: 'superadmin_image-build.yml'
+    - project: $CICD_REPOSITORY
+      ref: main
+      file: 'common/deploy-k8s.yml'
+

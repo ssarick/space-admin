@@ -1,0 +1,16 @@
+@media screen and (max-width: 1600px) {
+  .chart-pie {
+    .status-list {
+      display: flex;
+
+      .status-wrapper {
+        margin-top: 0!important;
+        margin-right: 24px;
+      }
+    }
+
+    &__content {
+      flex-direction: flex-column!important;
+    }
+  }
+}
