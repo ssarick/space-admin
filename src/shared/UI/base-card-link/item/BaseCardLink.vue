@@ -13,13 +13,13 @@ const props = withDefaults(
 
 <template>
   <div class="base-card-link">
-    <div class="base-card-link__logo">
-      <img
-        class="background-logo"
-        alt=""
-        src="/icons/point.svg"
-      >
-    </div>
+    <!--    <div class="base-card-link__logo">-->
+    <!--      <img-->
+    <!--        class="background-logo"-->
+    <!--        alt=""-->
+    <!--        src="/icons/space.svg"-->
+    <!--      >-->
+    <!--    </div>-->
 
     <div class="base-card-link__content">
       <n-text

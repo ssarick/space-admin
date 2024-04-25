@@ -16,6 +16,7 @@ import useSubsidyMenu from './useSubsidyMenu';
 
 export default function useAppMenusMap(): AuthPanelMenusMap {
   return {
+    [AuthPanel.CONTROL_PANEL]: useControlPanelMenu(),
     [AuthPanel.AUTOPAY]: useControlPanelMenu(),
     [AuthPanel.AUTOPAY]: useAutopayMenu(),
     [AuthPanel.B2B]: useB2bMenu(),

@@ -34,6 +34,11 @@ const {
         <BaseLogo
           :short="menuCollapsed"
         />
+        <!--        <img-->
+        <!--          src="/icons/icon-space.svg"-->
+        <!--          alt="point logo"-->
+        <!--          width="140"-->
+        <!--        />-->
       </router-link>
     </n-space>
 
@@ -63,7 +68,7 @@ const {
             'app-sider__version'
           ]"
         >
-          Point {{ currentVersion }}
+          Space {{ currentVersion }}
         </n-text>
 
         <n-spin

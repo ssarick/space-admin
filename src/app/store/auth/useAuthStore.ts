@@ -72,7 +72,7 @@ export const useAuthStore = defineStore('auth', () => {
 
     userLoading.value = true;
 
-    const { error, item } = await ApiAuth.whoami();
+    const { error, item } = await ApiAuth.whoAmI();
 
     if (error) {
       setAuthCredentials.value();

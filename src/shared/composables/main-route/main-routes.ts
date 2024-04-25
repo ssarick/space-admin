@@ -1,7 +1,7 @@
 import { AuthPanel } from '@/shared/types/auth.types';
 
 export const mainRouteNames: Record<AuthPanel, string> = {
-  [AuthPanel.CONTROL_PANEL]: 'control-panel',
+  [AuthPanel.CONTROL_PANEL]: 'terminals-list',
   [AuthPanel.AUTOPAY]: 'dashboard',
   [AuthPanel.B2B]: 'users',
   [AuthPanel.B2C]: '',

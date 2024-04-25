@@ -8,20 +8,36 @@ export default function useControlPanelMenu():
 
   return computed<IAppMenuOption[]>(() => [
     {
-      label: t('Users'),
-      icon: 'clients',
-      key: 'inventory-users-wrapper',
+      label: t('terminals-add'),
+      icon: 'transactions',
+      key: 'terminals-wrapper',
       route: {
-        name: 'inventory-users'
-      }
-    },
-    {
-      label: t('inventory-sessions'),
-      icon: 'settings',
-      key: 'inventory-sessions-wrapper',
-      route: {
-        name: 'inventory-sessions'
+        name: 'terminals-list'
       }
     }
+    // {
+    //   label: t('limits-add'),
+    //   icon: 'transactions',
+    //   key: 'limits-wrapper',
+    //   route: {
+    //     name: 'limits-create'
+    //   }
+    // },
+    // {
+    //   label: t('bins-add'),
+    //   icon: 'transactions',
+    //   key: 'bins-wrapper',
+    //   route: {
+    //     name: 'bins-create'
+    //   }
+    // },
+    // {
+    //   label: t('partners-add'),
+    //   icon: 'transactions',
+    //   key: 'partners-wrapper',
+    //   route: {
+    //     name: 'partners-create'
+    //   }
+    // }
   ]);
 }

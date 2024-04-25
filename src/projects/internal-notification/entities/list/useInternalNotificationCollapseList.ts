@@ -33,8 +33,9 @@ export default function useInternalNotificationCollapseList(
       `/file/${id}`
   );
 
-  const startIntersectionObserver = () =>
+  const startIntersectionObserver = () => {
     intersectionObserver.observe(observerRef.value!);
+  };
 
   const stopIntersectionObserver = () =>
     intersectionObserver.disconnect();

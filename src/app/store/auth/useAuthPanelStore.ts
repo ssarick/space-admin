@@ -1,7 +1,6 @@
 import { defineStore } from 'pinia';
 import { AuthPanel, AuthPanelEvent, AuthPanelEventListeners } from '@/shared/types/auth.types';
 import authBrowserStore from '@/shared/utils/auth-browser-store';
-import { authPanelRoles } from './config/roles';
 import { useAuthCredentialsStore } from './useAuthCredentialsStore';
 import { useAuthRolesStore } from './useAuthRolesStore';
 
@@ -10,6 +9,7 @@ export const useAuthPanelStore = defineStore(
   () => {
     const authCredentials = useAuthCredentialsStore();
     const authRoles = useAuthRolesStore();
+    console.warn(authRoles);
 
     const selectedPanel = ref<AuthPanel | null>(
       authBrowserStore.panel
@@ -26,7 +26,7 @@ export const useAuthPanelStore = defineStore(
 
     const availablePanels = ref<AuthPanel[]>([
       AuthPanel.CONTROL_PANEL,
-      AuthPanel.AUTOPAY,
+      // AuthPanel.AUTOPAY,
       AuthPanel.SUBSIDY,
       // AuthPanel.B2B,
       // AuthPanel.B2C,

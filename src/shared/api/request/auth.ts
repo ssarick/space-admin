@@ -41,7 +41,7 @@ const auth = async (
   return response?.data;
 };
 
-export const whoami = async (): Promise<
+export const whoAmI = async (): Promise<
   IResponseData<IAuthedUser>
 > => {
   const response = await globalApis

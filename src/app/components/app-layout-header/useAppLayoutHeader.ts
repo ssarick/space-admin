@@ -1,4 +1,4 @@
-import { computed, h, toRefs } from 'vue';
+import { computed, toRefs } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { DropdownMixedOption } from 'naive-ui/es/dropdown/src/interface';
 import { useMainRoute } from '@/shared/composables/main-route/useMainRoute';
@@ -68,10 +68,6 @@ export default function useAppLayoutHeader() {
   ): DropdownMixedOption {
     return {
       label: t(AuthPanel[key]),
-      icon: () => h(
-        'img',
-        { src: '/icons/logo-mini.svg' }
-      ),
       key: key
     };
   }

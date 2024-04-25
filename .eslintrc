@@ -158,7 +158,7 @@
         "ignorePattern": "d=\"([\\s\\S]*?)\""
       }
     ],
-    "max-lines": [ 2, 300 ],
+    "max-lines": [ 2, 500 ],
     "max-nested-callbacks": [ 2, 3 ],
     "max-statements": [ 2, 40 ],
     "max-lines-per-function": [ 2, 250 ],
