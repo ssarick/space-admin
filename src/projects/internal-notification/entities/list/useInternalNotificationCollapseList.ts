@@ -1,6 +1,9 @@
 import { HeaderClickInfo } from 'naive-ui/es/collapse/src/interface';
 import { globalConfig } from '@/shared/config/global-config';
-import { InternalNotificationCollapseListEmits, InternalNotificationCollapseListProps } from './internal-notification-collapse-list.types';
+import {
+  InternalNotificationCollapseListEmits,
+  InternalNotificationCollapseListProps
+} from './internal-notification-collapse-list.types';
 
 export default function useInternalNotificationCollapseList(
   props: InternalNotificationCollapseListProps,
@@ -29,13 +32,13 @@ export default function useInternalNotificationCollapseList(
 
   const openFile = (id: number) => window.open(
     globalConfig.apiBaseUrl +
-      globalConfig.apiInternalNotificationUrl +
-      `/file/${id}`
+    globalConfig.apiInternalNotificationUrl +
+    `/file/${id}`
   );
 
-  const startIntersectionObserver = () => {
+  const startIntersectionObserver = () =>
+    // @ts-expect-error
     intersectionObserver.observe(observerRef.value!);
-  };
 
   const stopIntersectionObserver = () =>
     intersectionObserver.disconnect();
