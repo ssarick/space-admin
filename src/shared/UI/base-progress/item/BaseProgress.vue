@@ -10,9 +10,7 @@ const props = withDefaults(
   }
 );
 
-const {
-  calcPercentageByIndex
-} = useBaseProgress(props);
+const { calcPercentageByIndex } = useBaseProgress(props);
 </script>
 
 <template>

@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { NGi, NGrid, NSpace } from 'naive-ui';
+import {
+  NGi,
+  NGrid,
+  NSpace
+} from 'naive-ui';
 import PageTitle from '@/shared/UI/page-title';
 import FilesManageDetails from '../../entities/files-manage/details';
 import FileManageFilters from '../../entities/files-manage/filters';

@@ -2,10 +2,10 @@ import { PaginationProps } from 'naive-ui';
 import { ToRefValues } from './utility.types';
 
 export interface IDataTablePagination extends PaginationProps {
-  page: number;
-  pageSize: number;
-  pageCount: number;
-  onReset: () => void;
+  page: number
+  pageSize: number
+  pageCount: number
+  onReset: () => void
 }
 
 export interface IDataTableExpose {
@@ -18,6 +18,6 @@ export interface DataTableRefPagination {
 
 type DataTableRefValue = IDataTableExpose
   | DataTableRefPagination
-  | null
+  | null;
 
-export type DataTableRef = ToRefValues<DataTableRefValue>
+export type DataTableRef = ToRefValues<DataTableRefValue>;

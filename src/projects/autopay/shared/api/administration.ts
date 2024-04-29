@@ -24,6 +24,7 @@ export const getInfo = async ():Promise<IResponseData<IAdministationTypes>> => {
   const { data } = await api.get('general/info');
   return data;
 };
+
 export const startProcessing = async (): Promise<IResponseData<IAdministrationActionResponseError>> => {
   const { data } = await api.post('general/start');
   return data;

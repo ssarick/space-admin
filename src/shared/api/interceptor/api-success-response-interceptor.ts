@@ -1,6 +1,10 @@
 import { AxiosResponse } from 'axios';
 import BaseApiResponseInterceptor from '@/shared/api/interceptor/base/base-api-response-interceptor';
-import { ApiResponseItemsGetter, ApiResponseItemsValue, IResponseData } from '@/shared/types/api.types';
+import {
+  ApiResponseItemsGetter,
+  ApiResponseItemsValue,
+  IResponseData
+} from '@/shared/types/api.types';
 
 export default class ApiSuccessResponseInterceptor
   extends BaseApiResponseInterceptor {
@@ -27,7 +31,8 @@ export default class ApiSuccessResponseInterceptor
   async intercept(
     response: AxiosResponse
   ): Promise<AxiosResponse<IResponseData>> {
-    const responseData: Record<string, unknown> = {};
+    const responseData: Record<string, unknown> = {
+    };
 
     if (response.data instanceof ArrayBuffer
       || response.data instanceof Blob) {
@@ -40,7 +45,8 @@ export default class ApiSuccessResponseInterceptor
 
     responseData.item = response.data?.data
       || response.data
-      || {};
+      || {
+      };
 
     responseData.error = false;
     responseData.totalCount = response.data?.totalCount || 0;

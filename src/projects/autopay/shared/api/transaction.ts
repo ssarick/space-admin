@@ -1,6 +1,7 @@
 import { IResponseData } from '@/shared/types/api.types';
 import {
-  ITransaction, ITransactionCancelPayload,
+  ITransaction,
+  ITransactionCancelPayload,
   ITransactionListFetchPayload,
   ITransactionsImportToExcelPayload
 } from '@/projects/autopay/shared/types/transaction.types';

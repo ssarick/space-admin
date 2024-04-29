@@ -2,9 +2,7 @@
 import { NSpace } from 'naive-ui';
 import { AuthPanel } from '@/shared/types/auth.types';
 import BaseIcon from '@/shared/UI/base-icon';
-import {
-  IProfilePanelsProps
-} from './profile-panels.types';
+import { IProfilePanelsProps } from './profile-panels.types';
 
 const props = withDefaults(
   defineProps<IProfilePanelsProps>(),

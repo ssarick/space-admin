@@ -3,6 +3,6 @@ export enum PassportType {
 }
 
 export interface IDocumentType {
-  id: number | null;
-  name: string | null;
+  id: number | null
+  name: string | null
 }

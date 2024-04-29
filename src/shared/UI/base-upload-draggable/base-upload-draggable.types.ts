@@ -2,8 +2,8 @@ import { UploadFileEvent } from '@/shared/types/common.types';
 import { FileMimeType } from '@/shared/utils/constants/file-mime-types';
 
 export interface BaseUploadDraggableProps {
-  accept?: FileMimeType[],
-  label?: string,
+  accept?: FileMimeType[]
+  label?: string
   maxFilesSize?: number
   max?: number
   modelValue?: null | File | File[]

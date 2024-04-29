@@ -1,9 +1,9 @@
 import { ICertificate } from '@/projects/b2b/shared/types/certificate.types';
 
 export interface IUserCertificateCreationActionProps {
-  certificates: ICertificate[];
-  maxCount?: number;
-  isMobileCertificate?: boolean;
+  certificates: ICertificate[]
+  maxCount?: number
+  isMobileCertificate?: boolean
 }
 
 export interface IUserCertificateCreationActionEmit {

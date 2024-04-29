@@ -2,7 +2,8 @@
 import BaseDataTable from '@/shared/UI/base-data-table';
 import {
   IOperDayListEmits,
-  IOperDayListProps } from './oper-day-list.types';
+  IOperDayListProps
+} from './oper-day-list.types';
 import useOperDayList from './useOperDayList';
 
 const props = withDefaults(

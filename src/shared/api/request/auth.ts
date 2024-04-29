@@ -15,12 +15,12 @@ const getAuthFullParams = <T extends object>(
   grant_type: AuthGrantType,
   payload: T
 ): T & IAuthClientParams => ({
-    ...payload,
-    client_id: globalConfig.apiAuthClientId,
-    client_secret: globalConfig.apiAuthClientSecret,
-    grant_type,
-    scope: 'openid'
-  });
+  ...payload,
+  client_id: globalConfig.apiAuthClientId,
+  client_secret: globalConfig.apiAuthClientSecret,
+  grant_type,
+  scope: 'openid'
+});
 
 const auth = async (
   grant_type: AuthGrantType,
@@ -35,7 +35,9 @@ const auth = async (
           grant_type, payload
         ) as {}
       ),
-      { endpoint: ApiEndpoint.KC_AUTH }
+      {
+        endpoint: ApiEndpoint.KC_AUTH
+      }
     );
 
   return response?.data;

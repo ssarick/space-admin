@@ -4,9 +4,7 @@ import PageTitle from '@/shared/UI/page-title';
 import ApplicationEdit from '@/projects/subsidy/features/applications/edit';
 import useApplicationEditPage from './useApplicationEditPage';
 
-const {
-  subsidyId
-} = useApplicationEditPage();
+const { subsidyId } = useApplicationEditPage();
 </script>
 
 <template>

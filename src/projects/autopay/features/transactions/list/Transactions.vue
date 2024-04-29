@@ -1,5 +1,9 @@
 <script setup lang='ts'>
-import { NButton, NSpace, NTag } from 'naive-ui';
+import {
+  NButton,
+  NSpace,
+  NTag
+} from 'naive-ui';
 import BaseIcon from '@/shared/UI/base-icon';
 import PageTitle from '@/shared/UI/page-title';
 import TransactionExcelModal from '@/projects/autopay/entities/transaction/transaction-excel-modal/TransactionExcelModal.vue';

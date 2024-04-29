@@ -1,4 +1,9 @@
-import { computed, reactive, Ref, ref } from 'vue';
+import {
+  computed,
+  reactive,
+  Ref,
+  ref
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
 import { useVModel } from '@vueuse/core';

@@ -11,4 +11,4 @@ export interface FormInstInternal<T = void> extends
 
 export type FormFieldValidator = (
   _, value: string | number
-) => boolean | Error
+) => boolean | Error;

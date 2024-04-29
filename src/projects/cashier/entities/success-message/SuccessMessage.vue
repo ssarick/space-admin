@@ -23,11 +23,11 @@ const {
     </div>
 
     <div class="success-message__title">
-      {{$t('Successfully')}}
+      {{ $t('Successfully') }}
     </div>
 
     <div class="success-message__text">
-      {{$t('documents-are-transfered-to-documents-of-day')}}
+      {{ $t('documents-are-transfered-to-documents-of-day') }}
     </div>
 
     <BaseButton
@@ -37,6 +37,7 @@ const {
     >
       {{ $t('ok') }}
     </BaseButton>
+
     <BaseButton
       type="link"
       class="mt-1 underline"

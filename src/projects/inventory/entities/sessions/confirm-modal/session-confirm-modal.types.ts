@@ -1,8 +1,8 @@
 import type { InventorySession } from '@/projects/inventory/shared/types/sessions.types';
 
 export interface SessionsConfirmModalProps {
-  loading?: boolean,
-  confirmModal?: boolean,
+  loading?: boolean
+  confirmModal?: boolean
   confirmData?: InventorySession
 }
 

@@ -1,5 +1,10 @@
 import { h } from 'vue';
-import { NCheckbox, NDivider, NSwitch, NTag } from 'naive-ui';
+import {
+  NCheckbox,
+  NDivider,
+  NSwitch,
+  NTag
+} from 'naive-ui';
 import { formatDate } from '@/shared/utils/functions/date';
 import { IOperDay } from '@/projects/b2b/shared/types/oper-day.types';
 import { IOperDaySwitchOptions } from './oper-day-list.types';
@@ -22,7 +27,9 @@ export const renderOperDayDetails = (
   description?: string | null
 ) => h('div', null, [
   h('p', null, `Дата: ${formatDate(date)}`),
-  h(NDivider, { class: 'my-1' }),
+  h(NDivider, {
+    class: 'my-1'
+  }),
   h('p', null, [
     'Статус: ',
     renderOperDayState(description)

@@ -79,14 +79,17 @@ export default class ApiFactory {
 
     const config: ApiInstanceFactoryConfig =
       typeof baseUrlOrConfig === 'string'
-        ? {}
+        ? {
+        }
         : baseUrlOrConfig;
 
     this.apiInstance = this.apiInstanceFactory({
       ...config,
       baseURL,
       paramsSerializer: params => stringify(
-        params, { arrayFormat: 'repeat' }
+        params, {
+          arrayFormat: 'repeat'
+        }
       )
     });
 

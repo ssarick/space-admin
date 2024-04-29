@@ -3,7 +3,11 @@ import { FormRules } from 'naive-ui';
 import useFormRefWithValidate from '@/shared/UI/base-form/useFormRefWithValidate';
 import { ruleRequired } from '@/shared/utils/validation-rules';
 import { rulesMix } from '@/shared/utils/validation-rules-generator';
-import { ruleContrAgent, ruleInn, rulePinfl } from '@/projects/binded-face/shared/utils/validation-rules';
+import {
+  ruleContrAgent,
+  ruleInn,
+  rulePinfl
+} from '@/projects/binded-face/shared/utils/validation-rules';
 import {
   BindedFaceAddModalEmits,
   BindedFaceAddModalProps

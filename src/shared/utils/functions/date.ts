@@ -187,6 +187,7 @@ export function formatDate(
       : text.split('\\]').join(']');
   });
 }
+
 export function convertUTCDateToLocalDate(date: string): Date | null {
   if (!date) return null;
 

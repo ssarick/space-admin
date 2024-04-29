@@ -5,7 +5,12 @@ import BaseInput from '@/shared/UI/base-input';
 import BaseSelect from '@/shared/UI/base-select';
 import PageTitle from '@/shared/UI/page-title';
 import { fieldLimits } from '@/shared/utils/constants/field-limits';
-import { inputAllowEmail, inputAllowLatinicAndNumber, inputAllowLogin, inputAllowOnlyNumber } from '@/shared/utils/input-allow-rules';
+import {
+  inputAllowEmail,
+  inputAllowLatinicAndNumber,
+  inputAllowLogin,
+  inputAllowOnlyNumber
+} from '@/shared/utils/input-allow-rules';
 import renderIcon from '@/shared/utils/render-icon';
 import { ApiDictionary } from '@/projects/b2b/shared/api';
 import useClientUserCreate from './useClientUserCreate';

@@ -1,7 +1,18 @@
-import { onBeforeUnmount, onMounted, ref, useAttrs, watch } from 'vue';
+import {
+  onBeforeUnmount,
+  onMounted,
+  ref,
+  useAttrs,
+  watch
+} from 'vue';
 import { useDebounceFn } from '@vueuse/core';
 import { NSelect } from 'naive-ui';
-import { BaseSelectAttrs, BaseSelectEmits, BaseSelectProps, ModelValueType } from './base-select.types';
+import {
+  BaseSelectAttrs,
+  BaseSelectEmits,
+  BaseSelectProps,
+  ModelValueType
+} from './base-select.types';
 import useClasses from './composables/useClasses';
 import useFetch from './composables/useFetch';
 import useRenderOption from './composables/useRenderOption';
@@ -79,7 +90,8 @@ export default function useBaseSelect(props: BaseSelectProps, emit: BaseSelectEm
     const selectedObj =
       optionsData.value?.find(
         f => v === (f as object)[valueField]
-      ) || {};
+      ) || {
+      };
 
     emit('update:modelValue', value);
     emit('select', selectedObj);

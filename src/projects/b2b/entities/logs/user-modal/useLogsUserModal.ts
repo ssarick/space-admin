@@ -22,9 +22,7 @@ export default function useLogsUserModal(
   const uploadable = computed<boolean>(() =>
     !!selectedUserIds.value.length);
 
-  const {
-    toggleSelectedRow
-  } = useRowSelect(selectedUserIds);
+  const { toggleSelectedRow } = useRowSelect(selectedUserIds);
 
   const columns = computed<
     DataTableColumns<IUser>

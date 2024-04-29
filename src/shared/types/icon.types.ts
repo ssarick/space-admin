@@ -56,4 +56,4 @@ export type IconName = 'administration'
   | 'trash-filled'
   | 'notification-filled'
   | 'file-empty'
-  | 'operations'
+  | 'operations';

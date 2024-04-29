@@ -1,6 +1,10 @@
 import AmountFormatter from '@/shared/utils/amount-formatter';
 import { formatDateToISO } from '@/shared/utils/functions/date';
-import { SubsidyApplication, SubsidyApplicationFormModel, SubsidyApplicationUpdatePayload } from '@/projects/subsidy/shared/types/application.types';
+import {
+  SubsidyApplication,
+  SubsidyApplicationFormModel,
+  SubsidyApplicationUpdatePayload
+} from '@/projects/subsidy/shared/types/application.types';
 
 export default class SubsidyApplicationMapper {
 

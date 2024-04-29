@@ -8,7 +8,9 @@ export default function useRenderOption() {
 
     return h('div', null, [
       h('div', null, option.label),
-      h('div', { class: 'color-secondary_dark' }, option.subLabel)
+      h('div', {
+        class: 'color-secondary_dark'
+      }, option.subLabel)
     ]);
   };
 

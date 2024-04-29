@@ -1,6 +1,10 @@
 import { readonly } from 'vue';
 import { defineStore } from 'pinia';
-import { AdminJwtPayload, IAuthResponse, IAuthToken } from '@/shared/types/auth.types';
+import {
+  AdminJwtPayload,
+  IAuthResponse,
+  IAuthToken
+} from '@/shared/types/auth.types';
 import authBrowserStore from '@/shared/utils/auth-browser-store';
 import dateShortcuts from '@/shared/utils/constants/date-shortcuts';
 import JwtUtils from '@/shared/utils/jwt';
@@ -17,19 +21,21 @@ export const useAuthCredentialsStore = defineStore(
       () => JwtUtils.parsePayload(accessToken.value)
     );
 
-    // const isAuth = computed<boolean>(
-    //   () => !!accessToken.value
-    // );
-
     const isAuth = computed<boolean>(
-      // () => false
-      () => true
+      () => !!accessToken.value
     );
+
+    // const isAuth = computed<boolean>(
+    //   // () => false
+    //   () => true
+    // );
 
     const getTokenForStore = (
       value: string
     ): IAuthToken => {
-      const token: IAuthToken = { value };
+      const token: IAuthToken = {
+        value
+      };
 
       token.expires = rememberMe.value
         ? new Date(Date.now() + (authExpiryInSeconds.value *

@@ -31,9 +31,7 @@ export default function useUserCreate() {
 
     loading.value = true;
 
-    const {
-      error
-    } = await ApiInventoryUsers.createInventoryUser(
+    const { error } = await ApiInventoryUsers.createInventoryUser(
       {
         ...formModel,
         email: `${formModel.email}@${DomainShortcuts.KAPITALBANK}`
@@ -44,7 +42,9 @@ export default function useUserCreate() {
 
     if (error) return;
 
-    return router.push({ name: 'inventory-users' });
+    return router.push({
+      name: 'inventory-users'
+    });
   };
 
   return {

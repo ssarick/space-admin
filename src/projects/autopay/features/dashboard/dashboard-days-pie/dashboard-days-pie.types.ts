@@ -13,4 +13,4 @@ export interface DashboardDaysPieProps {
 export type DatesByShortcuts = Record<
   StatisticsDateShortcut,
   () => number
->
+>;

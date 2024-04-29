@@ -6,7 +6,8 @@ import {
   NDatePicker,
   NRadio,
   NRadioGroup,
-  NSpace } from 'naive-ui';
+  NSpace
+} from 'naive-ui';
 import BaseCard from '@/shared/UI/base-card';
 import { BaseStatusIndicator } from '@/shared/UI/base-status';
 import { IDashboardDaysBarProps } from './dashboard-days-bar.types';

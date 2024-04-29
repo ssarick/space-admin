@@ -165,7 +165,7 @@ const {
 
   <n-space
     justify="space-between"
-    :size="[20, 16]"
+    :size="[ 20, 16 ]"
   >
     <BaseButton
       class="px-3"

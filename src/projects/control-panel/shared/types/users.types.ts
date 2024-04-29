@@ -28,7 +28,7 @@ export interface InventoryItemsApiResponse<T = {}> {
 }
 
 export interface InventoryApiResponse<T> {
-  httpStatus: number;
+  httpStatus: number
   errors: boolean | [] | {}
   result: T
 }

@@ -18,7 +18,8 @@ export default class ProcessingTypesMapper {
   static toProcessingsConfigMap(
     list: StatusConfig<ProcessingType>[]
   ): ProcessingsConfigMap {
-    const result = {} as ProcessingsConfigMap;
+    const result = {
+    } as ProcessingsConfigMap;
 
     list.forEach(
       item => result[item.id!] = item

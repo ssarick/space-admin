@@ -79,7 +79,9 @@ export default function useSendMessageToOne(
   };
 
   const generateRules = (parameters?: SendMessageInput['parameters']): FormRules => {
-    const rules: FormRules = {};
+    const rules: FormRules = {
+    };
+
     for (const key in parameters) {
       rules[key] = {
         validator: ruleRequired,

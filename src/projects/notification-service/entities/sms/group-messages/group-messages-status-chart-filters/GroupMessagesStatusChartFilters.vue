@@ -55,6 +55,7 @@ const {
               :color="item.color"
               :icon="item.icon"
             />
+
             <n-tag
               v-if="item.active"
               size="small"
@@ -68,9 +69,12 @@ const {
             </n-tag>
           </n-space>
         </div>
+
         <n-text class="item-title">{{ item?.title }}</n-text>
+
         <n-statistic>
           <n-skeleton v-if="loading" />
+
           <n-number-animation
             v-else
             :from="0"
@@ -79,6 +83,7 @@ const {
         </n-statistic>
       </div>
     </n-gi>
+
     <n-gi :span="8">
       <div class="chart-widget-item">
         <n-space
@@ -94,6 +99,7 @@ const {
               :options="chartOptions"
             />
           </n-spin>
+
           <div class="item-wrapper">
             <n-text class="item-title">
               {{ $t('short-desc') }}

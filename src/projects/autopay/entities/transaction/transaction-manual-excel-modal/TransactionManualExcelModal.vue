@@ -7,7 +7,8 @@ import {
   NInput,
   NSpace,
   NTag,
-  NTimePicker } from 'naive-ui';
+  NTimePicker
+} from 'naive-ui';
 import BaseForm from '@/shared/UI/base-form';
 import BaseInputGroup from '@/shared/UI/base-input-group';
 import BaseModal from '@/shared/UI/base-modal';

@@ -6,8 +6,8 @@ import type {
 
 export interface AllMessagesFiltersModelProps extends
   AllMessagesFiltersModel {
-  showModal?: boolean,
-  formValue?: AllMessagesFiltersInput,
+  showModal?: boolean
+  formValue?: AllMessagesFiltersInput
   statusOptions?: SelectOption[]
 }
 

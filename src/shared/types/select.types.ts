@@ -4,8 +4,8 @@ import { IApiError, IResponseData } from './api.types';
 export interface ISelectOption<T = string | number | boolean> {
   label: string
   subLabel?: string
-  value: T,
-  disabled?: boolean,
+  value: T
+  disabled?: boolean
 }
 
 export interface ISelectResponseData {
@@ -29,4 +29,4 @@ export interface ISelectPhoneInputOption extends ISelectOption {
 
 export type RequestSelectOptions = () => Promise<
   IResponseData<ISelectOption>
->
+>;

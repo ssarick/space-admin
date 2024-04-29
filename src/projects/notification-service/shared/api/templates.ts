@@ -7,14 +7,14 @@ import type {
 } from '@/projects/notification-service/shared/types/send-message.types';
 
 export const fetchAllTemplates = async (
-  {
-    ...params
-  }: MessageTemplatesFiltersPayload
+  { ...params }: MessageTemplatesFiltersPayload
 ): Promise<IResponseData<MessageTemplateModel>> => {
   const { data } = await apiNotificationService
     .get(
       'template/search',
-      { params }
+      {
+        params
+      }
     );
 
   return {
@@ -24,14 +24,14 @@ export const fetchAllTemplates = async (
 };
 
 export const createTemplate = async (
-  {
-    ...params
-  }: CreateMessageTemplatePayload
+  { ...params }: CreateMessageTemplatePayload
 ): Promise<IResponseData<MessageTemplateModel>> => {
   const { data } = await apiNotificationService
     .post(
       'template/create',
-      { ...params }
+      {
+        ...params
+      }
     );
 
   return {

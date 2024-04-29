@@ -5,9 +5,7 @@ import useBaseUpload from './useBaseUpload';
 
 const props = defineProps<BaseUploadProps>();
 
-const {
-  accept
-} = useBaseUpload(props);
+const { accept } = useBaseUpload(props);
 </script>
 
 <template>

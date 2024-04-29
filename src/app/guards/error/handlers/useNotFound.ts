@@ -4,7 +4,7 @@ import { useRoute } from 'vue-router';
 import { ErrorGuardStatus, IErrorGuard } from '../error-guard.types';
 
 export default function useNotFound():
-  ComputedRef<IErrorGuard> {
+ComputedRef<IErrorGuard> {
   const { t } = useI18n();
   const route = useRoute();
 

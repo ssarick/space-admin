@@ -1,6 +1,6 @@
 import { IUserPermission } from '@/projects/b2b/shared/types/user.types';
 
 export interface IUserAccessPermissionsListProps {
-  relatedUserPermissions: IUserPermission[];
+  relatedUserPermissions: IUserPermission[]
   disabled?: boolean
 }

@@ -3,9 +3,7 @@ import PageTitle from '@/shared/UI/page-title';
 import AdminList from '@/projects/b2b/features/admin/list';
 import useAdminsListPage from './useAdminsListPage';
 
-const {
-  goCreationPage
-} = useAdminsListPage();
+const { goCreationPage } = useAdminsListPage();
 </script>
 
 <template>

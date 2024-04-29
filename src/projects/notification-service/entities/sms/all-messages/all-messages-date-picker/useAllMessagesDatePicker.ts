@@ -1,7 +1,8 @@
 import { useVModels } from '@vueuse/core';
 import type {
   AllMessagesDatePickerEmits,
-  AllMessagesDatePickerProps } from './all-messages-date-picker.types';
+  AllMessagesDatePickerProps
+} from './all-messages-date-picker.types';
 
 export default function useAllMessagesDatePicker(
   props: AllMessagesDatePickerProps,

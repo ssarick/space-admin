@@ -14,7 +14,11 @@ export default function useBlockingReasonForm(
 ) {
   const reasonId = useVModel(props, 'reasonId', emit);
 
-  const { formRef, validateForm, restoreFormValidation } =
+  const {
+    formRef,
+    validateForm,
+    restoreFormValidation
+  } =
     useFormRefWithValidate();
 
   const blockingReasonFormRules: FormRules = {

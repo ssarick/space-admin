@@ -4,7 +4,7 @@ export interface SessionsMainTableProps {
   data?: InventorySession[]
   loading?: boolean
 }
-export interface SessionsMainTableEmits{
+export interface SessionsMainTableEmits {
   (
     event: 'confirmModalShow',
     value: boolean

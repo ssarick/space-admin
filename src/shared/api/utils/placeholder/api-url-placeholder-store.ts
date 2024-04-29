@@ -6,7 +6,7 @@ export default class ApiUrlPlaceholderStore {
     ReturnType<typeof useAuthPanelStore> | null = null;
 
   static get authPanelStore():
-    ReturnType<typeof useAuthPanelStore> {
+  ReturnType<typeof useAuthPanelStore> {
     if (!ApiUrlPlaceholderStore._authPanelStore) {
       ApiUrlPlaceholderStore._authPanelStore = useAuthPanelStore();
     }

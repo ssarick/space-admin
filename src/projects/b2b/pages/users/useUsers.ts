@@ -1,4 +1,8 @@
-import { computed, ref, watch } from 'vue';
+import {
+  computed,
+  ref,
+  watch
+} from 'vue';
 import { useDebounceFn } from '@vueuse/core';
 import { globalConfig } from '@/shared/config/global-config';
 import { FIELD_MASK } from '@/shared/utils/constants/field-mask';
@@ -49,7 +53,9 @@ export default function useUsers() {
   watch(
     () => searchForm.value,
     useDebounceFn(onSearchUsers, globalConfig.debounceInMS),
-    { deep: true }
+    {
+      deep: true
+    }
   );
 
   return {

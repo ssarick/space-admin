@@ -19,11 +19,14 @@
   ],
   "plugins": [
     "@typescript-eslint",
-    "unused-imports",
     "simple-import-sort",
     "import",
     "file-progress",
-    "@stylistic/js"
+    "@stylistic",
+    "eslint-plugin-vue",
+    "unused-imports",
+    "putout",
+    "fsd-import"
   ],
   "settings": {
     "import/resolver": {
@@ -33,12 +36,137 @@
     }
   },
   "rules": {
+    "no-prototype-builtins": 0,
+    "object-property-newline": "error",
+    "object-curly-newline": [
+      2, {
+        "ObjectExpression": "always",
+        "ObjectPattern": { "multiline": true },
+        "ImportDeclaration": { "multiline": true, "minProperties": 3 },
+        "ExportDeclaration": { "multiline": true, "minProperties": 3 }
+      }
+    ],
+    "no-empty": [
+      2,
+      {
+        "allowEmptyCatch": true
+      }
+    ],
+    "no-duplicate-imports": 2,
+    "prefer-const": [
+      2,
+      {
+        "destructuring": "all"
+      }
+    ],
+    "object-curly-spacing": [ 2, "always" ],
+    "array-bracket-spacing": [ 2, "always" ],
+    "no-multi-spaces": 2,
+    "max-len": [
+      2,
+      {
+        "code": 121,
+        "ignorePattern": "import\\s*(type)?\\s.*\\s*from\\s*.*';|.*\\s*from\\s*.*';|^export\\s|d=\"([\\s\\S]*?)\"|\\s*component:\\s\\(\\)\\s=>\\simport\\(.*\\)",
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "max-lines": [ 2, 300 ],
+    "max-nested-callbacks": [ 2, 3 ],
+    "max-statements": [ 2, 40 ],
+    "max-lines-per-function": [ 2, 250 ],
+    "max-depth": [ 2, 3 ],
+    "max-params": [ 2, 5 ],
+    "complexity": [ 2, 12 ],
+    "quotes": [ 2, "single" ],
+    "dot-notation": 2,
+    "no-nested-ternary": 2,
+    "no-console": [
+      2,
+      {
+        "allow": [ "warn", "error" ]
+      }
+    ],
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns":
+        ["../../../"]
+      }
+    ],
+    "prefer-destructuring": [
+      2,
+      {
+        "VariableDeclarator": {
+          "array": true,
+          "object": true
+        },
+        "AssignmentExpression": {
+          "array": true,
+          "object": false
+        }
+      },
+      {
+        "enforceForRenamedProperties": false
+      }
+    ],
+
+    "putout/multiple-properties-destructuring": "error",
+
+    "file-progress/activate": [ 2, 1 ],
+
+    "fsd-import/fsd-relative-path": "error",
+    "fsd-import/public-api-imports": "error",
+    "fsd-import/layer-imports": "error",
+
+    "simple-import-sort/imports": [
+      2,
+      {
+        "groups": [
+          [
+            "^vue",
+            "^@?\\w/?\\w",
+            "^@?/shared/\\w",
+            "^@?/entities/\\w",
+            "^@?/features/\\w",
+            "^@?/widgets/\\w",
+            "^@?/pages/\\w",
+            "^@?/app/\\w",
+            "^@?/projects/\\w",
+            "^[./]+/shared/\\w",
+            "^[./]+/entities/\\w",
+            "^[./]+/features/\\w",
+            "^[./]+/widgets/\\w",
+            "^[./]+/pages/\\w",
+            "^[./]+/app/\\w",
+            "^[./]+/projects/\\w",
+            "^"
+          ]
+        ]
+      }
+    ],
+    "simple-import-sort/exports": 2,
+
+    "import/first": 2,
+    "import/newline-after-import": 2,
+
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      2,
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_",
+        "ignoreRestSiblings": true
+      }
+    ],
+
     "@typescript-eslint/ban-types": 0,
     "@typescript-eslint/no-non-null-asserted-optional-chain": 0,
-    "no-prototype-builtins": 0,
     "@typescript-eslint/no-unused-vars": 0,
+
+    "vue/mustache-interpolation-spacing": ["error", "always"],
     "vue/multi-word-component-names": 0,
-    "file-progress/activate": [ 2, 1 ],
     "vue/no-unused-vars": [
       2,
       {
@@ -83,6 +211,16 @@
       }
     ],
     "vue/block-tag-newline": 2,
+    "vue/padding-line-between-tags": [
+      "error",
+      [
+        {
+          "blankLine": "always",
+          "prev": "*",
+          "next": "*"
+        }
+      ]
+    ],
     "vue/max-attributes-per-line": [
       2,
       {
@@ -95,149 +233,64 @@
       2,
       [ "script-setup" ]
     ],
-    "no-empty": [
-      2,
-      {
-        "allowEmptyCatch": true
-      }
-    ],
-    "simple-import-sort/imports": [
-      2,
-      {
-        "groups": [
-          [
-            "^vue",
-            "^@?\\w/?\\w",
-            "^@?/shared/\\w",
-            "^@?/entities/\\w",
-            "^@?/features/\\w",
-            "^@?/widgets/\\w",
-            "^@?/pages/\\w",
-            "^@?/app/\\w",
-            "^@?/projects/\\w",
-            "^[./]+/shared/\\w",
-            "^[./]+/entities/\\w",
-            "^[./]+/features/\\w",
-            "^[./]+/widgets/\\w",
-            "^[./]+/pages/\\w",
-            "^[./]+/app/\\w",
-            "^[./]+/projects/\\w",
-            "^"
-          ]
-        ]
-      }
-    ],
-    "simple-import-sort/exports": 2,
-    "import/first": 2,
-    "import/newline-after-import": 2,
-    "no-duplicate-imports": 2,
-    "unused-imports/no-unused-imports": 2,
-    "prefer-const": [
-      2,
-      {
-        "destructuring": "all"
-      }
-    ],
-    "unused-imports/no-unused-vars": [
-      2,
-      {
-        "vars": "all",
-        "varsIgnorePattern": "^_",
-        "args": "after-used",
-        "argsIgnorePattern": "^_",
-        "ignoreRestSiblings": true
-      }
-    ],
-    "object-curly-spacing": [ 2, "always" ],
-    "array-bracket-spacing": [ 2, "always" ],
-    "no-multi-spaces": 2,
-    "max-len": [
-      2,
-      {
-        "code": 150,
-        "ignorePattern": "d=\"([\\s\\S]*?)\""
-      }
-    ],
-    "max-lines": [ 2, 500 ],
-    "max-nested-callbacks": [ 2, 3 ],
-    "max-statements": [ 2, 40 ],
-    "max-lines-per-function": [ 2, 250 ],
-    "max-depth": [ 2, 3 ],
-    "max-params": [ 2, 5 ],
-    "complexity": [ 2, 12 ],
-    "quotes": [ 2, "single" ],
-    "dot-notation": 2,
-    "no-nested-ternary": 2,
-    "no-console": [
-      2,
-      {
-        "allow": [ "warn", "error" ]
-      }
-    ],
-    "@stylistic/js/max-statements-per-line": [
-      2,
-      { "max": 1 }
-    ],
-    "@stylistic/js/comma-spacing": 2,
-    "@stylistic/js/comma-dangle": 2,
-    "@stylistic/js/indent": [ 2, 2 ],
-    "@stylistic/js/semi": 2,
-    "@stylistic/js/no-extra-semi": 2,
-    "@stylistic/js/semi-style": [ 2, "last" ],
-    "@stylistic/js/semi-spacing": 2,
-    "@stylistic/js/no-multiple-empty-lines": [
-      2,
-      { "max": 1 }
-    ],
-    "@stylistic/js/lines-between-class-members": [ 2, "always" ],
-    "@stylistic/js/no-trailing-spaces": 2,
-    "@stylistic/js/keyword-spacing": 2,
-    "@stylistic/js/arrow-spacing": 2,
-    "@stylistic/js/block-spacing": 2,
-    "@stylistic/js/computed-property-spacing": 2,
-    "@stylistic/js/generator-star-spacing": 2,
-    "@stylistic/js/key-spacing": 2,
-    "@stylistic/js/space-in-parens": 2,
-    "@stylistic/js/space-infix-ops": 2,
-    "@stylistic/js/func-call-spacing": 2,
-    // "@stylistic/js/space-before-function-paren": [ 2, "never" ],
-    "@stylistic/js/space-before-blocks": 2,
-    // "@stylistic/js/object-curly-newline": [
-    //   2,
-    //   {
-    //     "ObjectExpression": {
-    //       "multiline": true,
-    //       "minProperties": 2
-    //     },
-    //     "ObjectPattern": {
-    //       "multiline": true,
-    //       "minProperties": 2
-    //     },
-    //     "ImportDeclaration": {
-    //       "multiline": true,
-    //       "minProperties": 4
-    //     },
-    //     "ExportDeclaration": {
-    //       "multiline": true,
-    //       "minProperties": 4
-    //     }
-    //   }
-    // ],
-    "prefer-destructuring": [
-      2,
-      {
-        "VariableDeclarator": {
-          "array": true,
-          "object": true
-        },
-        "AssignmentExpression": {
-          "array": true,
-          "object": false
-        }
+    "vue/array-bracket-spacing": [2, "always"],
+    "vue/html-self-closing": ["error", {
+      "html": {
+        "void": "never",
+        "normal": "always",
+        "component": "always"
       },
+      "svg": "always",
+      "math": "always"
+    }],
+
+    "@stylistic/max-statements-per-line": [
+      2,
+      { "max": 1 }
+    ],
+    "@stylistic/comma-spacing": 2,
+    "@stylistic/comma-dangle": 2,
+    "@stylistic/indent": [ 2, 2 ],
+    "@stylistic/semi": 2,
+    "@stylistic/no-extra-semi": 2,
+    "@stylistic/semi-style": [ 2, "last" ],
+    "@stylistic/semi-spacing": 2,
+    "@stylistic/no-multiple-empty-lines": [
+      2,
+      { "max": 1 }
+    ],
+    "@stylistic/lines-between-class-members": [ 2, "always" ],
+    "@stylistic/no-trailing-spaces": 2,
+    "@stylistic/keyword-spacing": 2,
+    "@stylistic/arrow-spacing": 2,
+    "@stylistic/block-spacing": 2,
+    "@stylistic/computed-property-spacing": 2,
+    "@stylistic/generator-star-spacing": 2,
+    "@stylistic/key-spacing": 2,
+    "@stylistic/space-in-parens": 2,
+    "@stylistic/space-infix-ops": 2,
+    "@stylistic/func-call-spacing": 2,
+    "@stylistic/space-before-blocks": 2,
+    "@stylistic/padding-line-between-statements": [
+      "error",
+      //      TODO: Отвечает за new-line между переносами. (создать собственное правило?)
+      //      {
+      //        "blankLine": "always",
+      //        "prev": "*",
+      //        "next": ["export", "interface", "type"]
+      //      },
       {
-        "enforceForRenamedProperties": false
+        "blankLine": "always",
+        "prev": "*",
+        "next": ["block-like"]
       }
-    ]
+    ],
+    "@stylistic/member-delimiter-style": [2, {
+      "multilineDetection": "brackets",
+      "multiline": {
+        "delimiter": "none",
+        "requireLast": false
+      }
+    }]
   }
 }

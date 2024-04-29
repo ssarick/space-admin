@@ -12,7 +12,9 @@ export default [
         locale: 'notifications'
       }
     },
-    redirect: { name: 'notification' },
+    redirect: {
+      name: 'notification'
+    },
     children: [
       ...creationRoutes,
       ...listRoutes

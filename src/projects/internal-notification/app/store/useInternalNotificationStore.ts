@@ -40,7 +40,9 @@ export const useInternalNotificationStore = defineStore(
       lastVersionNotification.value!.isRead = true;
 
       await ApiInternalNotificationItem
-        .markAsRead({ ids: [ id ] });
+        .markAsRead({
+          ids: [ id ]
+        });
     };
 
     const fetchCurrentVersion = async () => {

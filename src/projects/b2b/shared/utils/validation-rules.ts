@@ -1,5 +1,9 @@
 import { fieldLimits } from '@/shared/utils/constants/field-limits';
-import { checkByRegex, checkMinLength, regExp } from '@/shared/utils/validation-base';
+import {
+  checkByRegex,
+  checkMinLength,
+  regExp
+} from '@/shared/utils/validation-base';
 import { ruleRequired } from '@/shared/utils/validation-rules';
 import { PassportType } from '@/projects/b2b/shared/types/document.types';
 import { getPassportSeriesMinLength } from './validation-rules-generator';

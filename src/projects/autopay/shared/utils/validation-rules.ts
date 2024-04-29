@@ -1,6 +1,10 @@
 import i18n from '@/shared/plugins/i18n';
 import { fieldLimits } from '@/shared/utils/constants/field-limits';
-import { ruleInRange, ruleMatchLength, ruleMaxLength } from '@/shared/utils/validation-rules-generator';
+import {
+  ruleInRange,
+  ruleMatchLength,
+  ruleMaxLength
+} from '@/shared/utils/validation-rules-generator';
 
 export const ruleRequired = (_, value: string | number) => value
   ? true

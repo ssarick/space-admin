@@ -25,7 +25,9 @@ export default function useUserCertificateCreation() {
   const popCertificate = () => certificates.value.pop();
 
   const unshiftCertificate = (certificate: ICertificate) =>
-    certificates.value.unshift({ ...certificate });
+    certificates.value.unshift({
+      ...certificate
+    });
 
   const onChangeIsMobileCertificate = (value: boolean) => {
     isMobileCertificate.value = value;

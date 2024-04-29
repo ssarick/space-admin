@@ -1,5 +1,11 @@
 <script lang="ts" setup>
-import { NButton, NDropdown, NLayoutHeader, NSpace, NTooltip } from 'naive-ui';
+import {
+  NButton,
+  NDropdown,
+  NLayoutHeader,
+  NSpace,
+  NTooltip
+} from 'naive-ui';
 import { AuthPanel } from '@/shared/types/auth.types';
 import BaseBadge from '@/shared/UI/base-badge';
 import BaseButton from '@/shared/UI/base-button';
@@ -35,8 +41,7 @@ const {
     >
       <img
         v-if="props.disableAuthFeatures"
-        src="/icons/icon-space.svg"
-        width="120"
+        src="/icons/space-logo.svg"
         alt=""
       >
 

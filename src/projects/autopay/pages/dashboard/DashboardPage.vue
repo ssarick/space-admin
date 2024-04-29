@@ -6,9 +6,7 @@ import DashboardWithdrawalList from '@/projects/autopay/features/dashboard/dashb
 import { PaymentStatisticsDatePart } from '@/projects/autopay/shared/types/dashboard.types';
 import useDashboardPage from './useDashboardPage';
 
-const {
-  processingTypes
-} = useDashboardPage();
+const { processingTypes } = useDashboardPage();
 </script>
 
 <template>

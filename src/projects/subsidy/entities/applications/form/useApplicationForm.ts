@@ -4,7 +4,11 @@ import useFormRefWithValidate from '@/shared/UI/base-form/useFormRefWithValidate
 import { amountMaskOptions } from '@/shared/utils/mask';
 import { ruleRequired } from '@/shared/utils/validation-rules';
 import { SubsidyContract } from '@/projects/subsidy/shared/types/application.types';
-import { ruleAccount, ruleMfo, rulePinfl } from '@/projects/subsidy/shared/utils/validation-rules';
+import {
+  ruleAccount,
+  ruleMfo,
+  rulePinfl
+} from '@/projects/subsidy/shared/utils/validation-rules';
 import { ApplicationFormEmits, ApplicationFormProps } from './application-form.types';
 
 export default function useApplicationForm(

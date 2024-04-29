@@ -13,7 +13,8 @@ export default function useEntitySearchFilters(
   const models = useVModels(props, emit);
   const formRef = useFormRef();
 
-  const rules: FormRules = {};
+  const rules: FormRules = {
+  };
 
   const onOpenMassSearch = () =>
     emit('openMassSearch');

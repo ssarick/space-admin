@@ -1,4 +1,8 @@
-import { onMounted, ref, watch } from 'vue';
+import {
+  onMounted,
+  ref,
+  watch
+} from 'vue';
 import { ApiDictionary } from '@/projects/b2b/shared/api';
 import { IUserAction, IUserPermission } from '@/projects/b2b/shared/types/user.types';
 import { IUserAccessPermissionsListProps } from './user-access-permissions-list.types';
@@ -7,20 +11,22 @@ export default function useUserAccessPermissionsList(
   props: IUserAccessPermissionsListProps
 ) {
   interface ICheckboxUserAction extends IUserAction {
-    checked: boolean;
+    checked: boolean
   }
   type TCheckboxIUserPermission = Omit<IUserPermission, 'actions'> & {
-    allChecked: boolean;
-    indeterminate: boolean;
-    actions: ICheckboxUserAction[];
+    allChecked: boolean
+    indeterminate: boolean
+    actions: ICheckboxUserAction[]
   };
 
   const actionsModulesList = ref<TCheckboxIUserPermission[]>([]);
-  let permissionsHashMap = {};
+  let permissionsHashMap = {
+  };
   let allPermissions: IUserPermission[] = [];
 
   async function initUserActionsList() {
-    permissionsHashMap = {};
+    permissionsHashMap = {
+    };
 
     props.relatedUserPermissions.forEach((permission) => {
       const actions = permission.actions.map((action) => action.key);

@@ -2,7 +2,8 @@
 import BaseDataTable from '@/shared/UI/base-data-table';
 import {
   IIndividualSearchTableEmits,
-  IIndividualSearchTableProps } from './individual-search-table.types';
+  IIndividualSearchTableProps
+} from './individual-search-table.types';
 import useIndividualSearchTable from './useIndividualSearchTable';
 
 const props = withDefaults(

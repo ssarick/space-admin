@@ -3,7 +3,7 @@ import { UserStateId } from './user.types';
 
 export enum CertificateType {
   INTER_BANK = 2,
-  MOBILE_BANK = 3,
+  MOBILE_BANK = 3
 }
 
 export enum CertificateState {
@@ -14,59 +14,59 @@ export enum CertificateState {
 }
 
 export interface ICertificate {
-  userId?: number | null;
-  userLogin?: string | null;
-  userClientId?: number | null;
-  userClientState?: UserStateId;
-  clientId?: number | null;
-  clientCode?: string | null;
-  clientName?: string | null;
-  clientInn?: string | null;
-  clientState?: UserStateId;
-  clientBranch?: string | null;
-  certificateAnswerId?: number | null;
-  certificateSerialNumber?: string | null;
-  certificateActivateDate?: string | null;
-  certificateDeactivateDate?: string | null;
-  certificateState?: CertificateState | null;
-  certificateType?: CertificateType;
-  certificateRevokedReason?: string | null;
+  userId?: number | null
+  userLogin?: string | null
+  userClientId?: number | null
+  userClientState?: UserStateId
+  clientId?: number | null
+  clientCode?: string | null
+  clientName?: string | null
+  clientInn?: string | null
+  clientState?: UserStateId
+  clientBranch?: string | null
+  certificateAnswerId?: number | null
+  certificateSerialNumber?: string | null
+  certificateActivateDate?: string | null
+  certificateDeactivateDate?: string | null
+  certificateState?: CertificateState | null
+  certificateType?: CertificateType
+  certificateRevokedReason?: string | null
 }
 
 export interface IInetBankCertificateFetchingPayload extends IPagination {
-  branch: string;
-  userId: string;
+  branch: string
+  userId: string
 }
 
 export interface IMobileCertificatesFetchingPayload
   extends IPagination,
-    Pick<IInetBankCertificateFetchingPayload, 'userId'> {}
+  Pick<IInetBankCertificateFetchingPayload, 'userId'> {}
 
 export interface ICertificateRevokingPayload
   extends Pick<ICertificate, 'certificateSerialNumber'> {
-  reasonId?: number;
-  reasonText?: string;
+  reasonId?: number
+  reasonText?: string
 }
 
 export interface ICertificateRevokingReason {
-  id: number | null;
-  name: string | null;
-  isNeedWriteReason: boolean | null;
+  id: number | null
+  name: string | null
+  isNeedWriteReason: boolean | null
 }
 
 export interface IMobileCertificateAttachingPayload
   extends Pick<IInetBankCertificateFetchingPayload, 'branch' | 'userId'> {
-  businessCode: string;
-  serialNumber: string;
+  businessCode: string
+  serialNumber: string
 }
 
 export interface ICertificateCreationPayload
   extends Pick<ICertificate, 'certificateType'>,
-    Pick<
-      IMobileCertificateAttachingPayload,
+  Pick<
+    IMobileCertificateAttachingPayload,
       'branch' | 'userId' | 'businessCode'
-    > {
-  password: string;
+  > {
+  password: string
 }
 
 export interface ICertificateRevokingReasonsFetchingPayload
@@ -82,14 +82,14 @@ export interface ICertificateStateChangingPayload
 
 export interface ICertificateRevokingReasonFormModel
   extends Required<Pick<ICertificateRevokingPayload, 'reasonText'>> {
-  reasonId: number | null;
-  hasCustomReasonText: boolean;
-  customReasonText: string;
+  reasonId: number | null
+  hasCustomReasonText: boolean
+  customReasonText: string
 }
 
 export interface ICertificateTypeAndSerial {
-  certificateType: CertificateType;
-  certificateSerial: string;
+  certificateType: CertificateType
+  certificateSerial: string
 }
 
 export interface ICertificateTypeAndSerialFormModel

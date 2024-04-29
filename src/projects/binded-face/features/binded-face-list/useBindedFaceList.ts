@@ -1,4 +1,8 @@
-import { onMounted, ref, watch } from 'vue';
+import {
+  onMounted,
+  ref,
+  watch
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useMessage } from 'naive-ui';
 import { usePagination } from '@/shared/composables';
@@ -6,14 +10,22 @@ import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import useFormRef from '@/shared/UI/base-form/useFormRef';
 import { formValidate } from '@/shared/utils/functions';
 import { ApiBindedFace } from '../../shared/api';
-import { BindedFace, BindedFaceFormModel, BindedFaceStatus } from '../../shared/types/binded-face.types';
+import {
+  BindedFace,
+  BindedFaceFormModel,
+  BindedFaceStatus
+} from '../../shared/types/binded-face.types';
 
 export default function useBindedFaceList() {
   const tableRef = useTableRef();
   const formRef = useFormRef();
   const message = useMessage();
   const { t } = useI18n();
-  const { pageCount, pageNumber, pageSize } = usePagination(tableRef);
+  const {
+    pageCount,
+    pageNumber,
+    pageSize
+  } = usePagination(tableRef);
 
   const showAddModal = ref(false);
   const isLoadingCreateBtn = ref(false);

@@ -1,7 +1,12 @@
 import { computed, h } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
-import { DataTableColumns, NButton, NPopover, NSpace } from 'naive-ui';
+import {
+  DataTableColumns,
+  NButton,
+  NPopover,
+  NSpace
+} from 'naive-ui';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import { formatPhoneNumber } from '@/shared/utils/functions';
 import { formatDate } from '@/shared/utils/functions/date';
@@ -67,7 +72,9 @@ export default function useAdminTable(
           () => [
             h(
               NPopover,
-              { placement: 'top' },
+              {
+                placement: 'top'
+              },
               {
                 trigger: () =>
                   h(NButton, {
@@ -87,7 +94,9 @@ export default function useAdminTable(
             ),
             h(
               NPopover,
-              { placement: 'top' },
+              {
+                placement: 'top'
+              },
               {
                 trigger: () =>
                   h(NButton, {
@@ -126,7 +135,9 @@ export default function useAdminTable(
   const goToAdminEdit = (admin: IAdmin) => {
     router.push({
       name: 'admins-edit',
-      params: { id: admin.id }
+      params: {
+        id: admin.id
+      }
     });
   };
 

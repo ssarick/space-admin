@@ -1,8 +1,6 @@
 import i18n from '@/shared/plugins/i18n';
 import { ISelectOption } from '@/shared/types/select.types';
-import {
-  OPERATION_TYPES
-} from '@/projects/cashier/features/operation-type/operation-type.types';
+import { OPERATION_TYPES } from '@/projects/cashier/features/operation-type/operation-type.types';
 
 const { t } = i18n.global;
 

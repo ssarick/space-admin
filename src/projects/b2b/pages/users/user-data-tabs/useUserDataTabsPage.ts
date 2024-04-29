@@ -1,4 +1,8 @@
-import { computed, onMounted, ref } from 'vue';
+import {
+  computed,
+  onMounted,
+  ref
+} from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { IResponseData } from '@/shared/types/api.types';
 import { useAuthStore } from '@/app/store/auth/useAuthStore';
@@ -22,7 +26,10 @@ export default function useUserDataTabsPage() {
       || ClientUserDataTabName.PERSONAL_DATA,
     set: (tabName: ClientUserDataTabName) => router
       .replace({
-        params: { ...route.params, tabName },
+        params: {
+          ...route.params,
+          tabName
+        },
         query: route.query
       })
   });

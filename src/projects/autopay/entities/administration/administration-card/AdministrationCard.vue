@@ -1,5 +1,10 @@
 <script setup lang="ts">
-import { NCard, NDivider, NSpace, NTag } from 'naive-ui';
+import {
+  NCard,
+  NDivider,
+  NSpace,
+  NTag
+} from 'naive-ui';
 import BaseIcon from '@/shared/UI/base-icon';
 import { getDateNow } from '@/shared/utils/functions/date';
 import {
@@ -16,7 +21,8 @@ const {
   canBlock,
   canUnblock,
   canStart
-} = useAdministrationCard(props);
+} =
+  useAdministrationCard(props);
 </script>
 
 <template>
@@ -43,7 +49,7 @@ const {
 
     <div class="flex justify-space-between">
       <div class="color-quaternary_dark text-weight-5">
-        {{$t('all amount')}}
+        {{ $t('all amount') }}
       </div>
 
       <div class="color-common_black text-weight-5">
@@ -55,7 +61,7 @@ const {
 
     <div class="flex justify-space-between">
       <div class="color-quaternary_dark text-weight-5">
-        {{$t('part amount')}}
+        {{ $t('part amount') }}
       </div>
 
       <div class="color-common_black text-weight-5">
@@ -67,7 +73,7 @@ const {
 
     <div class="flex justify-space-between">
       <div class="color-quaternary_dark text-weight-5">
-        {{$t('date and time')}}
+        {{ $t('date and time') }}
       </div>
 
       <div class="color-common_black text-weight-5">
@@ -96,7 +102,7 @@ const {
         </template>
 
         <n-text class="text-caption">
-          {{$t('start')}}
+          {{ $t('start') }}
         </n-text>
       </n-button>
 
@@ -113,7 +119,7 @@ const {
         </template>
 
         <n-text class="text-caption">
-          {{$t('block')}}
+          {{ $t('block') }}
         </n-text>
       </n-button>
 
@@ -130,7 +136,7 @@ const {
         </template>
 
         <n-text class="text-caption">
-          {{$t('unblock')}}
+          {{ $t('unblock') }}
         </n-text>
       </n-button>
     </n-space>

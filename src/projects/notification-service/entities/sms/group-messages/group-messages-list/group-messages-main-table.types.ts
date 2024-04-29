@@ -26,4 +26,4 @@ export interface MessagesProgress {
 
 export type MessagesProgressMap = Record<
   keyof MessagesStatusGroupMap, MessagesProgress
->
+>;

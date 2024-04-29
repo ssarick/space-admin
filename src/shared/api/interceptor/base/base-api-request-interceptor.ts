@@ -4,6 +4,6 @@ export default abstract class BaseApiRequestInterceptor {
 
   abstract intercept(
     config: InternalAxiosRequestConfig
-  ): Promise<InternalAxiosRequestConfig>
+  ): Promise<InternalAxiosRequestConfig>;
 
 }

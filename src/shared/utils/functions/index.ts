@@ -24,9 +24,11 @@ export function pluralFunc(choice: number, choicesLength: number) {
   if (choicesLength < 4) {
     return !teen && endsWithOne ? 1 : 2;
   }
+
   if (!teen && endsWithOne) {
     return 1;
   }
+
   if (!teen && choice % 10 >= 2 && choice % 10 <= 4) {
     return 2;
   }

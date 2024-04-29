@@ -1,5 +1,11 @@
 <script setup lang="ts">
-import { NCard, NCheckbox, NCollapse, NCollapseItem, NSpace } from 'naive-ui';
+import {
+  NCard,
+  NCheckbox,
+  NCollapse,
+  NCollapseItem,
+  NSpace
+} from 'naive-ui';
 import { IUserAccessPermissionsListProps } from './user-access-permissions-list.types';
 import useUserAccessPermissionsList from './useUserAccessPermissionsList';
 
@@ -44,6 +50,7 @@ defineExpose({
           {{ $t('Select-all') }}
         </n-checkbox>
       </template>
+
       <n-collapse-item
         class="pb-2"
         style="flex: 0"

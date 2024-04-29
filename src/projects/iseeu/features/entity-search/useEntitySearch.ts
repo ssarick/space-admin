@@ -12,7 +12,9 @@ export default function useEntitySearch() {
 
   const entityClients = ref<EntityClient[]>(
     Array
-      .from({ length: 10 })
+      .from({
+        length: 10
+      })
       .fill(undefined)
       .map(() => ({
         name: 'ISLAM YUSUBOV CHP',

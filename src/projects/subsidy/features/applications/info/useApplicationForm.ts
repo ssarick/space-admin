@@ -1,4 +1,9 @@
-import { computed, onMounted, reactive, ref } from 'vue';
+import {
+  computed,
+  onMounted,
+  reactive,
+  ref
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { IListItem } from '@/shared/types/common.types';
 import AmountFormatter from '@/shared/utils/amount-formatter';
@@ -12,7 +17,8 @@ export default function useApplicationForm(
   props: ApplicationInfoProps
 ) {
   const { t } = useI18n();
-  const application = reactive<Partial<SubsidyApplication>>({});
+  const application = reactive<Partial<SubsidyApplication>>({
+  });
   const loading = ref(false);
 
   const isEditable = computed<boolean>(() =>

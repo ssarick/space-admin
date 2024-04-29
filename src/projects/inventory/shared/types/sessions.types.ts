@@ -16,7 +16,7 @@ export interface InventoryTakerUser extends
   Pick<InventoryUser, 'fullName' | 'id' | 'email'> {}
 
 export interface InventoryTakerUsersList extends
-  InventorySession{
+  InventorySession {
   users?: InventoryTakerUser[]
 }
 

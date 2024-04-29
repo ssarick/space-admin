@@ -16,7 +16,9 @@ export default function useFileUpload(
     fileUploadLoading.value = true;
 
     const { error } = await ApiSubsidyApplication
-      .uploadExcel({ excelFile: file! });
+      .uploadExcel({
+        excelFile: file!
+      });
 
     if (!error) {
       message.success(

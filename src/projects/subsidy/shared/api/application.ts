@@ -82,7 +82,7 @@ export const fetchApplicationItem = async (
 };
 
 export const fetchContractTypes = async ():
-  Promise<IResponseData<SubsidyContract>> => {
+Promise<IResponseData<SubsidyContract>> => {
   const { data } = await apiSubsidy
     .get('get-contract-types');
 
@@ -90,7 +90,7 @@ export const fetchContractTypes = async ():
 };
 
 export const fetchMinfinStatuses = async ():
-  Promise<IResponseData<SubsidyMinfinStatus>> => {
+Promise<IResponseData<SubsidyMinfinStatus>> => {
   const { data } = await apiSubsidy
     .get('minfin/statuses-info');
 

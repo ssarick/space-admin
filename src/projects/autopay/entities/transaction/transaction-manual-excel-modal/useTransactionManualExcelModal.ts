@@ -1,8 +1,6 @@
 import { useI18n } from 'vue-i18n';
 import { useVModel } from '@vueuse/core';
-import {
-  FormRules, useMessage
-} from 'naive-ui';
+import { FormRules, useMessage } from 'naive-ui';
 import useFormRef from '@/shared/UI/base-form/useFormRef';
 import dateShortcuts from '@/shared/utils/constants/date-shortcuts';
 import { formValidate } from '@/shared/utils/functions';
@@ -14,7 +12,8 @@ import {
 import { ProcessingType } from '@/projects/autopay/shared/types/administration.types';
 import {
   ruleContractId,
-  ruleProperSum, ruleRequired
+  ruleProperSum,
+  ruleRequired
 } from '@/projects/autopay/shared/utils/validation-rules';
 
 export default function useTransactionManualExcelModal(
@@ -69,14 +68,17 @@ export default function useTransactionManualExcelModal(
 
   const submitFilterModal = async ($event) => {
     const hasError = await formValidate(formRef.value);
+
     if ((props.formValue.dateTo as number) < (props.formValue.dateFrom as number)) {
       message.error(t('date to should be higher than date from'));
       return;
     }
+
     if (((props.formValue.dateTo as number) - (props.formValue.dateFrom as number)) > dateShortcuts.MS_IN_MONTH) {
       message.error(t('maximum date range is 31 days'));
       return;
     }
+
     if (!hasError) {
       emit('submitExcelModal', $event);
     }

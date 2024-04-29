@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { NBreadcrumb, NBreadcrumbItem, NCard } from 'naive-ui';
+import {
+  NBreadcrumb,
+  NBreadcrumbItem,
+  NCard
+} from 'naive-ui';
 import useAppLayoutBreadcrumbs from './useAppLayoutBreadcrumbs';
 
 const {

@@ -4,7 +4,7 @@ import { FileManageExtension } from '../../types/file-manage.types';
 export default class IconUtils {
 
   protected static iconNamesByExtensions:
-    Record<FileManageExtension, IconName> = {
+  Record<FileManageExtension, IconName> = {
       [FileManageExtension.doc]: 'file-word',
       [FileManageExtension.docx]: 'file-word',
       [FileManageExtension.xls]: 'file-excel',

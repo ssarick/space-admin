@@ -19,9 +19,7 @@ export default function useTerminalsList() {
   const fetchTerminals = async () => {
     terminalsLoading.value = true;
 
-    const {
-      totalPages
-    } = await ApiInventoryUsers.fetchUsers({
+    const { totalPages } = await ApiInventoryUsers.fetchUsers({
       page: pageNumber.value,
       count: pageSize.value
     });

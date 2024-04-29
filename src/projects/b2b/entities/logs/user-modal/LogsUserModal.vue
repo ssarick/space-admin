@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { NCard, NModal, NSpace } from 'naive-ui';
+import {
+  NCard,
+  NModal,
+  NSpace
+} from 'naive-ui';
 import BaseDataTable from '@/shared/UI/base-data-table';
 import { ILogsUserModalEmits, ILogsUserModalProps } from './logs-user-modal.types';
 import useLogsClientModal from './useLogsUserModal';

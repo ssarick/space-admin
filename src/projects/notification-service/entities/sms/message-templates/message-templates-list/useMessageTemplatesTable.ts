@@ -1,16 +1,17 @@
 import { computed, h } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { DataTableColumns, NButton, NPopover, NSpace } from 'naive-ui';
+import {
+  DataTableColumns,
+  NButton,
+  NPopover,
+  NSpace
+} from 'naive-ui';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import { DATE_VALUE_FORMAT, TIME_VALUE_FORMAT } from '@/shared/utils/constants/naive-constants';
 import { formatDate } from '@/shared/utils/functions/date';
 import renderIcon from '@/shared/utils/render-icon';
-import type {
-  MessageTemplateModel
-} from '@/projects/notification-service/shared/types/send-message.types';
-import type {
-  MessageTemplateTableEmits
-} from './messages-templates-table.types';
+import type { MessageTemplateModel } from '@/projects/notification-service/shared/types/send-message.types';
+import type { MessageTemplateTableEmits } from './messages-templates-table.types';
 
 export default function useMessageTemplatesTable(
   emit: MessageTemplateTableEmits
@@ -62,13 +63,16 @@ export default function useMessageTemplatesTable(
               default: () => [
                 h(
                   'span',
-                  {},
+                  {
+                  },
                   formatDate(row.createdDate, DATE_VALUE_FORMAT)
                 ),
                 h(
                   'span',
                   {
-                    style: { color: '#808080' }
+                    style: {
+                      color: '#808080'
+                    }
                   },
                   formatDate(row.createdDate, TIME_VALUE_FORMAT)
                 )

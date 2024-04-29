@@ -68,7 +68,9 @@ export default function useLogsUserTable(
 
   const onRowClick = (row: IUser) =>
     models.selected
-      && (models.selected.value = { ...row });
+      && (models.selected.value = {
+        ...row
+      });
 
   return {
     ...models,

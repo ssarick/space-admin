@@ -62,9 +62,7 @@ export default function useSessionInfo() {
   };
 
   const fetchSessionStatuses = async () => {
-    const {
-      result
-    } = await ApiInventorySessions.fetchInventoryStatusesList();
+    const { result } = await ApiInventorySessions.fetchInventoryStatusesList();
 
     sessionStatusesList.value = InventoryStatusesColorMap.map(status => {
       return {

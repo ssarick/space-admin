@@ -1,5 +1,9 @@
 import { computed, h } from 'vue';
-import { DataTableColumn, NSpace, NSpin } from 'naive-ui';
+import {
+  DataTableColumn,
+  NSpace,
+  NSpin
+} from 'naive-ui';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import BaseIcon from '@/shared/UI/base-icon';
 import { formatDate } from '@/shared/utils/functions/date';
@@ -53,7 +57,9 @@ export default function useFilesManageTable(
                 width: '24px',
                 height: '24px'
               }
-            }, () => h(NSpin, { size: 20 }))
+            }, () => h(NSpin, {
+              size: 20
+            }))
             : h(BaseIcon, {
               icon: getEntityIconName(row),
               size: 24,

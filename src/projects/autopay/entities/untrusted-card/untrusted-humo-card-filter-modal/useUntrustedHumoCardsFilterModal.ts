@@ -7,9 +7,7 @@ import {
   ruleContractId,
   ruleOwnerId
 } from '@/projects/autopay/shared/utils/validation-rules';
-import {
-  IUntrustedCardsFilterList, IUntrustedCardsModalEmits
-} from './untrusted-humo-cards-filter-modal.types';
+import { IUntrustedCardsFilterList, IUntrustedCardsModalEmits } from './untrusted-humo-cards-filter-modal.types';
 
 export default function useUntrustedHumoFilterModal(
   props: IUntrustedCardsFilterList,
@@ -56,6 +54,7 @@ export default function useUntrustedHumoFilterModal(
 
   const onFilterSubmit = async ($event: SubmitEvent) => {
     const hasError = await formValidate(formRef.value);
+
     if (!hasError) {
       emit('submitFilterModal', $event);
     }

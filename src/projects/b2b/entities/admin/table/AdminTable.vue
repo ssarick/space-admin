@@ -8,7 +8,9 @@ import useAdminTable from './useAdminTable';
 
 const props = withDefaults(
   defineProps<IAdminTableProps>(),
-  { data: () => [] }
+  {
+    data: () => []
+  }
 );
 
 const emit = defineEmits<IAdminTableEmits>();

@@ -63,7 +63,9 @@ export default function useLogsClientTable(
 
   const onRowClick = (row: IClient) =>
     models.selected
-      && (models.selected.value = { ...row });
+      && (models.selected.value = {
+        ...row
+      });
 
   return {
     ...models,

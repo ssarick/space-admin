@@ -26,8 +26,8 @@ export enum PermissionAction {
 
 export type Permission = Record<
   PermissionTarget, PermissionAction[]
->
+>;
 
 export type PermissionByRole = Record<
   AdminRole, () => DeepPartial<Permission>
->
+>;

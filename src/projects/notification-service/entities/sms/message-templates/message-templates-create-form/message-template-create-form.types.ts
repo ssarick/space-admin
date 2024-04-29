@@ -1,9 +1,7 @@
-import type {
-  MessageTemplateInputForm
-} from '@/projects/notification-service/shared/types/send-message.types';
+import type { MessageTemplateInputForm } from '@/projects/notification-service/shared/types/send-message.types';
 
 export interface MessageTemplateCreateFormProps extends MessageTemplateInputForm {
-  model?: MessageTemplateInputForm,
+  model?: MessageTemplateInputForm
   loading?: boolean
 }
 export interface MessageTemplateCreateFormEmits {

@@ -7,9 +7,7 @@ import {
   BuyerPassportDataFormEmits,
   BuyerPassportDataFormProps
 } from '@/projects/cashier/entities/buyer-passport-data-fields/buyer-passport-data-fields.types';
-import {
-  useBuyerPassportDataFields
-} from '@/projects/cashier/entities/buyer-passport-data-fields/useBuyerPassportDataFields';
+import { useBuyerPassportDataFields } from '@/projects/cashier/entities/buyer-passport-data-fields/useBuyerPassportDataFields';
 
 const props = defineProps<BuyerPassportDataFormProps>();
 const emit = defineEmits<BuyerPassportDataFormEmits>();

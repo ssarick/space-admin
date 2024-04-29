@@ -2,15 +2,14 @@
 import { NCard } from 'naive-ui';
 import {
   IAdminResetPasswordFormEmits,
-  IAdminResetPasswordFormProps } from './admin-reset-password-form.types';
+  IAdminResetPasswordFormProps
+} from './admin-reset-password-form.types';
 import useAdminResetPasswordForm from './useAdminResetPasswordForm';
 
 const props = defineProps<IAdminResetPasswordFormProps>();
 const emit = defineEmits<IAdminResetPasswordFormEmits>();
 
-const {
-  onReset
-} = useAdminResetPasswordForm(emit);
+const { onReset } = useAdminResetPasswordForm(emit);
 </script>
 
 <template>

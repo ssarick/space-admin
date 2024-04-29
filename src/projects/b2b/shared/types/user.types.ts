@@ -4,7 +4,7 @@ import { IClient } from './client.types';
 
 export enum UserStateId {
   BLOCKED,
-  ACTIVE,
+  ACTIVE
 }
 
 export enum UserBlockingReason {
@@ -17,21 +17,21 @@ export enum ClientUserDataTabName {
   PERMISSIONS = 'permissions',
   ACCESS_ACCOUNTS = 'access-accounts',
   CERTIFICATES = 'certificates',
-  LOGS = 'logs',
+  LOGS = 'logs'
 }
 
 export interface IUserByIdQueryParams {
-  isNewClient?: string;
+  isNewClient?: string
 }
 
 export interface IUserQueryParams extends IPagination {
-  userLogin?: string | null;
-  userName?: string | null;
-  userPhone?: string | null;
-  userPidSN?: string | null;
-  userPidNumber?: string | null;
-  excludeBranch?: string;
-  excludeBusinessCode?: string;
+  userLogin?: string | null
+  userName?: string | null
+  userPhone?: string | null
+  userPidSN?: string | null
+  userPidNumber?: string | null
+  excludeBranch?: string
+  excludeBusinessCode?: string
 }
 
 export interface IUserSearchModel extends Pick<
@@ -43,59 +43,59 @@ export interface IUserSearchModel extends Pick<
 > {}
 
 export interface IUser {
-  fio: string | null;
-  pidTypeId: number | null;
-  pidTypeName?: string | null;
-  pidSn: string | null;
-  pidNum: string | null;
-  phone: string | null;
-  email: string | null;
-  phrase: string | null;
-  login: string | null;
-  userId?: string | number | null;
-  role?: string;
-  createDate?: string;
-  stateId?: number;
-  pwdExpired?: string;
-  pwdLastTryDate?: string;
-  pwdWrongTries?: string;
-  stateReason?: UserStateId | null;
-  stateReasonId?: number | null;
-  fillDate?: string | null;
+  fio: string | null
+  pidTypeId: number | null
+  pidTypeName?: string | null
+  pidSn: string | null
+  pidNum: string | null
+  phone: string | null
+  email: string | null
+  phrase: string | null
+  login: string | null
+  userId?: string | number | null
+  role?: string
+  createDate?: string
+  stateId?: number
+  pwdExpired?: string
+  pwdLastTryDate?: string
+  pwdWrongTries?: string
+  stateReason?: UserStateId | null
+  stateReasonId?: number | null
+  fillDate?: string | null
 }
 
 export interface IUserRole {
-  id: number;
-  name: string;
-  modules?: IUserPermission[];
+  id: number
+  name: string
+  modules?: IUserPermission[]
 }
 
 export interface IUserAction {
-  id: number;
-  name: string;
-  key: string;
+  id: number
+  name: string
+  key: string
 }
 
 export interface IUserPermission {
-  id: number;
-  name: string;
-  key: string;
-  actions: IUserAction[];
+  id: number
+  name: string
+  key: string
+  actions: IUserAction[]
 }
 
 export interface IUserOrganization {
-  clientName: string | null;
-  inn: string | null;
-  clientCode: string | null;
-  stateId: UserStateId | null;
-  userRole: string | null;
-  userRoleId: number | null;
+  clientName: string | null
+  inn: string | null
+  clientCode: string | null
+  stateId: UserStateId | null
+  userRole: string | null
+  userRoleId: number | null
 }
 
 export interface IUserOrganizationFetchingParams
   extends IPagination,
-    NonNullableObjectValues<Pick<IUser, 'userId'>> {
-  branch: string;
+  NonNullableObjectValues<Pick<IUser, 'userId'>> {
+  branch: string
 }
 
 export interface IUserResetPasswordParams
@@ -126,7 +126,7 @@ export interface IClientUser extends
 }
 
 export interface IUserRelations {
-  role: IUserRole;
+  role: IUserRole
   modules: IUserPermission[]
 }
 

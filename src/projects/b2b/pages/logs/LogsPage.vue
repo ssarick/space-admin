@@ -3,9 +3,7 @@ import PageTitle from '@/shared/UI/page-title';
 import Logs from '@/projects/b2b/features/logs/main';
 import useLogsPage from './useLogsPage';
 
-const {
-  goHistoryPage
-} = useLogsPage();
+const { goHistoryPage } = useLogsPage();
 </script>
 
 <template>

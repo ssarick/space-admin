@@ -2,7 +2,7 @@
 import { NSpin } from 'naive-ui';
 
 interface IProps {
-  size?: number | 'small' | 'medium' | 'large';
+  size?: number | 'small' | 'medium' | 'large'
 }
 
 withDefaults(defineProps<IProps>(), {

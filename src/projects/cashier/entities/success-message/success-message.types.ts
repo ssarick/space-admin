@@ -1,4 +1,4 @@
 export interface SuccessMessageEmits {
-  (event: 'finalButtonClick'),
+  (event: 'finalButtonClick')
   (event: 'showPdfClick')
 }

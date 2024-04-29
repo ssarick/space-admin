@@ -5,7 +5,7 @@ export default function useBaseLogo(
   props: IProps
 ) {
   const logoWidth = computed(
-    () => props.short ? 22 : 220
+    () => props.short ? 32 : 220
   );
 
   return {

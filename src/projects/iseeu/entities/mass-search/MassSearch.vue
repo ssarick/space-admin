@@ -9,9 +9,7 @@ import useMassSearch from './useMassSearch';
 const props = defineProps<MassSearchProps>();
 const emit = defineEmits<MassSearchEmits>();
 
-const {
-  modelValue
-} = useMassSearch(props, emit);
+const { modelValue } = useMassSearch(props, emit);
 </script>
 
 <template>
@@ -29,7 +27,9 @@ const {
         placeholder="Введите данные"
         :rows="8"
       />
+
       <BaseSelect placeholder="Обрезать ФИО" />
+
       <n-button type="primary">Применить</n-button>
     </n-space>
   </BaseModal>

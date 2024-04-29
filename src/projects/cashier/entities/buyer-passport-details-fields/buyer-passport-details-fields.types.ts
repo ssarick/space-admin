@@ -4,12 +4,12 @@ import {
 } from '@/projects/cashier/shared/types/rrn-payment.types';
 
 export interface BuyerPassportDetailsFieldsProps {
-  documentType: string,
-  documentDateBegin: number | null,
-  documentGivePlace: string,
-  documentDateEnd: number | null,
-  countryId: number,
-  countries: Country[],
+  documentType: string
+  documentDateBegin: number | null
+  documentGivePlace: string
+  documentDateEnd: number | null
+  countryId: number
+  countries: Country[]
   documentTypes: DocumentTypes[]
 }
 

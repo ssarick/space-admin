@@ -1,4 +1,8 @@
-import { onMounted, reactive, ref } from 'vue';
+import {
+  onMounted,
+  reactive,
+  ref
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
 import { useMessage } from 'naive-ui';
@@ -20,9 +24,7 @@ export default function useApplicationEdit(
   const message = useMessage();
   const { t } = useI18n();
 
-  const {
-    showConfirmationDialog
-  } = useConfirmationDialog(
+  const { showConfirmationDialog } = useConfirmationDialog(
     onConfirmEdit
   );
 
@@ -76,7 +78,9 @@ export default function useApplicationEdit(
     if (error) return;
 
     message.success(t('Success'));
-    router.push({ name: 'subsidy-applications' });
+    router.push({
+      name: 'subsidy-applications'
+    });
   }
 
   onMounted(fetchApplication);

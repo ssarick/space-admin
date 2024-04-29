@@ -5,7 +5,8 @@ import BaseIcon from '../UI/base-icon';
 
 export default function renderIcon(
   icon: IconName,
-  iconWrapperProps: IconProps = {}
+  iconWrapperProps: IconProps = {
+  }
 ) {
   return () => h(BaseIcon, {
     icon,
@@ -14,7 +15,8 @@ export default function renderIcon(
 }
 
 export function createIconRenderer(
-  iconWrapperProps: IconProps = {}
+  iconWrapperProps: IconProps = {
+  }
 ) {
   return (icon: IconName) =>
     renderIcon(icon, iconWrapperProps);

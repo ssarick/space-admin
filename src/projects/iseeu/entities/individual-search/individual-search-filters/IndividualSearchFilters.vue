@@ -4,7 +4,8 @@ import BaseForm from '@/shared/UI/base-form';
 import BaseInput from '@/shared/UI/base-input';
 import {
   IIndividualSearchFiltersEmits,
-  IIndividualSearchFiltersProps } from './individual-search-filters.types';
+  IIndividualSearchFiltersProps
+} from './individual-search-filters.types';
 import useIndividualSearchFilters from './useIndividualSearchFilters';
 
 const props = defineProps<IIndividualSearchFiltersProps>();

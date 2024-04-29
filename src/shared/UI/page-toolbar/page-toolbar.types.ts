@@ -1,4 +1,4 @@
 export interface IPageToolbarProps {
-  title: string;
-  isShowSlot?: boolean;
+  title: string
+  isShowSlot?: boolean
 }

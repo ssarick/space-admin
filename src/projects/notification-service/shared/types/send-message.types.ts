@@ -53,7 +53,7 @@ export interface SendMessageToAllInput extends
   Omit<SendMessageInput, 'to' | 'parameters'> {}
 
 export interface SendMessageRequestPayload extends
-  SendMessageInput{}
+  SendMessageInput {}
 
 export interface MessageDateFormatted extends
   Pick<MessageTemplatesFiltersPayload, 'dateTo' | 'dateFrom'> {}

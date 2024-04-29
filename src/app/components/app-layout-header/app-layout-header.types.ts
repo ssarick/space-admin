@@ -8,4 +8,4 @@ export type AppLayoutHeaderTelegramLinks = Partial<
   Record<AuthPanel, string>
 > & {
   default: string
-}
+};

@@ -1,6 +1,6 @@
 import { MaskOptions } from 'maska';
 
-type Field = 'phone' | 'rrn'
+type Field = 'phone' | 'rrn';
 
 interface IMaskOptions extends
   Omit<MaskOptions, 'mask'> {

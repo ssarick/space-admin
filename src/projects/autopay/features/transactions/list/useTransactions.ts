@@ -1,4 +1,8 @@
-import { onMounted, reactive, ref } from 'vue';
+import {
+  onMounted,
+  reactive,
+  ref
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useDialog, useMessage } from 'naive-ui';
 import usePagination from '@/shared/composables/usePagination';
@@ -11,7 +15,8 @@ import {
   dateTimeFields,
   excelValueFields,
   formValueFields,
-  formValuesNaming } from '@/projects/autopay/features/transactions/list/utils';
+  formValuesNaming
+} from '@/projects/autopay/features/transactions/list/utils';
 import { ApiTransaction } from '@/projects/autopay/shared/api';
 import {
   IExcelFormInputs,
@@ -19,7 +24,9 @@ import {
   IFilterFormInputs,
   ITransaction,
   ITransactionListFetchPayload,
-  ITransactionsImportToExcelPayload, TransactionStatus } from '@/projects/autopay/shared/types/transaction.types';
+  ITransactionsImportToExcelPayload,
+  TransactionStatus
+} from '@/projects/autopay/shared/types/transaction.types';
 
 export default function useTransactions() {
   const modalState = ref<boolean>(false);
@@ -31,8 +38,11 @@ export default function useTransactions() {
   const { t } = useI18n();
   const message = useMessage();
   const transactionCancelLoading = ref(false);
-  const formValue = reactive<IFilterFormInputs>({ ...formValueFields });
-  const activeFilterValues = reactive<IFilterFormActiveInputs>({});
+  const formValue = reactive<IFilterFormInputs>({
+    ...formValueFields
+  });
+  const activeFilterValues = reactive<IFilterFormActiveInputs>({
+  });
 
   const excelValues = reactive<IExcelFormInputs>({
     ...excelValueFields,
@@ -67,7 +77,8 @@ export default function useTransactions() {
   const fetchTransactions = async () => {
     transactionsLoading.value = true;
 
-    const filterOptions: ITransactionListFetchPayload = {};
+    const filterOptions: ITransactionListFetchPayload = {
+    };
     Object.keys(formValue).forEach(key => {
       if (formValue[key]) {
         filterOptions[key] = formValue[key];
@@ -117,7 +128,8 @@ export default function useTransactions() {
   };
 
   const importTransactionsToExcel = async (_: SubmitEvent) => {
-    const importToExcelPayload: ITransactionsImportToExcelPayload = {};
+    const importToExcelPayload: ITransactionsImportToExcelPayload = {
+    };
 
     Object.keys(excelValues).forEach(key => {
       if (excelValues[key]) {

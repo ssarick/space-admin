@@ -1,7 +1,11 @@
 import Cookies, { CookieSetOptions } from 'universal-cookie';
 import { v4 as uuidv4 } from 'uuid';
 import { globalConfig } from '../config/global-config';
-import { AuthBrowserStoreKey, AuthPanel, IAuthToken } from '../types/auth.types';
+import {
+  AuthBrowserStoreKey,
+  AuthPanel,
+  IAuthToken
+} from '../types/auth.types';
 
 const cookies = new Cookies();
 let fingerprint: string | null;
@@ -22,7 +26,8 @@ const setCookieToken = (
   { expires, value }: IAuthToken
 ) => cookies.set(
   key, value, {
-    ...cookiesCommonOptions, expires
+    ...cookiesCommonOptions,
+    expires
   }
 );
 

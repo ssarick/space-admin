@@ -1,16 +1,16 @@
 export interface IUntrustedCardsFilterList {
-  showModal: boolean,
-  formValues: IUntrustedModalFilterValuesForm,
+  showModal: boolean
+  formValues: IUntrustedModalFilterValuesForm
 }
 
 export interface IUntrustedModalFilterValues {
-  contractId?: string | null,
-  clientId?: string | null,
-  ownerFullName?: string,
-  genesisFullName?: string,
-  similarityFrom?: string | null,
-  similarityTo?: string | null,
-  status?: string,
+  contractId?: string | null
+  clientId?: string | null
+  ownerFullName?: string
+  genesisFullName?: string
+  similarityFrom?: string | null
+  similarityTo?: string | null
+  status?: string
   check?: string
 }
 

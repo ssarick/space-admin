@@ -4,7 +4,8 @@ import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import { IndividualClient } from '@/projects/iseeu/shared/types/individual.types';
 import {
   IIndividualSearchTableEmits,
-  IIndividualSearchTableProps } from './individual-search-table.types';
+  IIndividualSearchTableProps
+} from './individual-search-table.types';
 
 export default function useIndividualSearchTable(
   _props: IIndividualSearchTableProps,

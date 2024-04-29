@@ -5,6 +5,6 @@ import type {
 
 export interface SessionInfoTableProps {
   data?: InventorySessionDetails[]
-  loading?: boolean,
+  loading?: boolean
   sessionStatusesList?: InventoryStatusesOption[]
 }

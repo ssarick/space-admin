@@ -2,9 +2,7 @@ import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { AuthPanel } from '@/shared/types/auth.types';
 import { ILinkListItem } from '@/shared/types/list.types';
-import {
-  ISignInPanelsEmits, ISignInPanelsProps
-} from './sign-in-panels.types';
+import { ISignInPanelsEmits, ISignInPanelsProps } from './sign-in-panels.types';
 
 export default function useSignInPanels(
   props: ISignInPanelsProps,
@@ -19,7 +17,6 @@ export default function useSignInPanels(
       [AuthPanel.B2B]: {
         title: t('B2B'),
         img: [
-          '/icons/logo.svg',
           '/icons/uzum-b2b.svg'
         ]
       }
@@ -51,7 +48,7 @@ export default function useSignInPanels(
         : {
           title: t(AuthPanel[panel]),
           img: [
-            '/icons/logo.svg'
+            '/icons/space-logo.svg'
           ],
           value: panel
         }

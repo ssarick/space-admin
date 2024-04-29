@@ -7,7 +7,7 @@ export default function useBaseDataTablePagination<
 >(
   tableRef: ReturnType<typeof useTableRef>,
   loadData: (pagination?: IPagination) =>
-    Promise<IResponseData<T>>
+  Promise<IResponseData<T>>
 ) {
   const loadPaginatedData = async (
     pagination?: IPagination
@@ -15,7 +15,8 @@ export default function useBaseDataTablePagination<
     const { totalPages } = await loadData({
       pageNumber: tableRef.value?.pagination?.page,
       pageSize: tableRef.value?.pagination?.pageSize,
-      ...(pagination || {})
+      ...(pagination || {
+      })
     });
 
     if (tableRef.value?.pagination) {
@@ -26,7 +27,9 @@ export default function useBaseDataTablePagination<
 
   const onPageNumberUpdated = async (
     pageNumber: number
-  ) => loadPaginatedData({ pageNumber });
+  ) => loadPaginatedData({
+    pageNumber
+  });
 
   const onPageSizeUpdated = async (
     pageSize: number

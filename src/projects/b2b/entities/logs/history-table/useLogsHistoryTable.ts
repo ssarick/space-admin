@@ -1,6 +1,11 @@
 import { computed, h } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { DataTableColumns, NButton, NPopover, NSpace } from 'naive-ui';
+import {
+  DataTableColumns,
+  NButton,
+  NPopover,
+  NSpace
+} from 'naive-ui';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import { formatDate } from '@/shared/utils/functions/date';
 import renderIcon from '@/shared/utils/render-icon';
@@ -36,7 +41,9 @@ export default function useLogsHistoryTable(
       key: 'actions',
       width: 142,
       render: (row: ILogsReportInfo) => [
-        h(NSpace, { justify: 'center' }, () => [
+        h(NSpace, {
+          justify: 'center'
+        }, () => [
           h(
             NPopover,
             {
@@ -66,7 +73,8 @@ export default function useLogsHistoryTable(
                     emitDownload(row.id!);
                   }
                 }),
-              default: () => h('span', {}, t('Download'))
+              default: () => h('span', {
+              }, t('Download'))
             }
           )
         ])

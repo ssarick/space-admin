@@ -3,11 +3,11 @@ import { BindedFaceStatus } from '@/projects/binded-face/shared/types/binded-fac
 // TODO: verstka
 
 export const bindedFaceStatusMapper:
-  Record<BindedFaceStatus, StatusConfig> = {
-    [BindedFaceStatus.ACTIVE]: {
-      color: StatusColor.GREEN
-    },
-    [BindedFaceStatus.INACTIVE]: {
-      color: StatusColor.RED
-    }
-  };
+Record<BindedFaceStatus, StatusConfig> = {
+  [BindedFaceStatus.ACTIVE]: {
+    color: StatusColor.GREEN
+  },
+  [BindedFaceStatus.INACTIVE]: {
+    color: StatusColor.RED
+  }
+};

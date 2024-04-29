@@ -1,4 +1,8 @@
-import { computed, reactive, ref } from 'vue';
+import {
+  computed,
+  reactive,
+  ref
+} from 'vue';
 import { ILogsModel } from '@/projects/b2b/pages/logs/logs-page.types';
 import { IClient } from '@/projects/b2b/shared/types/client.types';
 import { LogEntityType } from '@/projects/b2b/shared/types/log.types';

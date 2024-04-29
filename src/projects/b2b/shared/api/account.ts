@@ -4,10 +4,10 @@ import { IAccount, IAccountAccesses } from '@/projects/b2b/shared/types/account.
 import api from './instance';
 
 const path = ref<{
-  businessCode?: string;
-  branch: string;
-  userId?: number;
-  accountNumber?: string;
+  businessCode?: string
+  branch: string
+  userId?: number
+  accountNumber?: string
 }>({
   userId: undefined,
   accountNumber: undefined,
@@ -32,10 +32,10 @@ const baseUrl = computed(() => {
 
 export const fetchAccounts = async (payload: {
   query?: {
-    pageNumber: number;
-    pageSize: number;
-  };
-  path: { branch: string; businessCode: string };
+    pageNumber: number
+    pageSize: number
+  }
+  path: { branch: string; businessCode: string }
 }): Promise<IResponseData<IAccount>> => {
   path.value = payload.path;
 
@@ -48,15 +48,15 @@ export const fetchAccounts = async (payload: {
 
 export const toggleAccess = async (payload: {
   path: {
-    branch: string;
-    businessCode: string;
-    userId: number;
-    accountNumber: string;
-  };
+    branch: string
+    businessCode: string
+    userId: number
+    accountNumber: string
+  }
   body: {
-    canPay: number;
-    stateId: number;
-  };
+    canPay: number
+    stateId: number
+  }
 }): Promise<IResponseData<string>> => {
   path.value = payload.path;
 

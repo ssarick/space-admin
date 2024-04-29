@@ -1,6 +1,4 @@
-import {
-  GroupMessagesDatePickerModel
-} from '@/projects/notification-service/shared/types/group-messages.types';
+import { GroupMessagesDatePickerModel } from '@/projects/notification-service/shared/types/group-messages.types';
 
 export interface GroupMessagesDatePickerProps extends GroupMessagesDatePickerModel {}
 

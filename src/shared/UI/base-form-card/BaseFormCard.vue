@@ -2,7 +2,7 @@
 import { NCard } from 'naive-ui';
 
 interface IProps {
-  title?: string;
+  title?: string
 }
 defineProps<IProps>();
 </script>

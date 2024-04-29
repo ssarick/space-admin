@@ -6,7 +6,8 @@ import {
   IDebitControlItem,
   IDebitControlItemValue,
   IDebitControlItemWithOptions,
-  ProcessingType } from '@/projects/autopay/shared/types/administration.types';
+  ProcessingType
+} from '@/projects/autopay/shared/types/administration.types';
 
 export default function useDebitControl() {
   const debitList = ref<IDebitControlItemWithOptions[]>([]);

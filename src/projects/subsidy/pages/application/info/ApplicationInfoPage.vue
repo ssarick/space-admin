@@ -4,9 +4,7 @@ import PageTitle from '@/shared/UI/page-title';
 import ApplicationInfo from '@/projects/subsidy/features/applications/info';
 import useApplicationInfoPage from './useApplicationInfoPage';
 
-const {
-  subsidyId
-} = useApplicationInfoPage();
+const { subsidyId } = useApplicationInfoPage();
 </script>
 
 <template>

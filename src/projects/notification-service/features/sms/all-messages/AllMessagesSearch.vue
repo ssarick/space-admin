@@ -46,7 +46,7 @@ const {
 
     <n-space
       justify="space-around"
-      :size="[20, 16]"
+      :size="[ 20, 16 ]"
     >
       <AllMessagesDatePicker
         v-model:date-from="dateFilters.dateFrom"
@@ -56,7 +56,7 @@ const {
       />
 
       <n-space
-        :size="[20, 16]"
+        :size="[ 20, 16 ]"
       >
         <BaseButton
           class="px-6"

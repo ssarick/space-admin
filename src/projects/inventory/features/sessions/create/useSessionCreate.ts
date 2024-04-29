@@ -1,4 +1,8 @@
-import { onMounted, reactive, ref } from 'vue';
+import {
+  onMounted,
+  reactive,
+  ref
+} from 'vue';
 import { useRouter } from 'vue-router';
 import { ISelectOption } from '@/shared/types/select.types';
 import useFormRef from '@/shared/UI/base-form/useFormRef';
@@ -37,9 +41,7 @@ export default function useSessionCreate() {
 
     loading.value = true;
 
-    const {
-      error
-    } = await ApiInventorySessions.createInventorySession(
+    const { error } = await ApiInventorySessions.createInventorySession(
       {
         name: formModel.name,
         officeId: formModel.officeId,
@@ -49,7 +51,9 @@ export default function useSessionCreate() {
 
     loading.value = false;
     if (error) return;
-    return router.push({ name: 'inventory-sessions' });
+    return router.push({
+      name: 'inventory-sessions'
+    });
   };
 
   onMounted(fetchOffices);

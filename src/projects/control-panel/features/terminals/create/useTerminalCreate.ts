@@ -29,8 +29,6 @@ export default function useTerminalCreate() {
 
     loading.value = true;
 
-    console.log(formModel);
-
     // const {
     //   error
     // } = await ApiInventoryUsers.createInventoryUser(
@@ -44,7 +42,9 @@ export default function useTerminalCreate() {
 
     // if (error) return;
 
-    return router.push({ name: 'terminals-list' });
+    return router.push({
+      name: 'terminals-list'
+    });
   };
 
   return {

@@ -1,4 +1,9 @@
-import { computed, onMounted, Ref, watch } from 'vue';
+import {
+  computed,
+  onMounted,
+  Ref,
+  watch
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useVModels } from '@vueuse/core';
 import { DataTableColumn } from 'naive-ui';
@@ -25,7 +30,11 @@ export default function useOrganizationsList(
     organizationIds
   } = useVModels(props, emit);
 
-  const { loading, organizations, loadOrganizations } =
+  const {
+    loading,
+    organizations,
+    loadOrganizations
+  } =
     useOrganizationsLoader(props);
 
   const findOrganization = (
@@ -58,9 +67,7 @@ export default function useOrganizationsList(
     }
   });
 
-  const {
-    toggleSelectedRow
-  } = useRowSelect(
+  const { toggleSelectedRow } = useRowSelect(
     selectedRowKeys as Ref<string[]>
   );
 
@@ -80,8 +87,13 @@ export default function useOrganizationsList(
     }
   };
 
-  const { loadPaginatedData, onPageNumberUpdated, onPageSizeUpdated } =
-    useTablePagination(tableRef, loadOrganizations);
+  const {
+    loadPaginatedData,
+    onPageNumberUpdated,
+    onPageSizeUpdated
+  } =
+    useTablePagination(tableRef,
+      loadOrganizations);
 
   const columns = computed<
     DataTableColumn<IUserOrganization>[]
@@ -127,7 +139,9 @@ export default function useOrganizationsList(
           ? [ selectedRow!.value ]
           : [];
       },
-      { immediate: true }
+      {
+        immediate: true
+      }
     );
   }
 

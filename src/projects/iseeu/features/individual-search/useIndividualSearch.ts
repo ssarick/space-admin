@@ -13,7 +13,9 @@ export default function useIndividualSearch() {
 
   const individualClients = ref<IndividualClient[]>(
     Array
-      .from({ length: 10 })
+      .from({
+        length: 10
+      })
       .fill(undefined)
       .map(() => ({
         name: 'Гребенюк Владимир Дмитриевич',

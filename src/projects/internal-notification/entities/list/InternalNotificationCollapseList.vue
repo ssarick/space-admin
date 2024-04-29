@@ -6,7 +6,8 @@ import BaseIcon from '@/shared/UI/base-icon';
 import { BaseStatusIndicator } from '@/shared/UI/base-status';
 import {
   InternalNotificationCollapseListEmits,
-  InternalNotificationCollapseListProps } from './internal-notification-collapse-list.types';
+  InternalNotificationCollapseListProps
+} from './internal-notification-collapse-list.types';
 import useInternalNotificationCollapseList from './useInternalNotificationCollapseList';
 
 const props = withDefaults(

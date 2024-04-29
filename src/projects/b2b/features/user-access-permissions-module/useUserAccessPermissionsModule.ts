@@ -1,4 +1,8 @@
-import { computed, onMounted, ref } from 'vue';
+import {
+  computed,
+  onMounted,
+  ref
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
 import { useMessage } from 'naive-ui';
@@ -28,7 +32,11 @@ export default function useUserAccessPermissionsModule() {
   async function fetchClientUserRelations() {
     isLoading.value = true;
     const { item, error } = await ApiUser.fetchRelations({
-      path: { userId, branch: user?.branch!, businessCode }
+      path: {
+        userId,
+        branch: user?.branch!,
+        businessCode
+      }
     });
     isLoading.value = false;
     if (error) return;

@@ -15,4 +15,4 @@ export interface ILogsModel {
 
 export type LogsClientFieldLength = {
   [P in keyof ILogsModel]?: keyof typeof fieldLimits
-}
+};

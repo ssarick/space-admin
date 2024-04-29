@@ -1,7 +1,11 @@
 import { ref } from 'vue';
 import { setTimeAndFormatToUTC } from '@/shared/utils/functions/date';
 import { ApiDashboard } from '../../api';
-import { IPaymentStatistics, IPaymentStatisticsPayload, PaymentStatisticsDatePart } from '../../types/dashboard.types';
+import {
+  IPaymentStatistics,
+  IPaymentStatisticsPayload,
+  PaymentStatisticsDatePart
+} from '../../types/dashboard.types';
 
 export default function useDashboardStatisticsFetch(
   getRequestPayload?: () => IPaymentStatisticsPayload
@@ -26,7 +30,8 @@ export default function useDashboardStatisticsFetch(
         dateTo: setTimeAndFormatToUTC(
           dateTo, '23:59:59'
         ),
-        ...(getRequestPayload?.() || {})
+        ...(getRequestPayload?.() || {
+        })
       });
 
     statistics.value = items || [];

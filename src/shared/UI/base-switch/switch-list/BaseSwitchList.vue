@@ -3,7 +3,8 @@ import { SwitchListItem } from '@/shared/types/list.types';
 import BaseSwitchListItem from '../switch-list-item/BaseSwitchListItem.vue';
 import {
   IBaseSwitchListEmits,
-  IBaseSwitchListProps } from './base-switch-list.types';
+  IBaseSwitchListProps
+} from './base-switch-list.types';
 import useBaseSwitchList from './useBaseSwitchList';
 
 const props = withDefaults(

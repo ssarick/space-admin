@@ -1,6 +1,10 @@
 import { computed, toRefs } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { RouteLocationMatched, useRoute, useRouter } from 'vue-router';
+import {
+  RouteLocationMatched,
+  useRoute,
+  useRouter
+} from 'vue-router';
 import { useMainRoute } from '@/shared/composables/main-route/useMainRoute';
 import useBreadcrumbsStore from '@/app/store/useBreadcrumbsStore';
 

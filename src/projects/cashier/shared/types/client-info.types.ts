@@ -1,4 +1,4 @@
 export interface ClientInfoPayload {
-  documentSeria: string,
+  documentSeria: string
   documentNumber: string
 }

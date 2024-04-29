@@ -1,5 +1,10 @@
 import { IResponseData } from '@/shared/types/api.types';
-import { ICard, ICardsListFetchPayload, IHumoCard, UntrustedCardStatus } from '@/projects/autopay/shared/types/card.types';
+import {
+  ICard,
+  ICardsListFetchPayload,
+  IHumoCard,
+  UntrustedCardStatus
+} from '@/projects/autopay/shared/types/card.types';
 import api from './instance';
 
 export const fetchCards = async (

@@ -1,9 +1,14 @@
 <script lang="ts" setup>
-import { NCard, NModal, NSpace } from 'naive-ui';
+import {
+  NCard,
+  NModal,
+  NSpace
+} from 'naive-ui';
 import BaseIcon from '@/shared/UI/base-icon';
 import {
   IBaseModalEmits,
-  IBaseModalProps } from './base-modal.types';
+  IBaseModalProps
+} from './base-modal.types';
 import useBaseModal from './useBaseModal';
 
 const props = defineProps<IBaseModalProps>();

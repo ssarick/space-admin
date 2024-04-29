@@ -44,9 +44,7 @@ export default function useLogsUpload(
   const createReportLoadingMessage = (
     onDestroy?: () => void
   ) => {
-    const {
-      loadingMessage
-    } = useLoadingMessage(
+    const { loadingMessage } = useLoadingMessage(
       () => t('Download-logs-for-period', [
         formatDate(model.datePeriod[0]) +
           ' - ' +
@@ -104,9 +102,7 @@ export default function useLogsUpload(
   };
 
   const handleReportCreationResponse = async (
-    {
-      item
-    }: IResponseData<ILogsCreatedReport>
+    { item }: IResponseData<ILogsCreatedReport>
   ) => {
     if (!item?.reportId) return;
 

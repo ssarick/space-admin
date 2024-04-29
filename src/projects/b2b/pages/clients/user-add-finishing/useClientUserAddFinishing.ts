@@ -26,7 +26,11 @@ export default function useClientUserAddFinishing() {
     isLoading.value = true;
 
     const { item } = await ApiUser.getClientUserById({
-      path: { branch: user?.branch!, businessCode, userId }
+      path: {
+        branch: user?.branch!,
+        businessCode,
+        userId
+      }
     });
 
     isLoading.value = false;
@@ -42,7 +46,9 @@ export default function useClientUserAddFinishing() {
 
     router.push({
       name: 'client-users',
-      params: { businessCode }
+      params: {
+        businessCode
+      }
     });
   }
 
@@ -50,7 +56,9 @@ export default function useClientUserAddFinishing() {
     userCreationStore.userCreationStarted
       || router.push({
         name: 'client-users',
-        params: { businessCode }
+        params: {
+          businessCode
+        }
       });
   }
 

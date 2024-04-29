@@ -1,9 +1,9 @@
 export interface BuyerPersonalDataFormProps {
-  lastNameLat: string,
-  firstName: string,
-  patronymName: string,
-  birthDate: null | number,
-  birthPlace: string,
+  lastNameLat: string
+  firstName: string
+  patronymName: string
+  birthDate: null | number
+  birthPlace: string
   address: string
 }
 

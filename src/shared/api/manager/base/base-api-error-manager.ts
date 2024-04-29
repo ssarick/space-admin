@@ -11,6 +11,6 @@ export default abstract class BaseApiErrorManager {
 
   abstract handleErrorResponse(
     error: AxiosError
-  ): Promise<ApiErrorResponse>
+  ): Promise<ApiErrorResponse>;
 
 }

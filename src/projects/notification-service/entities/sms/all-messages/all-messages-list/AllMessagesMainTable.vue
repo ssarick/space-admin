@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import BaseDataTable from '@/shared/UI/base-data-table';
-import type {
-  AllMessagesMainTableProps
-} from './all-messages-main-table.types';
+import type { AllMessagesMainTableProps } from './all-messages-main-table.types';
 import useAllMessagesMainTable from './useAllMessagesMainTable';
 
 const props = withDefaults(

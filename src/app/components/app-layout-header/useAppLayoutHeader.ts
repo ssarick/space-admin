@@ -10,14 +10,16 @@ import { useInternalNotificationStore } from '@/projects/internal-notification/a
 import { headerTelegramLinks } from './utils/header-constants';
 
 export default function useAppLayoutHeader() {
-  const { t, locale, availableLocales } = useI18n();
+  const {
+    t,
+    locale,
+    availableLocales
+  } = useI18n();
   const { signOut } = useAuthStore();
   const authPanelStore = useAuthPanelStore();
   const { goToMainRoute } = useMainRoute();
 
-  const {
-    unreadCount
-  } = toRefs(useInternalNotificationStore());
+  const { unreadCount } = toRefs(useInternalNotificationStore());
 
   const langsMenu = computed<DropdownMixedOption[]>(
     () => availableLocales.map(createLangMenu)

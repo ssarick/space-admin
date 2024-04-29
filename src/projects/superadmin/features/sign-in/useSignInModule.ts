@@ -1,4 +1,9 @@
-import { computed, onMounted, reactive, ref } from 'vue';
+import {
+  computed,
+  onMounted,
+  reactive,
+  ref
+} from 'vue';
 import { useMainRoute } from '@/shared/composables/main-route/useMainRoute';
 import { AuthPanel, ISignInFormModel } from '@/shared/types/auth.types';
 import { ILinkListItem } from '@/shared/types/list.types';
@@ -21,8 +26,8 @@ export default function useSignInModule() {
   const signInFormModel = reactive<
     ISignInFormModel
   >({
-    username: 'T',
-    password: 'T',
+    username: '',
+    password: '',
     rememberMe: false
   });
 
@@ -36,11 +41,13 @@ export default function useSignInModule() {
     if (!signInFormHasError) {
       signInLoading.value = true;
 
-      // const success = await authStore
-      //   .signIn({ ...signInFormModel });
-      // signedIn.value = success;
+      const success = await authStore
+        .signIn({
+          ...signInFormModel
+        });
 
-      signedIn.value = true;
+      signedIn.value = success;
+      // signedIn.value = true;
       signInLoading.value = false;
     }
   };

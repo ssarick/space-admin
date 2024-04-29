@@ -17,9 +17,7 @@ export default function useAuthPanelListeners() {
     clearAllListeners
   } = useAuthPanelStore();
 
-  const {
-    fetchBuckets: fetchFileManagerBuckets
-  } = useFileManagerBucketsStore();
+  const { fetchBuckets: fetchFileManagerBuckets } = useFileManagerBucketsStore();
 
   const {
     fetchUnreadCount: fetchUnreadNotificationsCount,

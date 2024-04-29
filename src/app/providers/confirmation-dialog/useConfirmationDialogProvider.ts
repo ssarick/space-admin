@@ -5,7 +5,8 @@ import { ConfirmationDialogMethods } from '@/shared/types/dialog.types';
 
 export default function useConfirmationDialogProvider() {
   const dialogIsActive = ref(false);
-  const dialogOptions = ref<DialogOptions>({});
+  const dialogOptions = ref<DialogOptions>({
+  });
 
   const toggleDialogIsActive = () =>
     dialogIsActive.value = !dialogIsActive.value;

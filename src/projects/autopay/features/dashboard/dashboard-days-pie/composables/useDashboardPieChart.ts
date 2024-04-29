@@ -36,13 +36,15 @@ export default function useDashboardPieChart(
     ISumStatisticsByProcessing
   >(
     () => {
-      const result = {} as
+      const result = {
+      } as
         ISumStatisticsByProcessing;
 
       statistics.value[0]?.forEach(item => {
         if (!result[item.processingType!]) {
           result[item.processingType!] = {
-            count: 0, amount: 0
+            count: 0,
+            amount: 0
           };
         }
 
@@ -61,7 +63,8 @@ export default function useDashboardPieChart(
     ITotalStatistics
   >(() => {
     const result: ITotalStatistics = {
-      count: [], amount: []
+      count: [],
+      amount: []
     };
 
     processingsList.forEach(item => {

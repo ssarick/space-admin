@@ -1,7 +1,5 @@
 import { useVModels } from '@vueuse/core';
-import type {
-  MessageTemplateModel
-} from '@/projects/notification-service/shared/types/send-message.types';
+import type { MessageTemplateModel } from '@/projects/notification-service/shared/types/send-message.types';
 import type {
   SendMessageTemplatesListEmits,
   SendMessageTemplatesListProps
@@ -12,6 +10,7 @@ export default function useSendMessageTemplatesList(
   emit: SendMessageTemplatesListEmits
 ) {
   const models = useVModels(props, emit);
+
   const handleClickOnTemplate = () => {
     emit('handleTemplateSelectModal');
   };

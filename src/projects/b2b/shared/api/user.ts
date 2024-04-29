@@ -31,7 +31,7 @@ const baseUrl = computed(() => {
 });
 
 export const fetchUsers = async (payload: {
-  query: IUserQueryParams;
+  query: IUserQueryParams
 }): Promise<IResponseData<IUser>> => {
   const { data } = await api.get('/api/users', {
     params: payload.query
@@ -41,8 +41,8 @@ export const fetchUsers = async (payload: {
 };
 
 export const fetchClientUsers = async (payload: {
-  query: IUserQueryParams;
-  path: { businessCode: string; branch: string };
+  query: IUserQueryParams
+  path: { businessCode: string; branch: string }
 }): Promise<IResponseData<IUser>> => {
   path.value = payload.path;
 
@@ -62,7 +62,7 @@ export const getById = async (
 };
 
 export const getClientUserById = async (payload: {
-  path: { businessCode: string; branch: string; userId: number };
+  path: { businessCode: string; branch: string; userId: number }
 }): Promise<IResponseData<IClientUser>> => {
   path.value = payload.path;
 
@@ -72,7 +72,7 @@ export const getClientUserById = async (payload: {
 };
 
 export const fetchRelations = async (payload: {
-  path: { businessCode: string; branch: string; userId: number };
+  path: { businessCode: string; branch: string; userId: number }
 }): Promise<IResponseData<IUserRelations>> => {
   path.value = payload.path;
 
@@ -82,8 +82,8 @@ export const fetchRelations = async (payload: {
 };
 
 export const updateRelations = async (payload: {
-  path: { businessCode: string; branch: string; userId: number };
-  body: { roleId: number; actionIdList: number[] };
+  path: { businessCode: string; branch: string; userId: number }
+  body: { roleId: number; actionIdList: number[] }
 }): Promise<IResponseData<{ role: IUserRole; modules: IUserPermission[] }>> => {
   path.value = payload.path;
 
@@ -93,8 +93,8 @@ export const updateRelations = async (payload: {
 };
 
 export const userCreate = async (payload: {
-  path: { branch: string; businessCode: string };
-  body: IUser;
+  path: { branch: string; businessCode: string }
+  body: IUser
 }): Promise<IResponseData<{ userId: number }>> => {
   path.value = payload.path;
 
@@ -104,8 +104,8 @@ export const userCreate = async (payload: {
 };
 
 export const addExistUserToClient = async (payload: {
-  path: { branch: string; businessCode: string };
-  body: { userId: number };
+  path: { branch: string; businessCode: string }
+  body: { userId: number }
 }): Promise<IResponseData<string>> => {
   path.value = payload.path;
 
@@ -115,8 +115,8 @@ export const addExistUserToClient = async (payload: {
 };
 
 export const changeUserStatus = async (payload: {
-  path: { userId: number };
-  body: { stateId: number; stateReasonId?: number };
+  path: { userId: number }
+  body: { stateId: number; stateReasonId?: number }
 }): Promise<IResponseData<string>> => {
   const { data } = await api.put(
     `/api/users/${payload.path.userId}/state`,
@@ -127,8 +127,8 @@ export const changeUserStatus = async (payload: {
 };
 
 export const changeClientUserStatus = async (payload: {
-  path: { branch: string; businessCode: string; userId: number };
-  body: { stateId: number; stateReasonId?: number };
+  path: { branch: string; businessCode: string; userId: number }
+  body: { stateId: number; stateReasonId?: number }
 }): Promise<IResponseData<string>> => {
   path.value = payload.path;
 
@@ -160,9 +160,7 @@ export const updateUser = async ({
   return data;
 };
 
-export const resetUserPassword = async ({
-  userId
-}: IUserResetPasswordParams): Promise<IResponseData<string>> => {
+export const resetUserPassword = async ({ userId }: IUserResetPasswordParams): Promise<IResponseData<string>> => {
   const { data } = await api.put(
     `/api/users/${userId}/reset-password`
   );

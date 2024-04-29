@@ -1,7 +1,5 @@
 import { useVModel } from '@vueuse/core';
-import {
-  FormRules, SelectOption
-} from 'naive-ui';
+import { FormRules, SelectOption } from 'naive-ui';
 import useFormRef from '@/shared/UI/base-form/useFormRef';
 import { formValidate } from '@/shared/utils/functions';
 import { amountMaskOptions } from '@/shared/utils/mask';
@@ -100,6 +98,7 @@ export default function useTransactionManualFilterModal(
 
   const submitFilterModal = async ($event) => {
     const hasError = await formValidate(formRef.value);
+
     if (!hasError) {
       emit('submitFilterModal', $event);
     }

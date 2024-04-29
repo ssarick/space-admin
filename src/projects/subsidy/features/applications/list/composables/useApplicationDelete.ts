@@ -11,9 +11,7 @@ export default function useApplicationDelete(
   const message = useMessage();
   const { t } = useI18n();
 
-  const {
-    showConfirmationDialog: deleteApplication
-  } = useConfirmationDialog(
+  const { showConfirmationDialog: deleteApplication } = useConfirmationDialog(
     confirmDeleteApplication
   );
 

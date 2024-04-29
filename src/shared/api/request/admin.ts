@@ -24,7 +24,7 @@ export const fetchAdmins = async (
 };
 
 export const fetchAdminsForSelect = async ():
-  Promise<IResponseData<ISelectOption>> => {
+Promise<IResponseData<ISelectOption>> => {
   const { items } = await fetchAdmins({
     pageNumber: 1,
     pageSize: 1000

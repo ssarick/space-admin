@@ -1,4 +1,8 @@
-import { computed, onMounted, ref } from 'vue';
+import {
+  computed,
+  onMounted,
+  ref
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useMessage } from 'naive-ui';
 import { IListItem } from '@/shared/types/common.types';

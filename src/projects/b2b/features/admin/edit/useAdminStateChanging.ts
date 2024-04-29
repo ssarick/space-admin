@@ -37,9 +37,7 @@ export default function useAdminStateChanging(
     toast.success(t('Success'));
   };
 
-  const {
-    showConfirmationDialog
-  } = useConfirmationDialog(
+  const { showConfirmationDialog } = useConfirmationDialog(
     changeAdminState
   );
 

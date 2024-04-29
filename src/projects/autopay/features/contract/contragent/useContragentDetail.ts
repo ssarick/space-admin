@@ -23,7 +23,9 @@ export default function useContragentDetail(
   watch(
     () => props.contragentId,
     fetchContragentDetail,
-    { immediate: true }
+    {
+      immediate: true
+    }
   );
 
   return {

@@ -37,5 +37,5 @@ export enum GroupedMessageStatuses {
   NEW = 'NEW',
   IN_PROGRESS = 'IN_PROGRESS',
   PAUSE = 'PAUSE',
-  STOP = 'STOP',
+  STOP = 'STOP'
 }

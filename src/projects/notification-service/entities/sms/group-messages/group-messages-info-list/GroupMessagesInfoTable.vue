@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import BaseDataTable from '@/shared/UI/base-data-table';
-import type {
-  GroupMessagesInfoTableProps
-} from '@/projects/notification-service/entities/sms/group-messages/group-messages-info-list/group-messages-info-table.types';
+import type { GroupMessagesInfoTableProps } from '@/projects/notification-service/entities/sms/group-messages/group-messages-info-list/group-messages-info-table.types';
 import useGroupMessagesInfoTable from './useGroupMessagesInfoTable';
 
 withDefaults(defineProps<GroupMessagesInfoTableProps>(),

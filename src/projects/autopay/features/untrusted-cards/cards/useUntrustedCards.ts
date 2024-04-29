@@ -1,13 +1,19 @@
-import { onMounted, reactive, ref } from 'vue';
+import {
+  onMounted,
+  reactive,
+  ref
+} from 'vue';
 import { useDialog, useMessage } from 'naive-ui';
 import usePagination from '@/shared/composables/usePagination';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
-import {
-  IUntrustedModalFilterValues, IUntrustedModalFilterValuesForm
-} from '@/projects/autopay/entities/untrusted-card/untrusted-card-filter-modal/untrusted-cards-filter-modal.types';
+import { IUntrustedModalFilterValues, IUntrustedModalFilterValuesForm } from '@/projects/autopay/entities/untrusted-card/untrusted-card-filter-modal/untrusted-cards-filter-modal.types';
 import { ApiCards } from '@/projects/autopay/shared/api/index';
 import { ICard, UntrustedCardStatus } from '@/projects/autopay/shared/types/card.types';
-import { formValueFields, formValueNamings, numberValues } from './utils';
+import {
+  formValueFields,
+  formValueNamings,
+  numberValues
+} from './utils';
 
 export default function useUntrustedCards() {
   const dialog = useDialog();
@@ -17,8 +23,11 @@ export default function useUntrustedCards() {
   const cardsSubmitLoading = ref(false);
   const cards = ref<ICard[]>([]);
   const checkedValuesIds = reactive<number[]>([]);
-  const activeFIlters = reactive<IUntrustedModalFilterValues>({});
-  const formValue = reactive<IUntrustedModalFilterValuesForm>({ ...formValueFields });
+  const activeFIlters = reactive<IUntrustedModalFilterValues>({
+  });
+  const formValue = reactive<IUntrustedModalFilterValuesForm>({
+    ...formValueFields
+  });
   const tableRef = useTableRef();
   const formValuesNaming = formValueNamings;
 
@@ -32,7 +41,8 @@ export default function useUntrustedCards() {
 
     cardsLoading.value = true;
 
-    const filterOptions = {};
+    const filterOptions = {
+    };
 
     Object.keys(formValue).forEach(key => {
       if (formValue[key]) {
@@ -62,6 +72,7 @@ export default function useUntrustedCards() {
 
   const toggleCheckedValueInArray = (card: ICard) => {
     const indexValueInArray = checkedValuesIds.indexOf(card.id);
+
     if (indexValueInArray === -1) {
       checkedValuesIds.push(card.id);
       return;

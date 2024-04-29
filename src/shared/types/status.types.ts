@@ -21,4 +21,4 @@ export interface StatusConfig<T = string | number> {
 }
 
 export type StatusType = 'default'
-  | 'filled'
+  | 'filled';

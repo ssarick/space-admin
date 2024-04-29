@@ -16,7 +16,9 @@ export default [
         ]
       }
     },
-    redirect: { name: 'logs' },
+    redirect: {
+      name: 'logs'
+    },
     children: [
       {
         path: 'list',

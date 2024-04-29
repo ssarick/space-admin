@@ -1,4 +1,9 @@
-import { Component, defineAsyncComponent, shallowRef, watch } from 'vue';
+import {
+  Component,
+  defineAsyncComponent,
+  shallowRef,
+  watch
+} from 'vue';
 import { IProps } from './base-icon.types';
 
 export default function useBaseIcon(

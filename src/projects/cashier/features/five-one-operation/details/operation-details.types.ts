@@ -4,12 +4,12 @@ import { PAYMENT_TYPES } from '@/projects/cashier/shared/types/payment-type.type
 import { RRN_TYPE_OPTIONS } from '@/projects/cashier/shared/types/rrn-payment.types';
 
 export interface OperationDetailFormValues {
-  paymentTypeChosenOption: PAYMENT_TYPES,
-  currencyChosenOption: CURRENCIES,
-  chosenRnnOption: RRN_TYPE_OPTIONS,
-  rrnNumber: string,
-  manualPayment: boolean,
-  paidSum: string,
+  paymentTypeChosenOption: PAYMENT_TYPES
+  currencyChosenOption: CURRENCIES
+  chosenRnnOption: RRN_TYPE_OPTIONS
+  rrnNumber: string
+  manualPayment: boolean
+  paidSum: string
   formattedSellSum: string
 }
 export interface OperationTypeEmits {
@@ -18,7 +18,7 @@ export interface OperationTypeEmits {
 }
 
 export interface DefaultValuesForDictionaries {
-  paymentType: PAYMENT_TYPES,
-  currency: CURRENCIES,
+  paymentType: PAYMENT_TYPES
+  currency: CURRENCIES
   rrnType: RRN_TYPE_OPTIONS
 }

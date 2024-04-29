@@ -1,9 +1,7 @@
-import type {
-  AllMessagesFiltersInput
-} from '@/projects/notification-service/shared/types/all-messages.types';
+import type { AllMessagesFiltersInput } from '@/projects/notification-service/shared/types/all-messages.types';
 
 export interface AllMessagesActiveFiltersProps {
-  filterItems?: Filter[];
+  filterItems?: Filter[]
 }
 
 export interface Filter {
@@ -11,7 +9,7 @@ export interface Filter {
   value: AllMessagesFiltersInput[keyof AllMessagesFiltersInput]
 }
 
-export interface AllMessagesActiveFiltersEmits{
+export interface AllMessagesActiveFiltersEmits {
   (
     event: 'handleClose',
     value?: Filter | undefined

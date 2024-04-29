@@ -58,7 +58,7 @@ defineExpose({
     >
       <thead>
         <tr>
-          <th></th>
+          <th />
 
           <th>{{ $t('Admin-data') }}</th>
         </tr>

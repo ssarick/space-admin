@@ -6,9 +6,7 @@ import { NSpace } from 'naive-ui/es/space';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import { DATE_VALUE_FORMAT, TIME_VALUE_FORMAT } from '@/shared/utils/constants/naive-constants';
 import { formatDate } from '@/shared/utils/functions/date';
-import {
-  GroupMessagesClientInternal
-} from '@/projects/notification-service/shared/types/group-messages.types';
+import { GroupMessagesClientInternal } from '@/projects/notification-service/shared/types/group-messages.types';
 import useStatusRenderer from './composables/useStatusRenderer';
 import { GroupMessagesMainTableEmits } from './group-messages-main-table.types';
 
@@ -19,9 +17,7 @@ export default function useGroupMessagesMainTable(
   const tableRef = useTableRef();
   const router = useRouter();
 
-  const {
-    renderProgressOrStatus
-  } = useStatusRenderer(emit);
+  const { renderProgressOrStatus } = useStatusRenderer(emit);
 
   const columns = computed<
     DataTableColumns<GroupMessagesClientInternal>
@@ -60,12 +56,15 @@ export default function useGroupMessagesMainTable(
               default: () => [
                 h(
                   'span',
-                  {},
+                  {
+                  },
                   formatDate(row.createdDate, DATE_VALUE_FORMAT)
                 ),
                 h(
                   'span', {
-                    style: { color: '#808080' }
+                    style: {
+                      color: '#808080'
+                    }
                   }, formatDate(row.createdDate, TIME_VALUE_FORMAT)
                 )
               ]

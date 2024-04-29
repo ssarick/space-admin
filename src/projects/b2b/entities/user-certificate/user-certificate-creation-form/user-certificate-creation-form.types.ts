@@ -2,17 +2,17 @@ import { ICertificateTypeAndSerialFormModel } from '@/projects/b2b/shared/types/
 
 export interface IUserCertificateCreationFormProps
   extends ICertificateTypeAndSerialFormModel {
-  model: ICertificateTypeAndSerialFormModel;
-  disabled?: boolean;
+  model: ICertificateTypeAndSerialFormModel
+  disabled?: boolean
 }
 
 export interface IUserCertificateCreationFormEmit {
   (
     event: 'update:certificateType',
     value: IUserCertificateCreationFormProps['certificateType']
-  ): void;
+  ): void
   (
     event: 'update:certificateSerial',
     value: IUserCertificateCreationFormProps['certificateSerial']
-  ): void;
+  ): void
 }

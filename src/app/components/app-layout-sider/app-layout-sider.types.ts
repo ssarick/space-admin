@@ -26,4 +26,4 @@ export interface IAppMenus {
 
 export type AuthPanelMenusMap = Partial<Record<
   AuthPanel, ComputedRef<IAppMenuOption[]>
->>
+>>;

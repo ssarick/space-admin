@@ -1,11 +1,17 @@
 <script lang="ts" setup>
-import { NCard, NFormItem, NSpace, NSpin } from 'naive-ui';
+import {
+  NCard,
+  NFormItem,
+  NSpace,
+  NSpin
+} from 'naive-ui';
 import BaseForm from '@/shared/UI/base-form';
 import BaseSelect from '@/shared/UI/base-select';
 import { ApiDictionary } from '@/projects/b2b/shared/api';
 import {
   IAdminStateFormEmits,
-  IAdminStateFormProps } from './admin-state-form.types';
+  IAdminStateFormProps
+} from './admin-state-form.types';
 import useAdminStateForm from './useAdminStateForm';
 
 const props = defineProps<IAdminStateFormProps>();

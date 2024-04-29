@@ -5,11 +5,13 @@ export const createDefaultApiResponseData = (
   data?: IResponseData
 ): Partial<AxiosResponse<IResponseData>> => ({
   data: {
-    item: {},
+    item: {
+    },
     items: [],
     totalCount: 0,
     totalPages: 0,
     error: true,
-    ...(data || {})
+    ...(data || {
+    })
   }
 });

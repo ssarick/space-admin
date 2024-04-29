@@ -5,9 +5,7 @@ import { InternalNotificationListControls } from '../internal-notification-list.
 export default function useNotificationsReadByIds(
   listControls: InternalNotificationListControls
 ) {
-  const {
-    decreaseUnreadCount
-  } = useInternalNotificationStore();
+  const { decreaseUnreadCount } = useInternalNotificationStore();
 
   const markAsReadById = (id: number) => {
     for (const notification of listControls.notifications.value) {
@@ -21,7 +19,9 @@ export default function useNotificationsReadByIds(
 
   const handleReadById = async (id: number) => {
     const { error } = await ApiInternalNotificationItem
-      .markAsRead({ ids: [ id ] });
+      .markAsRead({
+        ids: [ id ]
+      });
 
     if (error) return;
 

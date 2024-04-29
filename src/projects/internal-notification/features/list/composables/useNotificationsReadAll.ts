@@ -5,9 +5,7 @@ import { InternalNotificationListControls } from '../internal-notification-list.
 export default function useNotificationsReadAll(
   listControls: InternalNotificationListControls
 ) {
-  const {
-    resetUnreadCount
-  } = useInternalNotificationStore();
+  const { resetUnreadCount } = useInternalNotificationStore();
 
   const readAllLoading = ref(false);
 

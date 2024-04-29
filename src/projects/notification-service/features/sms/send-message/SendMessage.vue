@@ -45,7 +45,7 @@ const {
   <n-space
     justify="space-between"
     class="mb-4"
-    :size="[20, 16]"
+    :size="[ 20, 16 ]"
   >
     <PageTitle
       no-margin
@@ -55,7 +55,7 @@ const {
 
   <n-space
     class="mb-3"
-    :size="[20, 16]"
+    :size="[ 20, 16 ]"
   >
     <n-radio-group
       v-model:value="sendingType"

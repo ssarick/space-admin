@@ -1,4 +1,8 @@
-import { computed, onMounted, ref } from 'vue';
+import {
+  computed,
+  onMounted,
+  ref
+} from 'vue';
 import { IListItem } from '@/shared/types/common.types';
 import { ApiNotifications } from '@/projects/autopay/shared/api';
 import { INotification } from '@/projects/superadmin/shared/types/notifications.types';

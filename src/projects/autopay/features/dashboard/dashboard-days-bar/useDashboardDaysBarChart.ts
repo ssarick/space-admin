@@ -1,4 +1,8 @@
-import { computed, Ref, ref } from 'vue';
+import {
+  computed,
+  Ref,
+  ref
+} from 'vue';
 import {
   ArcElement,
   BarElement,
@@ -8,7 +12,8 @@ import {
   ChartOptions,
   Legend,
   LinearScale,
-  Tooltip } from 'chart.js';
+  Tooltip
+} from 'chart.js';
 import { IDictionaryCommon } from '@/shared/types/common.types';
 import { NonNullableObjectValues } from '@/shared/types/utility.types';
 import AmountFormatter from '@/shared/utils/amount-formatter';
@@ -100,7 +105,8 @@ export default function useDashboardDaysBarChart(
 
       if (!result[subItem.processingType]) {
         result[subItem.processingType] = {
-          count: [], amount: []
+          count: [],
+          amount: []
         };
       }
 
@@ -130,7 +136,8 @@ export default function useDashboardDaysBarChart(
   >(() => {
     const result = {
       [ProcessingType.ALL]: {
-        count: [], amount: []
+        count: [],
+        amount: []
       }
     } as {} as TotalStatisticsListByProcessings;
 

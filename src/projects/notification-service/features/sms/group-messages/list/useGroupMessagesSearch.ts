@@ -1,4 +1,8 @@
-import { onMounted, reactive, ref } from 'vue';
+import {
+  onMounted,
+  reactive,
+  ref
+} from 'vue';
 import { usePagination } from '@/shared/composables';
 import { globalConfig } from '@/shared/config/global-config';
 import { IResponseData } from '@/shared/types/api.types';

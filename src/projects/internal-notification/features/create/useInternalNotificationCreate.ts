@@ -29,7 +29,10 @@ export default function useInternalNotificationCreate() {
     file: File
   ): Promise<boolean> => {
     const { error } = await ApiInternalNotificationCreate
-      .uploadFile({ id, file });
+      .uploadFile({
+        id,
+        file
+      });
 
     return !error;
   };
@@ -58,7 +61,7 @@ export default function useInternalNotificationCreate() {
   };
 
   const handleCreateNotifications = async ():
-    Promise<ApiCreatedResponseList[]> => {
+  Promise<ApiCreatedResponseList[]> => {
     submitLoading.value = true;
 
     const validatedServices = formModel.services as
@@ -93,7 +96,9 @@ export default function useInternalNotificationCreate() {
       responses
     );
 
-    responseHasError || router.push({ name: 'notification' });
+    responseHasError || router.push({
+      name: 'notification'
+    });
   };
 
   const handleAddService = () =>
@@ -104,7 +109,7 @@ export default function useInternalNotificationCreate() {
   };
 
   function createService():
-    InternalNotificationCreateServiceModel {
+  InternalNotificationCreateServiceModel {
     return {
       service: null,
       text: '',

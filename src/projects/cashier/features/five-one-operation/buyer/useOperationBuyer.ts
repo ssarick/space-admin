@@ -6,10 +6,19 @@ import { CashboxSellPayload } from '@/projects/cashier/pages/five-one-operation/
 import {
   getClientInfoByDocument,
   getCountries,
-  getDocumentTypes, submitCashboxSell
+  getDocumentTypes,
+  submitCashboxSell
 } from '@/projects/cashier/shared/api/rrn-payment';
-import { Client, CountrySelectOptions, DocumentSelectOptions } from '@/projects/cashier/shared/types/rrn-payment.types';
-import { BuyerFormValues, OperationTypeEmits, OperationTypeProps } from './operation-buyer.types';
+import {
+  Client,
+  CountrySelectOptions,
+  DocumentSelectOptions
+} from '@/projects/cashier/shared/types/rrn-payment.types';
+import {
+  BuyerFormValues,
+  OperationTypeEmits,
+  OperationTypeProps
+} from './operation-buyer.types';
 
 export default function useOperationBuyer(
   props: OperationTypeProps,
@@ -98,6 +107,7 @@ export default function useOperationBuyer(
       const choseUserData = availableUsers.value.find(user =>
         user.businessPartnerId === currentUser.value
       );
+
       if (choseUserData) {
         formValue.value = {
           ...formValue.value,

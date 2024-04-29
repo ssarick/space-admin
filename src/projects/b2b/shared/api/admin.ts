@@ -13,7 +13,9 @@ export const fetchAdmins = async (
   params: IAdminSearchPayload
 ): Promise<IResponseData<IAdmin>> => {
   const { data } = await api
-    .get('/api/admins', { params });
+    .get('/api/admins', {
+      params
+    });
 
   return data;
 };
@@ -44,7 +46,9 @@ export const updateAdminState = async (
     .put(
       `/api/admins/${adminId}` +
         `/state/${stateId}`,
-      { adminBlockingReasonId }
+      {
+        adminBlockingReasonId
+      }
     );
 
   return data;

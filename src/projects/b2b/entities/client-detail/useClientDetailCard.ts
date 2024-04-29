@@ -12,7 +12,8 @@ export default function useClientDetailCard(props: IClientDetailCardProps) {
   const { t } = useI18n();
 
   const head = computed<IBaseDetailCardHead[]>(() => [
-    {},
+    {
+    },
     {
       text: t('Organization-data')
     }

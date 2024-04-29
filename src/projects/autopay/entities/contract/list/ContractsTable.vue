@@ -4,7 +4,8 @@ import { fieldLimits } from '@/shared/utils/constants/field-limits';
 import { inputAllowOnlyNumber } from '@/shared/utils/input-allow-rules';
 import {
   IContractsTableEmit,
-  IContractsTableProps } from './contracts-table.types';
+  IContractsTableProps
+} from './contracts-table.types';
 import useContractsTable from './useContractsTable';
 
 const props = defineProps<IContractsTableProps>();

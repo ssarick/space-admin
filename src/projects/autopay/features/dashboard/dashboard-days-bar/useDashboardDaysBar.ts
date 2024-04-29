@@ -44,7 +44,7 @@ export default function useDashboardDaysBar(
   );
 
   function getFetchStatisticsPayload():
-    IPaymentStatisticsPayload {
+  IPaymentStatisticsPayload {
     return {
       datePart: props.datePart
         || PaymentStatisticsDatePart.DAY,

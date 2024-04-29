@@ -16,7 +16,9 @@ export const useMainRoute = () => {
       ];
 
       return mainRouteName
-        ? { name: mainRouteName }
+        ? {
+          name: mainRouteName
+        }
         : '/';
     }
   );

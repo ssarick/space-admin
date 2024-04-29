@@ -21,7 +21,9 @@ export const fetchInetBankCertificates = async ({
 > => {
   const { data } = await api.get(
     `/api/branches/${branch}` + `/users/${userId}/inetbank-certificates`,
-    { params }
+    {
+      params
+    }
   );
 
   return data;
@@ -46,7 +48,11 @@ export const revokeMobileCertificate = async ({
 }: ICertificateRevokingPayload): Promise<IResponseData<string>> => {
   const { data } = await api.delete(
     '/api/mobile-certificates/' + certificateSerialNumber,
-    { params: { reason: reasonText } }
+    {
+      params: {
+        reason: reasonText
+      }
+    }
   );
 
   return data;

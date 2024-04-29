@@ -15,7 +15,10 @@ export default function useClientDetailPage() {
     isLoading.value = true;
 
     const { item } = await ApiClient.fetchClientById({
-      path: { branch: user?.branch!, businessCode }
+      path: {
+        branch: user?.branch!,
+        businessCode
+      }
     });
 
     isLoading.value = false;

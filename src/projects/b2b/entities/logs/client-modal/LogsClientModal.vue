@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { NCard, NModal, NSpace } from 'naive-ui';
+import {
+  NCard,
+  NModal,
+  NSpace
+} from 'naive-ui';
 import { ILogsClientModalEmits, ILogsClientModalProps } from './logs-client-modal.types';
 import useLogsClientModal from './useLogsClientModal';
 

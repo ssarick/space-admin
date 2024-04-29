@@ -1,13 +1,17 @@
 <script setup lang="ts">
-import { NCard, NFormItem, NGrid, NGridItem, NSpace } from 'naive-ui';
+import {
+  NCard,
+  NFormItem,
+  NGrid,
+  NGridItem,
+  NSpace
+} from 'naive-ui';
 import BaseForm from '@/shared/UI/base-form';
 import BaseLoading from '@/shared/UI/base-loading';
 import BaseSelect from '@/shared/UI/base-select';
 import UserInfoCard from '@/projects/b2b/entities/user-info-card/UserInfoCard.vue';
 import { ApiDictionary } from '@/projects/b2b/shared/api';
-import {
-  IUserPersonalDataFormProps
-} from './user-personal-data-form.types';
+import { IUserPersonalDataFormProps } from './user-personal-data-form.types';
 import useUserPersonalDataForm from './useUserPersonalDataForm';
 
 const props = defineProps<IUserPersonalDataFormProps>();

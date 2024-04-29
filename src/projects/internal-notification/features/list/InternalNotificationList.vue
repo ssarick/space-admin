@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import { AuthPanel } from '@/shared/types/auth.types';
 import BaseButton from '@/shared/UI/base-button';
 import BaseIcon from '@/shared/UI/base-icon';
 import PageTitle from '@/shared/UI/page-title';
-import { AuthPanel } from '../../../../shared/types/auth.types';
 import InternalNotificationCollapseList from '../../entities/list';
 import useInternalNotificationList from './useInternalNotificationList';
 

@@ -4,12 +4,8 @@ import { DataTableColumns, NSpace } from 'naive-ui';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import { DATE_VALUE_FORMAT, TIME_VALUE_FORMAT } from '@/shared/utils/constants/naive-constants';
 import { formatDate } from '@/shared/utils/functions/date';
-import type {
-  MessageTemplateModel
-} from '@/projects/notification-service/shared/types/send-message.types';
-import type {
-  SendMessageTemplateTableEmits
-} from './send-messages-templates-table.types';
+import type { MessageTemplateModel } from '@/projects/notification-service/shared/types/send-message.types';
+import type { SendMessageTemplateTableEmits } from './send-messages-templates-table.types';
 
 export default function useSendMessageTemplatesTable(
   emit: SendMessageTemplateTableEmits
@@ -53,12 +49,15 @@ export default function useSendMessageTemplatesTable(
               default: () => [
                 h(
                   'span',
-                  {},
+                  {
+                  },
                   formatDate(row.createdDate, DATE_VALUE_FORMAT)
                 ),
                 h(
                   'span', {
-                    style: { color: '#808080' }
+                    style: {
+                      color: '#808080'
+                    }
                   }, formatDate(row.createdDate, TIME_VALUE_FORMAT)
                 )
               ]

@@ -99,7 +99,7 @@ const {
             type="primary"
             block
           >
-            {{ $t('Apply')}}
+            {{ $t('Apply') }}
           </BaseButton>
         </n-gi>
       </n-grid>

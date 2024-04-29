@@ -4,9 +4,7 @@ import PageTitle from '@/shared/UI/page-title';
 import ContractDetail from '@/projects/autopay/features/contract/detail/ContractDetail.vue';
 import useContractDetailPage from './useContractDetailPage';
 
-const {
-  contractId
-} = useContractDetailPage();
+const { contractId } = useContractDetailPage();
 </script>
 
 <template>

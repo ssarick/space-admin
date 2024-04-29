@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-import {
-  IBaseCardLinkProps
-} from './base-card-link.types';
+import { IBaseCardLinkProps } from './base-card-link.types';
 
 const props = withDefaults(
   defineProps<IBaseCardLinkProps>(),
@@ -13,13 +11,13 @@ const props = withDefaults(
 
 <template>
   <div class="base-card-link">
-    <!--    <div class="base-card-link__logo">-->
-    <!--      <img-->
-    <!--        class="background-logo"-->
-    <!--        alt=""-->
-    <!--        src="/icons/space.svg"-->
-    <!--      >-->
-    <!--    </div>-->
+    <div class="base-card-link__logo">
+      <img
+        class="background-logo"
+        alt=""
+        src="/icons/logo-mini.svg"
+      >
+    </div>
 
     <div class="base-card-link__content">
       <n-text
@@ -82,7 +80,8 @@ const props = withDefaults(
   &__logo {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 24px;
+    width: 100px;
   }
 
   &:hover {

@@ -1,4 +1,8 @@
-import { onMounted, Ref, ref } from 'vue';
+import {
+  onMounted,
+  Ref,
+  ref
+} from 'vue';
 import usePagination from '@/shared/composables/usePagination';
 import { DataTableRefPagination } from '@/shared/types/data-table.types';
 import { ApiUser } from '@/projects/b2b/shared/api';

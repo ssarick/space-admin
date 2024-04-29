@@ -2,7 +2,11 @@ import { ref } from 'vue';
 import { useDebounceFn } from '@vueuse/core';
 import { InputInst } from 'naive-ui';
 import { globalConfig } from '@/shared/config/global-config';
-import { IBaseInputEmits, IBaseInputProps, InputFormatter } from './base-input.types';
+import {
+  IBaseInputEmits,
+  IBaseInputProps,
+  InputFormatter
+} from './base-input.types';
 
 export default function useBaseInput(
   props: IBaseInputProps,

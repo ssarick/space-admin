@@ -1,4 +1,8 @@
-import { computed, onMounted, ref } from 'vue';
+import {
+  computed,
+  onMounted,
+  ref
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
 import { useDialog } from 'naive-ui';
@@ -43,13 +47,17 @@ export default function useClientUsers() {
       onPositiveClick: () => {
         router.push({
           name: 'client-users-add',
-          params: { businessCode }
+          params: {
+            businessCode
+          }
         });
       },
       onNegativeClick: () => {
         router.push({
           name: 'client-user-create',
-          params: { businessCode }
+          params: {
+            businessCode
+          }
         });
       }
     });

@@ -5,7 +5,8 @@ import {
   NGrid,
   NRadio,
   NRadioGroup,
-  NSpace } from 'naive-ui';
+  NSpace
+} from 'naive-ui';
 import BaseCard from '@/shared/UI/base-card';
 import { DATE_FORMAT } from '@/shared/utils/constants/naive-constants';
 import ChartPie from '@/projects/autopay/entities/chart/pie';

@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import { Pie } from 'vue-chartjs';
-import type {
-  GroupMessagesChartPieProps
-} from './group-messages-chart-pie.types';
+import type { GroupMessagesChartPieProps } from './group-messages-chart-pie.types';
 
 defineProps<GroupMessagesChartPieProps>();
 </script>

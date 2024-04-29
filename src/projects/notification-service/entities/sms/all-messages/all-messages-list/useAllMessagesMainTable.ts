@@ -5,9 +5,7 @@ import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import { BaseStatusItem } from '@/shared/UI/base-status';
 import { DATE_VALUE_FORMAT, TIME_VALUE_FORMAT } from '@/shared/utils/constants/naive-constants';
 import { formatDate } from '@/shared/utils/functions/date';
-import type {
-  AllMessagesClient
-} from '@/projects/notification-service/shared/types/all-messages.types';
+import type { AllMessagesClient } from '@/projects/notification-service/shared/types/all-messages.types';
 import { MessagesStatusMap } from '@/projects/notification-service/shared/utils/constants/status-map';
 
 export default function useAllMessagesMainTable() {
@@ -61,12 +59,15 @@ export default function useAllMessagesMainTable() {
               default: () => [
                 h(
                   'span',
-                  {},
+                  {
+                  },
                   formatDate(row.createdDate, DATE_VALUE_FORMAT)
                 ),
                 h(
                   'span', {
-                    style: { color: '#808080' }
+                    style: {
+                      color: '#808080'
+                    }
                   }, formatDate(row.createdDate, TIME_VALUE_FORMAT)
                 )
               ]

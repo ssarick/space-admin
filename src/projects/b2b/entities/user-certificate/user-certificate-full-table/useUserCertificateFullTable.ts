@@ -1,4 +1,9 @@
-import { computed, h, onMounted, watch } from 'vue';
+import {
+  computed,
+  h,
+  onMounted,
+  watch
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useVModels } from '@vueuse/core';
 import { DataTableColumns, NRadio } from 'naive-ui';
@@ -23,16 +28,26 @@ export default function useUserCertificateFullTable(
 
   const pagination = computed(() => tableRef.value?.pagination);
 
-  const { selectedCertificate, certificates, isMobileCertificates } =
-    useVModels(props as Required<IUserCertificateFullTableProps>, emit);
+  const {
+    selectedCertificate,
+    certificates,
+    isMobileCertificates
+  } =
+    useVModels(props as Required<IUserCertificateFullTableProps>,
+      emit);
 
   const { loadCertificates, loading } = useUserCertificateLoader(
     certificates,
     isMobileCertificates
   );
 
-  const { loadPaginatedData, onPageNumberUpdated, onPageSizeUpdated } =
-    useTablePagination(tableRef, loadCertificates);
+  const {
+    loadPaginatedData,
+    onPageNumberUpdated,
+    onPageSizeUpdated
+  } =
+    useTablePagination(tableRef,
+      loadCertificates);
 
   const onRowClick = (row: ICertificate) => (selectedCertificate.value = row);
 

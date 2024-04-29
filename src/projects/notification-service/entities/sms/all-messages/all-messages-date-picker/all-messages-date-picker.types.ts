@@ -1,6 +1,4 @@
-import type {
-  AllMessagesDatePickerModel
-} from '@/projects/notification-service/shared/types/all-messages.types';
+import type { AllMessagesDatePickerModel } from '@/projects/notification-service/shared/types/all-messages.types';
 
 export interface AllMessagesDatePickerProps extends
   AllMessagesDatePickerModel {}

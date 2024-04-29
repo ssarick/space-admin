@@ -1,17 +1,20 @@
 import { computed, h } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
-import { DataTableColumns, NButton, NPopover } from 'naive-ui';
+import {
+  DataTableColumns,
+  NButton,
+  NPopover
+} from 'naive-ui';
 import {
   StatusColor,
-  StatusConfig } from '@/shared/types/status.types';
+  StatusConfig
+} from '@/shared/types/status.types';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import { BaseStatusItem } from '@/shared/UI/base-status';
 import { formatDateToLocaleWithTime } from '@/shared/utils/functions/date';
 import renderIcon from '@/shared/utils/render-icon';
-import type {
-  SessionsMainTableEmits
-} from '@/projects/inventory/entities/sessions/main-table/sessions-main-table.types';
+import type { SessionsMainTableEmits } from '@/projects/inventory/entities/sessions/main-table/sessions-main-table.types';
 import type {
   InventorySession,
   InventoryTakerUsersList
@@ -132,9 +135,13 @@ export default function useSessionsMainTable(
     const data = users && users.map(item => item.fullName);
     return h(
       'div',
-      { class: 'popover-list' },
+      {
+        class: 'popover-list'
+      },
       data && data.map(item => {
-        return h('div', { class: 'popover-list-item' }, item as string);
+        return h('div', {
+          class: 'popover-list-item'
+        }, item as string);
       })
     );
   };

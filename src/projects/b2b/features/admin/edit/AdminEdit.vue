@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { NGi, NGrid, NSpace } from 'naive-ui';
+import {
+  NGi,
+  NGrid,
+  NSpace
+} from 'naive-ui';
 import BaseLoading from '@/shared/UI/base-loading';
 import AdminEditForm from '@/projects/b2b/entities/admin/edit-form';
 import AdminResetPasswordForm from '@/projects/b2b/entities/admin/reset-password-form';

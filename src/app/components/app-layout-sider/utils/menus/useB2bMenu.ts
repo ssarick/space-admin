@@ -5,7 +5,7 @@ import { PermissionAction, PermissionTarget } from '@/projects/b2b/shared/types/
 import { IAppMenuOption } from '../../app-layout-sider.types';
 
 export default function useB2bMenu():
-  ComputedRef<IAppMenuOption[]> {
+ComputedRef<IAppMenuOption[]> {
   const { t } = useI18n();
   const permissionsStore = usePermissionsStore();
 

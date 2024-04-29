@@ -1,7 +1,16 @@
-import { computed, h, onMounted, ref } from 'vue';
+import {
+  computed,
+  h,
+  onMounted,
+  ref
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
-import { DataTableColumns, NButton, NPopover } from 'naive-ui';
+import {
+  DataTableColumns,
+  NButton,
+  NPopover
+} from 'naive-ui';
 import { globalConfig } from '@/shared/config/global-config';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import { formatDate } from '@/shared/utils/functions/date';
@@ -82,7 +91,8 @@ export default function useClientsTable() {
                   class: 'mx-1',
                   renderIcon: renderIcon('order-details')
                 }),
-              default: () => h('span', {}, t('User-data'))
+              default: () => h('span', {
+              }, t('User-data'))
             }
           )
         ];

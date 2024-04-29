@@ -39,13 +39,15 @@ export default function useConfirmationDialog<T = void>(
 
         confirmationLoading.value = false;
       },
-      ...(options || {}),
+      ...(options || {
+      }),
       positiveButtonProps: {
         type: 'primary',
         get loading() {
           return confirmationLoading.value;
         },
-        ...(options?.positiveButtonProps || {})
+        ...(options?.positiveButtonProps || {
+        })
       },
       negativeButtonProps: {
         type: 'tertiary',
@@ -53,7 +55,8 @@ export default function useConfirmationDialog<T = void>(
         get disabled() {
           return confirmationLoading.value;
         },
-        ...(options?.negativeButtonProps || {})
+        ...(options?.negativeButtonProps || {
+        })
       }
     });
   };

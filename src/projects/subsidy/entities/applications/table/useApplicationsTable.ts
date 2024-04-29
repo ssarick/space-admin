@@ -2,7 +2,12 @@ import { computed, h } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
 import { useVModels } from '@vueuse/core';
-import { DataTableColumn, NButton, NPopover, NSpace } from 'naive-ui';
+import {
+  DataTableColumn,
+  NButton,
+  NPopover,
+  NSpace
+} from 'naive-ui';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import { BaseStatusItem } from '@/shared/UI/base-status';
 import AmountFormatter from '@/shared/utils/amount-formatter';
@@ -96,7 +101,8 @@ export default function useApplicationsTable(
               type: 'filled',
               ...(subsidyApplicationStatusesMap[
                 row.status!
-              ] || {})
+              ] || {
+              })
             }
           ),
           default: () => row.descriptionError

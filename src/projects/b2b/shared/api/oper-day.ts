@@ -3,7 +3,7 @@ import { IOperDay, IOperDayTogglePayload } from '@/projects/b2b/shared/types/ope
 import api from './instance';
 
 export const getOperDay = async ():
-  Promise<IResponseData<IOperDay>> => {
+Promise<IResponseData<IOperDay>> => {
   const { data } = await api
     .get('/api/oper-day-all-states');
 

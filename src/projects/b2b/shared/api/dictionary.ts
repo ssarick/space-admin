@@ -51,9 +51,7 @@ export const fetchDocumentTypes = async (): Promise<
   return data;
 };
 
-export const fetchCertificateRevokingReasons = async ({
-  certificateType
-}: ICertificateRevokingReasonsFetchingPayload): Promise<
+export const fetchCertificateRevokingReasons = async ({ certificateType }: ICertificateRevokingReasonsFetchingPayload): Promise<
   IResponseData<ICertificateRevokingReason>
 > => {
   const { data } = await api.get(
@@ -91,7 +89,7 @@ export const fetchAdminRoles = async (): Promise<
 };
 
 export const fetchBranches = async ():
-  Promise<IResponseData<IMfo>> => {
+Promise<IResponseData<IMfo>> => {
   const { data } = await api
     .get('/api/dictionaries/branches');
 

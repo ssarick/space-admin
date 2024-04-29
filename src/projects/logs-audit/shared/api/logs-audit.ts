@@ -10,13 +10,15 @@ export const fetchList = async (
   params?: LogsAuditFetchPayload
 ): Promise<IResponseData<LogsAuditItem>> => {
   const { data } = await api
-    .get('list', { params });
+    .get('list', {
+      params
+    });
 
   return data;
 };
 
 export const fetchServices = async ():
-  Promise<IResponseData<ISelectOption>> => {
+Promise<IResponseData<ISelectOption>> => {
   const { data } = await api
     .get('service/list');
 
@@ -24,7 +26,7 @@ export const fetchServices = async ():
 };
 
 export const fetchActions = async ():
-  Promise<IResponseData<ISelectOption>> => {
+Promise<IResponseData<ISelectOption>> => {
   const { data } = await api
     .get('action/list');
 

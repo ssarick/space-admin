@@ -1,7 +1,7 @@
 import { IExcelFormInputs } from '@/projects/autopay/shared/types/transaction.types';
 
 export interface ITransactionManualExcelModalProps {
-  showModal: boolean,
+  showModal: boolean
   formValue: IExcelFormInputs
 }
 

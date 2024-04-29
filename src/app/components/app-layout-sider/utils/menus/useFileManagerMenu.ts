@@ -3,7 +3,7 @@ import { useFileManagerBucketsStore } from '@/projects/file-manager/app/store/us
 import { IAppMenuOption } from '../../app-layout-sider.types';
 
 export default function useFileManagerMenu():
-  ComputedRef<IAppMenuOption[]> {
+ComputedRef<IAppMenuOption[]> {
   const skeletonsCount = 5;
   const bucketsStore = useFileManagerBucketsStore();
 
@@ -11,7 +11,9 @@ export default function useFileManagerMenu():
     () => bucketsStore.loading
       ? new Array(skeletonsCount)
         .fill(undefined)
-        .map(() => ({ loading: true }))
+        .map(() => ({
+          loading: true
+        }))
       : bucketsStore
         .buckets
         .map(item => ({

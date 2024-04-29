@@ -3,9 +3,7 @@ import { useRouter } from 'vue-router';
 import { usePagination } from '@/shared/composables';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import { ApiNotificationTemplates } from '@/projects/notification-service/shared/api';
-import type {
-  MessageTemplateModel
-} from '@/projects/notification-service/shared/types/send-message.types';
+import type { MessageTemplateModel } from '@/projects/notification-service/shared/types/send-message.types';
 import { MessageChannel } from '@/projects/notification-service/shared/utils/constants/enums';
 
 export default function useMessageTemplatesList() {
@@ -68,7 +66,9 @@ export default function useMessageTemplatesList() {
   };
 
   const sendToCreatePage = () => router.push(
-    { name: 'message-templates-create' }
+    {
+      name: 'message-templates-create'
+    }
   );
 
   onMounted(fetchTemplates);

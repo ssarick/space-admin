@@ -17,7 +17,7 @@ export const markAsRead = async (
 };
 
 export const markAsReadAllByService = async ():
-  Promise<IResponseData> => {
+Promise<IResponseData> => {
   const { data } = await apiInternalNotification
     .patch(`mark/as-read/${ApiUrlPlaceholder.AUTH_PANEL}`);
 
@@ -25,7 +25,7 @@ export const markAsReadAllByService = async ():
 };
 
 export const getUnreadCount = async ():
-  Promise<IResponseData<InternalNotificationCount>> => {
+Promise<IResponseData<InternalNotificationCount>> => {
   const { data } = await apiInternalNotification
     .get(`unread/count/${ApiUrlPlaceholder.AUTH_PANEL}`);
 
@@ -36,13 +36,15 @@ export const fetchList = async (
   params?: IPagination
 ): Promise<IResponseData<InternalNotification>> => {
   const { data } = await apiInternalNotification
-    .get(`list/${ApiUrlPlaceholder.AUTH_PANEL}`, { params });
+    .get(`list/${ApiUrlPlaceholder.AUTH_PANEL}`, {
+      params
+    });
 
   return data;
 };
 
 export const getLastVersion = async ():
-  Promise<IResponseData<InternalNotification>> => {
+Promise<IResponseData<InternalNotification>> => {
   const { data } = await apiInternalNotification
     .get(`last-version/${ApiUrlPlaceholder.AUTH_PANEL}`);
 
@@ -50,7 +52,7 @@ export const getLastVersion = async ():
 };
 
 export const getPublicLastVersion = async ():
-  Promise<IResponseData<InternalNotification>> => {
+Promise<IResponseData<InternalNotification>> => {
   const { data } = await apiInternalNotification
     .get('last-version');
 

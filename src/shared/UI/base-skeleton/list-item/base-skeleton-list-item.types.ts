@@ -1,3 +1,3 @@
 export interface IBaseSkeletonListItemProps {
-	repeat?: number
+  repeat?: number
 }

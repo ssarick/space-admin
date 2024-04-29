@@ -1,17 +1,15 @@
 import { IPagination } from '@/shared/types/pagination.types';
-import {
-  IUntrustedModalFilterValues
-} from '@/projects/autopay/entities/untrusted-card/untrusted-card-filter-modal/untrusted-cards-filter-modal.types';
+import { IUntrustedModalFilterValues } from '@/projects/autopay/entities/untrusted-card/untrusted-card-filter-modal/untrusted-cards-filter-modal.types';
 
 export interface ICard {
-  id: number,
-  contractId: number,
-  clientId: number,
-  clientName: string,
-  genesisName: number,
-  similarity: number,
-  status: string,
-  check: number,
+  id: number
+  contractId: number
+  clientId: number
+  clientName: string
+  genesisName: number
+  similarity: number
+  status: string
+  check: number
 }
 
 export interface ICardsListFetchPayload extends

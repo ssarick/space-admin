@@ -1,9 +1,7 @@
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
 import { Step } from '@/shared/types/base-stepper.types';
-import {
-  FIVE_THREE_OPERATION, OperationFiveThreeFields
-} from '@/projects/cashier/pages/five-three-operation/five-three-operation.types';
+import { FIVE_THREE_OPERATION, OperationFiveThreeFields } from '@/projects/cashier/pages/five-three-operation/five-three-operation.types';
 
 export default function useFiveThreeOperation() {
   const { t } = useI18n();
@@ -14,25 +12,25 @@ export default function useFiveThreeOperation() {
   const activeStep = ref<FIVE_THREE_OPERATION>(FIVE_THREE_OPERATION.DETAILS);
   const steps = computed<
     Step<FIVE_THREE_OPERATION>[]>(() => [
-      {
-        label: t('details'),
-        key: FIVE_THREE_OPERATION.DETAILS,
-        isFilled: false,
-        isDisabled: true
-      },
-      {
-        label: t('buyer'),
-        key: FIVE_THREE_OPERATION.BUYER,
-        isFilled: false,
-        isDisabled: true
-      },
-      {
-        label: t('document'),
-        key: FIVE_THREE_OPERATION.DOCUMENT,
-        isFilled: false,
-        isDisabled: true
-      }
-    ]);
+    {
+      label: t('details'),
+      key: FIVE_THREE_OPERATION.DETAILS,
+      isFilled: false,
+      isDisabled: true
+    },
+    {
+      label: t('buyer'),
+      key: FIVE_THREE_OPERATION.BUYER,
+      isFilled: false,
+      isDisabled: true
+    },
+    {
+      label: t('document'),
+      key: FIVE_THREE_OPERATION.DOCUMENT,
+      isFilled: false,
+      isDisabled: true
+    }
+  ]);
   const pageTitle = router.currentRoute.value.name;
 
   const fillDataAndGoToNextStep = (payload: OperationFiveThreeFields) => {

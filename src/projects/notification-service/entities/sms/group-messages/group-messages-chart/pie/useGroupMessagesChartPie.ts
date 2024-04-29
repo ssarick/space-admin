@@ -3,7 +3,8 @@ import {
   Chart as ChartJS,
   ChartOptions,
   Legend,
-  Tooltip } from 'chart.js';
+  Tooltip
+} from 'chart.js';
 
 ChartJS.register(Tooltip, ArcElement, Legend);
 

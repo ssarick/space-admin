@@ -1,10 +1,14 @@
 import { DataTableColumn, InputProps } from 'naive-ui';
-import { CreateRowProps, DataTableProps, RowData } from 'naive-ui/es/data-table/src/interface';
+import {
+  CreateRowProps,
+  DataTableProps,
+  RowData
+} from 'naive-ui/es/data-table/src/interface';
 
 export interface IDataTableSettings {
-  defaultColumnsOrder?: Array<string>;
-  hiddenColumns?: Array<string>;
-  renderFunctions?: object;
+  defaultColumnsOrder?: Array<string>
+  hiddenColumns?: Array<string>
+  renderFunctions?: object
 }
 
 export interface IDataTableProps<T = never> {

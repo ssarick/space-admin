@@ -4,9 +4,7 @@ import { DataTableColumns } from 'naive-ui';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import { BaseStatusItem } from '@/shared/UI/base-status';
 import { formatDateToLocaleWithTime } from '@/shared/utils/functions/date';
-import type {
-  SessionInfoTableProps
-} from '@/projects/inventory/entities/sessions/info-table/session-info-table.types';
+import type { SessionInfoTableProps } from '@/projects/inventory/entities/sessions/info-table/session-info-table.types';
 import type {
   InventorySessionDetails,
   InventoryStatusesOption

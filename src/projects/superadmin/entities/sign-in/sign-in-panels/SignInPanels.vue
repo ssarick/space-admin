@@ -22,7 +22,7 @@ const {
         src="/icons/icon-space.svg"
         alt="point logo"
         width="140"
-      />
+      >
     </n-space>
 
     <n-text

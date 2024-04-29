@@ -140,8 +140,8 @@ interface IFileManageEntities {
   [FileManageEntityType.FOLDER]: undefined
 }
 
-export type FileManageSortField = keyof IFileManageItem
+export type FileManageSortField = keyof IFileManageItem;
 
 export type FileManageEntity = {
   [P in keyof IFileManageEntities]: IFileManageGeneralEntity<P>
-}[FileManageEntityType]
+}[FileManageEntityType];

@@ -1,5 +1,10 @@
 <script setup lang="ts">
-import { NGrid, NGridItem, NSpace, NSpin } from 'naive-ui';
+import {
+  NGrid,
+  NGridItem,
+  NSpace,
+  NSpin
+} from 'naive-ui';
 import BaseSelect from '@/shared/UI/base-select';
 import OrganizationList from '@/projects/b2b/entities/organization-list/OrganizationList.vue';
 import UserAccessPermissionsList from '@/projects/b2b/entities/user-access-permissions-list/UserAccessPermissionsList.vue';

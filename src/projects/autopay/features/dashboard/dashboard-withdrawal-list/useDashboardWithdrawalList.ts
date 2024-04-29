@@ -48,7 +48,7 @@ export default function useDashboardWithdrawalList(
   };
 
   function getFetchStatisticsPayload():
-    IPaymentStatisticsPayload {
+  IPaymentStatisticsPayload {
     return {
       datePart: PaymentStatisticsDatePart.MONTH,
       processingTypes: props.processings

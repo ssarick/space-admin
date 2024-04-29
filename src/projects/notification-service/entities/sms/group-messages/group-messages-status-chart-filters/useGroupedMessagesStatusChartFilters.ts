@@ -34,6 +34,7 @@ export default function useGroupedMessagesStatusChartFilters(
 
     itemsList.value && itemsList.value.forEach(item => {
       item.active = item.title === title;
+
       if (item.active) {
         activeColors.value = {
           color: item.color,
@@ -72,7 +73,9 @@ export default function useGroupedMessagesStatusChartFilters(
       itemsList.value = props.data;
       createPieChart(props.data);
     },
-    { deep: true }
+    {
+      deep: true
+    }
   );
 
   return {

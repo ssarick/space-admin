@@ -17,8 +17,12 @@ export const fetchFiles = async (
   const { data } = await apiFileManager
     .post(
       'file/search',
-      { searchCriteria },
-      { params }
+      {
+        searchCriteria
+      },
+      {
+        params
+      }
     );
 
   return data;
@@ -39,7 +43,7 @@ export const fetchFolders = async (
 };
 
 export const fetchBuckets = async ():
-  Promise<IResponseData<string>> => {
+Promise<IResponseData<string>> => {
   const { data } = await apiFileManager
     .get('bucket');
 
@@ -50,7 +54,9 @@ export const downloadFile = async (
   params: IFileManageDownloadPayload
 ): Promise<IResponseData<IFileManageDownloadable>> => {
   const { data } = await apiFileManager
-    .get('file', { params });
+    .get('file', {
+      params
+    });
 
   return data;
 };

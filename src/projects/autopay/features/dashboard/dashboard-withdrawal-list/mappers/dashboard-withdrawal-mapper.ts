@@ -32,10 +32,10 @@ export default class DashboardWithdrawalMapper {
   ): DashboardWithdrawalItem[] {
     return payload
       .reduce<DashboardWithdrawalItem[]>(
-        DashboardWithdrawalMapper
-          .addWithdrawalItems,
-        []
-      );
+      DashboardWithdrawalMapper
+        .addWithdrawalItems,
+      []
+    );
   }
 
 }

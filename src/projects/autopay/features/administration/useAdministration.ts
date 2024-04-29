@@ -1,7 +1,16 @@
-import { onBeforeUnmount, onMounted, reactive } from 'vue';
+import {
+  onBeforeUnmount,
+  onMounted,
+  reactive
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useDialog, useMessage } from 'naive-ui';
-import { blockQueue, getInfo, startProcessing, unblockQueue } from '@/projects/autopay/shared/api/administration';
+import {
+  blockQueue,
+  getInfo,
+  startProcessing,
+  unblockQueue
+} from '@/projects/autopay/shared/api/administration';
 import { AdministrationFunction, IAdministationTypes } from '@/projects/autopay/shared/types/administration.types';
 import useLimitsManage from './limits/useLimitsManage';
 import useDebitControl from './useDebitControl';
@@ -9,7 +18,8 @@ import useHumoInterval from './useHumoInterval';
 
 export default function useAdministration() {
   const { t } = useI18n();
-  const administrationInfo = reactive<IAdministationTypes>({});
+  const administrationInfo = reactive<IAdministationTypes>({
+  });
   const dialog = useDialog();
   const message = useMessage();
   let interval = 0;

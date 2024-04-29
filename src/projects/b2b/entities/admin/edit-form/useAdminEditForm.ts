@@ -29,7 +29,11 @@ export default function useAdminEditForm(
       : null
   );
 
-  const { formRef, validateForm, restoreFormValidation } =
+  const {
+    formRef,
+    validateForm,
+    restoreFormValidation
+  } =
     useFormRefWithValidate();
 
   const formRules: FormRules = {

@@ -40,7 +40,8 @@ export default function useApplicationsTable(
           type: 'filled',
           ...(bindedFaceStatusMapper[
             row.status!
-          ] || {})
+          ] || {
+          })
         }
       )
     }

@@ -27,8 +27,8 @@ const baseUrl = computed(() => {
 });
 
 export const fetchClients = async (payload: {
-  query?: IUserQueryParams;
-  path: { branch: string };
+  query?: IUserQueryParams
+  path: { branch: string }
 }): Promise<IResponseData<IClient>> => {
   path.value = payload.path;
 
@@ -56,8 +56,8 @@ export const fetchClientsByAnyCode = async (
 };
 
 export const fetchClientById = async (payload: {
-  query?: IUserByIdQueryParams;
-  path: { branch: string; businessCode: string };
+  query?: IUserByIdQueryParams
+  path: { branch: string; businessCode: string }
 }): Promise<IResponseData<IClient>> => {
   path.value = payload.path;
 
@@ -69,7 +69,7 @@ export const fetchClientById = async (payload: {
 };
 
 export const addNewClientToClientBranch = async (payload: {
-  path: { branch: string; businessCode: string };
+  path: { branch: string; businessCode: string }
 }): Promise<IResponseData<IClient>> => {
   path.value = payload.path;
 

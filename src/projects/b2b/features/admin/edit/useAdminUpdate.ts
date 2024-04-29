@@ -17,7 +17,7 @@ export default function useAdminUpdate(
   const toast = useMessage();
 
   const getAdminUpdateData = ():
-    IAdminUpdatePayload => ({
+  IAdminUpdatePayload => ({
     branch: admin.value?.branch!,
     email: admin.value?.email
       ? (admin.value.email +

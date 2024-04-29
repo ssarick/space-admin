@@ -8,17 +8,17 @@ export interface IAdministrationCardProps {
 
 export interface AdministrationStatus {
   type: typeof tagProps['type']['type'] extends
-    PropType<infer U> ? U : string
+  PropType<infer U> ? U : string
   name: string
 }
 
 export interface IAdministrationCardEmits {
-  (e: 'turnOn'),
-  (e: 'pause'),
-  (e: 'renew'),
-  (e: 'stop'),
+  (e: 'turnOn')
+  (e: 'pause')
+  (e: 'renew')
+  (e: 'stop')
 }
 
 export type AdministrationStatusesMap = Partial<
   Record<WithdrawalCircleCode, AdministrationStatus>
->
+>;

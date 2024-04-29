@@ -11,9 +11,7 @@ import useDebitControlCard from './useDebitControlCard';
 const props = defineProps<IProps>();
 const emit = defineEmits<IEmits>();
 
-const {
-  emitCheckDebitItem
-} = useDebitControlCard(emit);
+const { emitCheckDebitItem } = useDebitControlCard(emit);
 </script>
 
 <template>

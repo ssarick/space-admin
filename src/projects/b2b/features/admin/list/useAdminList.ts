@@ -1,4 +1,9 @@
-import { onMounted, reactive, ref, watch } from 'vue';
+import {
+  onMounted,
+  reactive,
+  ref,
+  watch
+} from 'vue';
 import { useDebounceFn } from '@vueuse/core';
 import usePagination from '@/shared/composables/usePagination';
 import { globalConfig } from '@/shared/config/global-config';

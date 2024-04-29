@@ -14,4 +14,4 @@ export interface IBaseInputEmits {
 
 export type InputFormatter = (
   value?: string | null
-) => string | undefined | null
+) => string | undefined | null;

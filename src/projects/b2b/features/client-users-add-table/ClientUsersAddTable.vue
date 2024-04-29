@@ -69,6 +69,7 @@ const {
         {{ $t('Search') }}
       </n-button>
     </NSpace>
+
     <BaseDataTable
       ref="tableRef"
       :columns="columns"

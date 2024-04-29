@@ -1,4 +1,8 @@
-import { onBeforeUnmount, onMounted, ref } from 'vue';
+import {
+  onBeforeUnmount,
+  onMounted,
+  ref
+} from 'vue';
 import usePagination from '@/shared/composables/usePagination';
 import { DownloadType } from '@/shared/types/download.types';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';

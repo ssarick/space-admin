@@ -2,9 +2,7 @@ import { useVModels } from '@vueuse/core';
 import { FormRules } from 'naive-ui';
 import useFormRefWithValidate from '@/shared/UI/base-form/useFormRefWithValidate';
 import { ruleRequired } from '@/shared/utils/validation-rules';
-import type {
-  MessageTemplateCreateFormEmits, MessageTemplateCreateFormProps
-} from './message-template-create-form.types';
+import type { MessageTemplateCreateFormEmits, MessageTemplateCreateFormProps } from './message-template-create-form.types';
 
 export default function useMessageTemplateCreateForm(
   props: MessageTemplateCreateFormProps,

@@ -1,7 +1,8 @@
 import { useVModels } from '@vueuse/core';
 import {
   IBaseModalEmits,
-  IBaseModalProps } from './base-modal.types';
+  IBaseModalProps
+} from './base-modal.types';
 
 export default function useBaseModal(
   props: IBaseModalProps,

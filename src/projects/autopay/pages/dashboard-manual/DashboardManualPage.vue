@@ -7,9 +7,7 @@ import { processingTypesManualList } from '@/projects/autopay/shared/utils/const
 import DashboardWithdrawalList from '../../features/dashboard/dashboard-withdrawal-list';
 import useDashboardManualPage from './useDashboardManualPage';
 
-const {
-  processingTypes
-} = useDashboardManualPage();
+const { processingTypes } = useDashboardManualPage();
 </script>
 
 <template>

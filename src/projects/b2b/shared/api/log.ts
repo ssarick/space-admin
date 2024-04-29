@@ -25,7 +25,9 @@ export const fetchReports = async (
   IResponseData<ILogsReportInfo>
 > => {
   const { data } = await api
-    .get('api/reportsInfo', { params });
+    .get('api/reportsInfo', {
+      params
+    });
 
   return data;
 };

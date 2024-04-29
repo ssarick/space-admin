@@ -16,6 +16,7 @@ export default function useOperationDocument(
       base64: true
     });
   };
+
   const resetToFirstStep = () => {
     emit('resetToFirstStep');
   };

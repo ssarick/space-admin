@@ -8,17 +8,17 @@ export type CertificateStateTextMap = {
 };
 
 export interface IUserCertificateFullTableProps {
-  selectedCertificate?: ICertificate | null;
-  selectable?: boolean;
-  visibleKeys?: string[];
-  certificates: ICertificate[];
-  title?: string;
-  hideSwitch?: boolean;
-  isMobileCertificates?: boolean;
+  selectedCertificate?: ICertificate | null
+  selectable?: boolean
+  visibleKeys?: string[]
+  certificates: ICertificate[]
+  title?: string
+  hideSwitch?: boolean
+  isMobileCertificates?: boolean
 }
 
 export interface IUserCertificateFullTableEmit {
-  (event: 'update:selectedCertificate', value?: ICertificate | null): void;
-  (event: 'update:certificates', value: ICertificate[]): void;
-  (event: 'update:isMobileCertificates', value?: boolean): void;
+  (event: 'update:selectedCertificate', value?: ICertificate | null): void
+  (event: 'update:certificates', value: ICertificate[]): void
+  (event: 'update:isMobileCertificates', value?: boolean): void
 }

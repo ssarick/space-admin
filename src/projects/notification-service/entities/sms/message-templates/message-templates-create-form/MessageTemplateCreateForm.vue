@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { NFormItem, NGi, NGrid } from 'naive-ui';
+import {
+  NFormItem,
+  NGi,
+  NGrid
+} from 'naive-ui';
 import BaseButton from '@/shared/UI/base-button';
 import BaseForm from '@/shared/UI/base-form';
 import BaseInput from '@/shared/UI/base-input';

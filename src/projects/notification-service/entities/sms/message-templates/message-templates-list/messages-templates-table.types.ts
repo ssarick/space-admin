@@ -1,13 +1,11 @@
-import type {
-  MessageTemplateModel
-} from '@/projects/notification-service/shared/types/send-message.types';
+import type { MessageTemplateModel } from '@/projects/notification-service/shared/types/send-message.types';
 
 export interface MessageTemplateTableProps {
   data?: MessageTemplateModel[]
   loading?: boolean
 }
 
-export interface MessageTemplateTableEmits{
+export interface MessageTemplateTableEmits {
   (
     event: 'confirmModalShow',
     value: boolean

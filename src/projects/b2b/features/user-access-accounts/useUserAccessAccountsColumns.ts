@@ -1,4 +1,8 @@
-import { computed, h, Ref } from 'vue';
+import {
+  computed,
+  h,
+  Ref
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { DataTableColumns, NCheckbox } from 'naive-ui';
 import { useCheckboxColumnTitle } from '@/shared/composables';
@@ -73,7 +77,8 @@ export default function useUserAccessAccountsColumns(
       .value ? 0 : 1;
 
     const newRelation: Partial<IAccountRelation> = {
-      canPay: newValue, stateId: newValue
+      canPay: newValue,
+      stateId: newValue
     };
 
     const success = await toggleAllAccountAccesses(

@@ -37,7 +37,7 @@ const {
 
     <n-space
       justify="space-around"
-      :size="[20, 16]"
+      :size="[ 20, 16 ]"
     >
       <GroupMessagesDatePickers
         v-model:date-from="dateFilters.dateFrom"

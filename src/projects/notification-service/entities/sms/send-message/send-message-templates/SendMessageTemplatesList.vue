@@ -10,9 +10,7 @@ import useSendMessageTemplatesList
 const props = defineProps<SendMessageTemplatesListProps>();
 const emit = defineEmits<SendMessageTemplatesListEmits>();
 
-const {
-  handleClickOnTemplate
-} = useSendMessageTemplatesList(props, emit);
+const { handleClickOnTemplate } = useSendMessageTemplatesList(props, emit);
 </script>
 
 <template>
@@ -28,12 +26,15 @@ const {
         @click.prevent="handleClickOnTemplate"
       >
         <n-text class="item-title">{{ $t('template-code') }}: {{ selectedTemplate.code }}</n-text>
+
         <n-text class="item-title">{{ $t('template-description') }}: {{ selectedTemplate.description }}</n-text>
 
         <n-text class="item-title mt-3"> {{ $t('template-description') }} - RU</n-text>
+
         <n-text class="item-text">{{ selectedTemplate.textRu }}</n-text>
 
         <n-text class="item-title mt-3"> {{ $t('template-description') }} - UZ</n-text>
+
         <n-text class="item-text">{{ selectedTemplate.textUz }}</n-text>
 
       </div>

@@ -9,10 +9,10 @@ export type ModelValueType =
   | null;
 
 export interface BaseSelectAttrs {
-  filterable?: boolean;
-  remote?: boolean;
-  disabled?: boolean;
-  'value-field'?: string;
+  filterable?: boolean
+  remote?: boolean
+  disabled?: boolean
+  'value-field'?: string
 }
 
 export interface BaseSelectProps {
@@ -32,14 +32,14 @@ export interface BaseSelectProps {
   maxlength?: number
   optionsIsReactive?: boolean
   modelModifiers?: {
-    uppercase: boolean;
+    uppercase: boolean
   }
   size?: SelectProps['size']
 }
 
 export interface BaseSelectEmits {
-  (event: 'update:modelValue', value: ModelValueType): void;
-  <T = object>(event: 'select', value: T extends object ? T : never): void;
-  (event: 'reset'): void;
-  (event: 'input', value: string): void;
+  (event: 'update:modelValue', value: ModelValueType): void
+  <T = object>(event: 'select', value: T extends object ? T : never): void
+  (event: 'reset'): void
+  (event: 'input', value: string): void
 }

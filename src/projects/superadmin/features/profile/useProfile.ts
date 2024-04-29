@@ -9,9 +9,7 @@ export default function useProfile() {
     userLoading
   } = toRefs(useAuthStore());
 
-  const {
-    availablePanels
-  } = toRefs(useAuthPanelStore());
+  const { availablePanels } = toRefs(useAuthPanelStore());
 
   const profileList = computed<IListItem[]>(
     () => [

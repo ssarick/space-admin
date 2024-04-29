@@ -9,9 +9,7 @@ import useBaseSwitchListItem from './useBaseSwitchListItem';
 const props = defineProps<IBaseSwitchListItemProps>();
 const emit = defineEmits<IBaseSwitchListItemEmits>();
 
-const {
-  checked
-} = useBaseSwitchListItem(
+const { checked } = useBaseSwitchListItem(
   props, emit
 );
 </script>

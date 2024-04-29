@@ -1,7 +1,16 @@
-import { computed, h, onMounted, ref } from 'vue';
+import {
+  computed,
+  h,
+  onMounted,
+  ref
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
-import { DataTableColumns, NCheckbox, useMessage } from 'naive-ui';
+import {
+  DataTableColumns,
+  NCheckbox,
+  useMessage
+} from 'naive-ui';
 import { globalConfig } from '@/shared/config/global-config';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import { useAuthStore } from '@/app/store/auth/useAuthStore';
@@ -72,7 +81,11 @@ export default function useClientUserAccessAccount() {
 
   async function getUserById() {
     const { item } = await ApiUser.getClientUserById({
-      path: { branch: user?.branch!, businessCode, userId }
+      path: {
+        branch: user?.branch!,
+        businessCode,
+        userId
+      }
     });
     userFullName.value = item.fio;
   }
@@ -135,7 +148,10 @@ export default function useClientUserAccessAccount() {
 
     router.push({
       name: 'client-user-add-finishing',
-      params: { businessCode, userId }
+      params: {
+        businessCode,
+        userId
+      }
     });
   }
 

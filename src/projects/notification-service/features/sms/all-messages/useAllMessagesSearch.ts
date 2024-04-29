@@ -1,13 +1,15 @@
-import { onMounted, reactive, ref } from 'vue';
+import {
+  onMounted,
+  reactive,
+  ref
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { SelectOption } from 'naive-ui';
 import { usePagination } from '@/shared/composables';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import { formatDateToUTC } from '@/shared/utils/functions/date';
 import downloadFile from '@/shared/utils/functions/downloadFile';
-import type {
-  Filter
-} from '@/projects/notification-service/entities/sms/all-messages/all-messages-active-filters/all-messages-active-filters.types';
+import type { Filter } from '@/projects/notification-service/entities/sms/all-messages/all-messages-active-filters/all-messages-active-filters.types';
 import { ApiNotificationMessages } from '@/projects/notification-service/shared/api';
 import type {
   AllMessagesClient,
@@ -28,7 +30,8 @@ export default function useAllMessageSearch() {
     resetPagination
   } = usePagination(tableRef);
 
-  const filters = reactive<AllMessagesFiltersInput>({});
+  const filters = reactive<AllMessagesFiltersInput>({
+  });
   const dateFilters = reactive<AllMessagesDatePickerModel>({
     dateFrom: null,
     dateTo: null

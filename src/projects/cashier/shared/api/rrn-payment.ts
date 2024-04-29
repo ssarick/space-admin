@@ -1,7 +1,5 @@
 import { IResponseData } from '@/shared/types/api.types';
-import {
-  CashboxSellPayload
-} from '@/projects/cashier/pages/five-one-operation/five-one-operation.types';
+import { CashboxSellPayload } from '@/projects/cashier/pages/five-one-operation/five-one-operation.types';
 import {
   BrvCountResponse,
   BrvSumResponse,
@@ -9,8 +7,10 @@ import {
 } from '@/projects/cashier/pages/five-three-operation/five-three-operation.types';
 import { ClientInfoPayload } from '@/projects/cashier/shared/types/client-info.types';
 import {
-  ClientInfo, Country,
-  CurrencyRate, DocumentTypes,
+  ClientInfo,
+  Country,
+  CurrencyRate,
+  DocumentTypes,
   PrintableInquiry,
   RrnHumoResponse,
   RrnUzcardResponse

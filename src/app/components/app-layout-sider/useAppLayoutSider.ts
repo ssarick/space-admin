@@ -10,9 +10,7 @@ export default function useAppLayoutSider() {
   const { selectedKey } = useSelectedMenuKey(menuOptions);
   const { mainRoute } = useMainRoute();
 
-  const {
-    currentVersion
-  } = toRefs(useInternalNotificationStore());
+  const { currentVersion } = toRefs(useInternalNotificationStore());
 
   const toggleMenuCollapsed = () =>
     menuCollapsed.value = !menuCollapsed.value;

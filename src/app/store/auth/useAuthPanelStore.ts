@@ -1,6 +1,11 @@
 import { defineStore } from 'pinia';
-import { AuthPanel, AuthPanelEvent, AuthPanelEventListeners } from '@/shared/types/auth.types';
+import {
+  AuthPanel,
+  AuthPanelEvent,
+  AuthPanelEventListeners
+} from '@/shared/types/auth.types';
 import authBrowserStore from '@/shared/utils/auth-browser-store';
+import { authPanelRoles } from '@/app/store/auth/config/roles';
 import { useAuthCredentialsStore } from './useAuthCredentialsStore';
 import { useAuthRolesStore } from './useAuthRolesStore';
 
@@ -15,30 +20,31 @@ export const useAuthPanelStore = defineStore(
       authBrowserStore.panel
     );
 
-    // const availablePanels = computed<AuthPanel[]>(
-    //   () => Object
-    //     .keys(authPanelRoles)
-    //     .filter(panel => authRoles.hasSomeRole(
-    //       authPanelRoles[panel]
-    //     ))
-    //     .map(panel => +panel)
-    // );
+    const availablePanels = computed<AuthPanel[]>(
+      () => Object
+        .keys(authPanelRoles)
+        .filter(panel => authRoles.hasSomeRole(
+          authPanelRoles[panel]
+        ))
+        .map(panel => +panel)
+    );
 
-    const availablePanels = ref<AuthPanel[]>([
-      AuthPanel.CONTROL_PANEL,
-      // AuthPanel.AUTOPAY,
-      AuthPanel.SUBSIDY,
-      // AuthPanel.B2B,
-      // AuthPanel.B2C,
-      AuthPanel.FILE_MANAGER,
-      AuthPanel.INVENTORY,
-      AuthPanel.ISEEU,
-      AuthPanel.NOTIFICATION,
-      AuthPanel.CASHIER,
-      AuthPanel.BINDED_FACE,
-      AuthPanel.LOGS_AUDIT
-    ]);
-    let listeners: AuthPanelEventListeners = {};
+    // const availablePanels = ref<AuthPanel[]>([
+    //   AuthPanel.CONTROL_PANEL,
+    //   // AuthPanel.AUTOPAY,
+    //   AuthPanel.SUBSIDY,
+    //   // AuthPanel.B2B,
+    //   // AuthPanel.B2C,
+    //   AuthPanel.FILE_MANAGER,
+    //   AuthPanel.INVENTORY,
+    //   AuthPanel.ISEEU,
+    //   AuthPanel.NOTIFICATION,
+    //   AuthPanel.CASHIER,
+    //   AuthPanel.BINDED_FACE,
+    //   AuthPanel.LOGS_AUDIT
+    // ]);
+    let listeners: AuthPanelEventListeners = {
+    };
 
     const addListener = (
       event: AuthPanelEvent | AuthPanelEvent[],
@@ -53,7 +59,8 @@ export const useAuthPanelStore = defineStore(
       listeners[event] = listeners[event] || [];
 
       listeners[event]?.push({
-        listener, authPanel
+        listener,
+        authPanel
       });
     };
 
@@ -78,7 +85,8 @@ export const useAuthPanelStore = defineStore(
     );
 
     const clearAllListeners = () => {
-      listeners = {};
+      listeners = {
+      };
     };
 
     const callEventListeners = (

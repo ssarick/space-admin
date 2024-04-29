@@ -24,7 +24,9 @@ export default function useAdminCreation() {
   });
 
   const goToAdminsList = () =>
-    router.push({ name: 'admins' });
+    router.push({
+      name: 'admins'
+    });
 
   const createAdmin = async () => {
     const hasError = await formValidate(

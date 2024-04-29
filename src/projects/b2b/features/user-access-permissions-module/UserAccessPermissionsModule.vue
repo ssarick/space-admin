@@ -30,6 +30,7 @@ const {
     <div v-if="!isLoading">
       <div class="flex align-items-center my-2">
         <p style="white-space: nowrap">{{ $t('User-role') }}</p>
+
         <BaseSelect
           v-model:value="roleId"
           class="ml-2"
@@ -40,11 +41,13 @@ const {
           @select="onSelectUserRole"
         />
       </div>
+
       <UserAccessPermissionsList
         ref="refUserAccessPermissionsList"
         style="height: calc(100vh - 180px); overflow-y: auto"
         :related-user-permissions="relatedUserPermissions"
       />
+
       <footer class="flex mt-3">
         <n-button
           ghost
@@ -58,6 +61,7 @@ const {
         >
           {{ $t(isAllSelected ? 'Remove-all' : 'Select-all') }}
         </n-button>
+
         <n-button
           class="ml-auto"
           ghost
@@ -70,6 +74,7 @@ const {
         >
           {{ $t('Back') }}
         </n-button>
+
         <n-button
           type="info"
           icon-placement="right"
@@ -81,6 +86,7 @@ const {
         >
           {{ $t('Next') }}
         </n-button>
+
         <n-button
           type="warning"
           ghost
@@ -90,6 +96,7 @@ const {
         </n-button>
       </footer>
     </div>
+
     <BaseLoading v-else />
   </div>
 </template>

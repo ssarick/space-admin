@@ -4,9 +4,7 @@ import { DataTableColumn, NButton } from 'naive-ui';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import AmountFormatter from '@/shared/utils/amount-formatter';
 import { formatDateToLocaleWithTime } from '@/shared/utils/functions/date';
-import {
-  ITransactionListTableEmits
-} from '@/projects/autopay/entities/transaction/transactions-list/transaction-list.types';
+import { ITransactionListTableEmits } from '@/projects/autopay/entities/transaction/transactions-list/transaction-list.types';
 import { ProcessingType } from '@/projects/autopay/shared/types/administration.types';
 import { ITransaction, TransactionStatus } from '@/projects/autopay/shared/types/transaction.types';
 

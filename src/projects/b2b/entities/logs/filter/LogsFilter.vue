@@ -4,7 +4,11 @@ import BaseInput from '@/shared/UI/base-input';
 import BaseSelect from '@/shared/UI/base-select';
 import { fieldLimits } from '@/shared/utils/constants/field-limits';
 import { isDisabledDatesExceptCurrent } from '@/shared/utils/functions/date-picker';
-import { inputAllowLatinicAndNumber, inputAllowLogin, inputAllowOnlyNumber } from '@/shared/utils/input-allow-rules';
+import {
+  inputAllowLatinicAndNumber,
+  inputAllowLogin,
+  inputAllowOnlyNumber
+} from '@/shared/utils/input-allow-rules';
 import { LogEntityType } from '@/projects/b2b/shared/types/log.types';
 import { ILogsFilterEmits, ILogsFilterProps } from './logs-filter.types';
 import useLogsFilter from './useLogsFilter';

@@ -4,7 +4,8 @@ import BaseForm from '@/shared/UI/base-form';
 import BaseInput from '@/shared/UI/base-input';
 import {
   IEntitySearchFiltersEmits,
-  IEntitySearchFiltersProps } from './entity-search-filters.types';
+  IEntitySearchFiltersProps
+} from './entity-search-filters.types';
 import useEntitySearchFilters from './useEntitySearchFilters';
 
 const props = defineProps<IEntitySearchFiltersProps>();

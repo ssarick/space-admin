@@ -21,7 +21,9 @@ export const fetchAllMessages = async (
   const { data } = await apiNotificationService
     .get(
       'info/search',
-      { params }
+      {
+        params
+      }
     );
 
   return {
@@ -79,7 +81,9 @@ export const fetchGroupMessages = async (
   const { data } = await apiNotificationService
     .get(
       'mass-mailing/search',
-      { params }
+      {
+        params
+      }
     );
 
   return {

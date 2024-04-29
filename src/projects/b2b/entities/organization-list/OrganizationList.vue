@@ -2,7 +2,8 @@
 import BaseDataTable from '@/shared/UI/base-data-table';
 import {
   IOrganizationListEmit,
-  IOrganizationListProps } from './organization-list.types';
+  IOrganizationListProps
+} from './organization-list.types';
 import useOrganizationList from './useOrganizationList';
 
 const props = defineProps<IOrganizationListProps>();

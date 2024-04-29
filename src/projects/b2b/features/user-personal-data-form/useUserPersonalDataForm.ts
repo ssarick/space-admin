@@ -1,4 +1,9 @@
-import { computed, reactive, ref, toRef } from 'vue';
+import {
+  computed,
+  reactive,
+  ref,
+  toRef
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
 import { useDialog, useMessage } from 'naive-ui';
@@ -7,7 +12,11 @@ import { formValidate } from '@/shared/utils/functions';
 import { ruleRequired } from '@/shared/utils/validation-rules';
 import { useAuthStore } from '@/app/store/auth/useAuthStore';
 import { ApiUser } from '@/projects/b2b/shared/api';
-import { IUser, UserBlockingReason, UserStateId } from '@/projects/b2b/shared/types/user.types';
+import {
+  IUser,
+  UserBlockingReason,
+  UserStateId
+} from '@/projects/b2b/shared/types/user.types';
 import { IUserPersonalDataFormProps } from './user-personal-data-form.types';
 
 export default function useUserPersonalDataForm(
@@ -75,7 +84,9 @@ export default function useUserPersonalDataForm(
       });
     } else {
       await ApiUser.changeUserStatus({
-        path: { userId },
+        path: {
+          userId
+        },
         body
       });
     }

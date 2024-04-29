@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { NGrid, NGridItem, NSpace } from 'naive-ui';
+import {
+  NGrid,
+  NGridItem,
+  NSpace
+} from 'naive-ui';
 import BaseDataTable from '@/shared/UI/base-data-table';
 import OrganizationList from '@/projects/b2b/entities/organization-list/OrganizationList.vue';
 import { IUserAccessAccountsProps } from './user-access-accounts.types';

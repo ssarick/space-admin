@@ -1,5 +1,9 @@
 import { h, Ref } from 'vue';
-import { NCheckbox, NSpace, NText } from 'naive-ui';
+import {
+  NCheckbox,
+  NSpace,
+  NText
+} from 'naive-ui';
 
 export default function useCheckboxColumnTitle(
   title: string,
@@ -13,7 +17,9 @@ export default function useCheckboxColumnTitle(
     {
       align: 'center',
       wrap: false,
-      style: { cursor: 'pointer' },
+      style: {
+        cursor: 'pointer'
+      },
       onClick: () => onCheck?.(
         !checked.value
       )

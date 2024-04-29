@@ -5,26 +5,26 @@ import {
 
 export interface IUserCertificateRevokingFormProps
   extends ICertificateRevokingReasonFormModel {
-  disabled?: boolean;
-  certificate?: ICertificate | null;
-  model: ICertificateRevokingReasonFormModel;
+  disabled?: boolean
+  certificate?: ICertificate | null
+  model: ICertificateRevokingReasonFormModel
 }
 
 export interface IUserCertificateRevokingFormEmit {
   (
     event: 'update:reasonId',
     value: IUserCertificateRevokingFormProps['reasonId']
-  ): void;
+  ): void
   (
     event: 'update:reasonText',
     value: IUserCertificateRevokingFormProps['reasonText']
-  ): void;
+  ): void
   (
     event: 'update:customReasonText',
     value: IUserCertificateRevokingFormProps['customReasonText']
-  ): void;
+  ): void
   (
     event: 'update:hasCustomReasonText',
     value: IUserCertificateRevokingFormProps['hasCustomReasonText']
-  ): void;
+  ): void
 }

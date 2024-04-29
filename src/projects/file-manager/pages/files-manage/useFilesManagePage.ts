@@ -1,11 +1,13 @@
-import { computed, onBeforeUnmount, watch } from 'vue';
+import {
+  computed,
+  onBeforeUnmount,
+  watch
+} from 'vue';
 import { useRoute } from 'vue-router';
 import useBreadcrumbsStore from '@/app/store/useBreadcrumbsStore';
 
 export default function useFilesManagePage() {
-  const {
-    setBreadcrumbs
-  } = useBreadcrumbsStore();
+  const { setBreadcrumbs } = useBreadcrumbsStore();
 
   const route = useRoute();
 
@@ -35,7 +37,9 @@ export default function useFilesManagePage() {
   watch(
     bucketName,
     updateBreadcrumbs,
-    { immediate: true }
+    {
+      immediate: true
+    }
   );
 
   onBeforeUnmount(resetBreadcrumbs);

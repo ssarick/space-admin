@@ -2,22 +2,25 @@ import { onMounted, ref } from 'vue';
 import print from 'print-js';
 import { DATE_SYSTEM_FORMAT } from '@/shared/utils/constants/naive-constants';
 import { formatDate } from '@/shared/utils/functions/date';
-import {
-  CashboxBuyPayload
-} from '@/projects/cashier/pages/five-three-operation/five-three-operation.types';
+import { CashboxBuyPayload } from '@/projects/cashier/pages/five-three-operation/five-three-operation.types';
 import {
   getBrvCount,
   getBrvSum,
   getClientInfoByDocument,
   getCountries,
-  getDocumentTypes, submitCashboxBuy
+  getDocumentTypes,
+  submitCashboxBuy
 } from '@/projects/cashier/shared/api/rrn-payment';
 import {
   Client,
   CountrySelectOptions,
   DocumentSelectOptions
 } from '@/projects/cashier/shared/types/rrn-payment.types';
-import { BuyerFormValues, OperationTypeEmits, OperationTypeProps } from './operation-buyer.types';
+import {
+  BuyerFormValues,
+  OperationTypeEmits,
+  OperationTypeProps
+} from './operation-buyer.types';
 
 export default function useOperationBuyer(
   props: OperationTypeProps,
@@ -115,6 +118,7 @@ export default function useOperationBuyer(
       const choseUserData = availableUsers.value.find(
         user => user.businessPartnerId === currentUser.value
       );
+
       if (choseUserData) {
         formValue.value = {
           ...formValue.value,

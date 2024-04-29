@@ -42,7 +42,8 @@ export const createRulesByArray = <T extends object>(
   rules: FormRules
 ): FormRules => list.reduce<FormRules>(
   (acc, item, index) => {
-    const rulesWithIndex: FormRules = {};
+    const rulesWithIndex: FormRules = {
+    };
 
     for (const key in rules) {
       rulesWithIndex[`${key}.${index}`] = {
@@ -56,7 +57,8 @@ export const createRulesByArray = <T extends object>(
       ...rulesWithIndex
     };
   },
-  {}
+  {
+  }
 );
 
 export const createComputedRulesByArray = <T extends object>(

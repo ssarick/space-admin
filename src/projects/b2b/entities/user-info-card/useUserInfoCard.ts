@@ -23,7 +23,8 @@ export default function useUserInfoCard(
   const phoneFieldMask = FIELD_MASK.phone;
 
   const userEditableData = reactive({
-    ...(props.data || {})
+    ...(props.data || {
+    })
   }) as Required<IUser>;
 
   const userIsBlocked = computed(() => {
@@ -38,7 +39,11 @@ export default function useUserInfoCard(
     name: userEditableData.pidTypeName || ''
   }));
 
-  const { formRef, validateForm, restoreFormValidation } =
+  const {
+    formRef,
+    validateForm,
+    restoreFormValidation
+  } =
     useFormRefWithValidate();
 
   const getFormData = (): Required<IUser> => ({

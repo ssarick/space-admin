@@ -2,7 +2,8 @@ import {
   FileManageEntity,
   FileManageEntityType,
   IFileManageBucket,
-  IFileManageItem } from '../../types/file-manage.types';
+  IFileManageItem
+} from '../../types/file-manage.types';
 
 export default class FileManageMapper {
 

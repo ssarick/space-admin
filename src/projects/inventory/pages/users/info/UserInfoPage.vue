@@ -4,9 +4,7 @@ import PageTitle from '@/shared/UI/page-title';
 import UserInfo from '@/projects/inventory/features/users/info';
 import useUserInfoPage from './useUserInfoPage';
 
-const {
-  userId
-} = useUserInfoPage();
+const { userId } = useUserInfoPage();
 </script>
 
 <template>

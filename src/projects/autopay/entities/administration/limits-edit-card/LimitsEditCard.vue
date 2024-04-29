@@ -3,7 +3,8 @@ import {
   NCard,
   NSpace,
   NSpin,
-  NTable } from 'naive-ui';
+  NTable
+} from 'naive-ui';
 import BaseIcon from '@/shared/UI/base-icon';
 import AmountFormatter from '@/shared/utils/amount-formatter';
 import { IEmits, IProps } from './limits-edit-card.types';
@@ -18,9 +19,7 @@ const props = withDefaults(
 
 const emit = defineEmits<IEmits>();
 
-const {
-  emitEditLimit
-} = useLimitsEditCard(emit);
+const { emitEditLimit } = useLimitsEditCard(emit);
 </script>
 
 <template>
@@ -53,7 +52,7 @@ const {
 
         <th class="text-right">{{ $t('Amount') }}</th>
 
-        <th></th>
+        <th />
       </thead>
 
       <tbody>

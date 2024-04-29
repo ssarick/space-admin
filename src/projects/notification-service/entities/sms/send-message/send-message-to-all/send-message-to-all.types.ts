@@ -1,10 +1,8 @@
-import type {
-  SendMessageToAllInput
-} from '@/projects/notification-service/shared/types/send-message.types';
+import type { SendMessageToAllInput } from '@/projects/notification-service/shared/types/send-message.types';
 
 export interface SendMessageToAllProps extends
   SendMessageToAllInput {
-  formValue?: SendMessageToAllInput,
+  formValue?: SendMessageToAllInput
   loading?: boolean
 }
 

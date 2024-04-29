@@ -10,8 +10,14 @@ import useUserCertificateActions from './useUserCertificateActions';
 const props = defineProps<IUserCertificateActionsProps>();
 const emit = defineEmits<IUserCertificateActionsEmit>();
 
-const { revokingLoading, revokingReason, onBeforeRevoke, formRef } =
-  useUserCertificateActions(props, emit);
+const {
+  revokingLoading,
+  revokingReason,
+  onBeforeRevoke,
+  formRef
+} =
+  useUserCertificateActions(props,
+    emit);
 </script>
 
 <template>

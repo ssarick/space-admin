@@ -2,9 +2,7 @@ import { useVModel } from '@vueuse/core';
 import { FormRules } from 'naive-ui';
 import useFormRef from '@/shared/UI/base-form/useFormRef';
 import { formValidate } from '@/shared/utils/functions';
-import {
-  IUntrustedCardsFilterList, IUntrustedCardsModalEmits
-} from '@/projects/autopay/entities/untrusted-card/untrusted-card-filter-modal/untrusted-cards-filter-modal.types';
+import { IUntrustedCardsFilterList, IUntrustedCardsModalEmits } from '@/projects/autopay/entities/untrusted-card/untrusted-card-filter-modal/untrusted-cards-filter-modal.types';
 import {
   ruleCoincidence,
   ruleContractId,
@@ -56,6 +54,7 @@ export default function useUntrustedFilterModal(
 
   const onFilterSubmit = async ($event: SubmitEvent) => {
     const hasError = await formValidate(formRef.value);
+
     if (!hasError) {
       emit('submitFilterModal', $event);
     }

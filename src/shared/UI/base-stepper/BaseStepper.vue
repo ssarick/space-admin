@@ -24,9 +24,10 @@ const { stepRef, activeStep } = useBaseStepper(props, emit);
           {{ step.label }}
         </div>
 
-        <div class="steps-wrapper__step__line"></div>
+        <div class="steps-wrapper__step__line" />
       </div>
     </div>
+
     <div ref="stepRef">
       <div
         v-for="step in steps"

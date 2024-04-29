@@ -1,7 +1,8 @@
 import {
   createRouter,
   createWebHistory,
-  RouterScrollBehavior } from 'vue-router';
+  RouterScrollBehavior
+} from 'vue-router';
 import routes from './routes';
 
 interface IScrollPosition {
@@ -15,7 +16,10 @@ const scrollBehavior = (
   _,
   __,
   savedPosition: IScrollPosition
-) => savedPosition || { top: 0, left: 0 };
+) => savedPosition || {
+  top: 0,
+  left: 0
+};
 
 const router = createRouter({
   history: routerHistory,

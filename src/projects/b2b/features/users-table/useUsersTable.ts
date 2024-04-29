@@ -1,7 +1,16 @@
-import { computed, h, onMounted, ref } from 'vue';
+import {
+  computed,
+  h,
+  onMounted,
+  ref
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
-import { DataTableColumns, NButton, NPopover } from 'naive-ui';
+import {
+  DataTableColumns,
+  NButton,
+  NPopover
+} from 'naive-ui';
 import { globalConfig } from '@/shared/config/global-config';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import { formatPhoneNumber } from '@/shared/utils/functions';
@@ -26,7 +35,9 @@ export default function useClientsTable(
   const redirectToUsersDetail = (user: IUser) => {
     router.push({
       name: 'user-data-tabs',
-      params: { userId: user.userId }
+      params: {
+        userId: user.userId
+      }
     });
   };
 
@@ -101,7 +112,8 @@ export default function useClientsTable(
                     color: '#16A000'
                   })
                 }),
-              default: () => h('span', {}, t('User-data'))
+              default: () => h('span', {
+              }, t('User-data'))
             }
           )
         ];
@@ -118,7 +130,8 @@ export default function useClientsTable(
     const queryParams: IUserQueryParams = {
       pageNumber: pagination?.page || 1,
       pageSize,
-      ...(props.filters || {}),
+      ...(props.filters || {
+      }),
       userPhone: props.filters?.userPhone
         ? MaskUtils.unmaskPhone(
           props.filters.userPhone

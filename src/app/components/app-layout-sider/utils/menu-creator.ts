@@ -1,6 +1,10 @@
 import { h, VNode } from 'vue';
 import { RouterLink } from 'vue-router';
-import { MenuOption, NSkeleton, NSpace } from 'naive-ui';
+import {
+  MenuOption,
+  NSkeleton,
+  NSpace
+} from 'naive-ui';
 import BaseIcon from '@/shared/UI/base-icon';
 import NumberUtils from '@/shared/utils/number';
 import { createIconRenderer } from '@/shared/utils/render-icon';
@@ -39,7 +43,9 @@ const createMenuItem = ({
 }: IAppMenuOption): MenuOption => {
   const resultRoute = route
     ? route
-    : (key && !children && { name: key });
+    : (key && !children && {
+      name: key
+    });
 
   return loading
     ? {

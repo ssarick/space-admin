@@ -5,10 +5,10 @@ export type ClientStateTextMap = {
 };
 
 export interface IClientDetailActionsProps {
-  client: IClient | null;
-  businessCode: string;
+  client: IClient | null
+  businessCode: string
 }
 
 export interface IClientDetailActionsEmit {
-  (event: 'update:client', value: IClientDetailActionsProps['client']): void;
+  (event: 'update:client', value: IClientDetailActionsProps['client']): void
 }

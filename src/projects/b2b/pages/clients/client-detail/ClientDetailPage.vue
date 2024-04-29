@@ -5,7 +5,11 @@ import { ClientDetailCard } from '@/projects/b2b/entities/client-detail';
 import { ClientDetailActions } from '@/projects/b2b/features/client-detail-actions';
 import useClientDetailPage from './useClientDetailPage';
 
-const { isLoading, clientData, businessCode } = useClientDetailPage();
+const {
+  isLoading,
+  clientData,
+  businessCode
+} = useClientDetailPage();
 </script>
 
 <template>

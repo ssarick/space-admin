@@ -1,4 +1,10 @@
-import { AdminRole, Permission, PermissionAction, PermissionByRole, PermissionTarget } from '@/projects/b2b/shared/types/permission.types';
+import {
+  AdminRole,
+  Permission,
+  PermissionAction,
+  PermissionByRole,
+  PermissionTarget
+} from '@/projects/b2b/shared/types/permission.types';
 
 export const permissionByRoles: PermissionByRole = {
   [AdminRole.CALL_CENTER]: () => ({
@@ -26,7 +32,7 @@ export const permissionByRoles: PermissionByRole = {
 };
 
 function getDefaultPermissionActionEntity():
-  PermissionAction[] {
+PermissionAction[] {
   return Object
     .keys(PermissionAction)
     .filter(action => !isNaN(+action))
@@ -34,7 +40,8 @@ function getDefaultPermissionActionEntity():
 }
 
 function getDefaultPermissions(): Permission {
-  const permissions = {} as Permission;
+  const permissions = {
+  } as Permission;
 
   for (const key in PermissionTarget) {
     if (!isNaN(+key)) {

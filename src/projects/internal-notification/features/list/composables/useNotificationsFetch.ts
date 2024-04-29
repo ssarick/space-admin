@@ -10,9 +10,7 @@ export default function useNotificationsFetch() {
   const pageNumber = ref<number>(0);
   const pageSize = 25;
 
-  const {
-    lastVersionNotification
-  } = toRefs(useInternalNotificationStore());
+  const { lastVersionNotification } = toRefs(useInternalNotificationStore());
 
   const isPlaceholderVisible = computed<boolean>(
     () => !notifications.value.length

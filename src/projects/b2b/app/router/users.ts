@@ -16,7 +16,9 @@ export default [
         ]
       }
     },
-    redirect: { name: 'users' },
+    redirect: {
+      name: 'users'
+    },
     children: [
       {
         path: '',

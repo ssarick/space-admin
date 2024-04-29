@@ -11,7 +11,7 @@ export enum ProcessingType {
   ALL = 'ALL',
   MANUAL_PAY_UZCARD = 'MANUAL_PAY_UZCARD',
   MANUAL_PAY_HUMO = 'MANUAL_PAY_HUMO',
-  MANUAL_PAY_VISA = 'MANUAL_PAY_TIETO',
+  MANUAL_PAY_VISA = 'MANUAL_PAY_TIETO'
 }
 
 export enum LimitType {
@@ -31,15 +31,15 @@ export enum WithdrawalCircleCode {
 }
 
 export interface IAdministationTypes {
-  code?: WithdrawalCircleCode,
-  status?: string,
-  batchInfo?: number,
+  code?: WithdrawalCircleCode
+  status?: string
+  batchInfo?: number
   queueInfo?: number
 }
 
 export interface IAdministrationActionResponseError {
-  code?: WithdrawalCircleCode,
-  message?: string,
+  code?: WithdrawalCircleCode
+  message?: string
 }
 
 export interface IDebitControlItem {
@@ -70,4 +70,4 @@ export interface IHumoInterval {
   name?: string | null
 }
 
-export type AdministrationFunction = () => Promise<IResponseData<IAdministationTypes>>
+export type AdministrationFunction = () => Promise<IResponseData<IAdministationTypes>>;

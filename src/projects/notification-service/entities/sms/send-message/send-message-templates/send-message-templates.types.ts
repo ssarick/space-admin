@@ -1,6 +1,4 @@
-import type {
-  MessageTemplateModel
-} from '@/projects/notification-service/shared/types/send-message.types';
+import type { MessageTemplateModel } from '@/projects/notification-service/shared/types/send-message.types';
 
 export interface SendMessageTemplatesListProps extends MessageTemplateModel {
   lang?: string | null

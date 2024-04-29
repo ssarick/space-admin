@@ -1,4 +1,8 @@
-import { onMounted, reactive, ref } from 'vue';
+import {
+  onMounted,
+  reactive,
+  ref
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
 import { useMessage } from 'naive-ui';
@@ -7,9 +11,13 @@ import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import useFormRef from '@/shared/UI/base-form/useFormRef';
 import { formValidate } from '@/shared/utils/functions';
 import { excludeEmptyObjectValues } from '@/shared/utils/functions/object';
-import { ApiNotificationMessages, ApiNotificationTemplates } from '@/projects/notification-service/shared/api';
 import {
-  MessageTemplateModel, SendMessageInput,
+  ApiNotificationMessages,
+  ApiNotificationTemplates
+} from '@/projects/notification-service/shared/api';
+import {
+  MessageTemplateModel,
+  SendMessageInput,
   SendMessageToAllInput,
   SendMessageToOneInput,
   SendRadioInput
@@ -40,7 +48,8 @@ export default function useSendMessage() {
     priority: null,
     language: null,
     to: null,
-    parameters: {},
+    parameters: {
+    },
     file: null
   };
 
@@ -55,7 +64,8 @@ export default function useSendMessage() {
     ...defaultFormValues
   });
   const sendingLoading = ref(false);
-  const selectedTemplate = reactive<MessageTemplateModel>({});
+  const selectedTemplate = reactive<MessageTemplateModel>({
+  });
   const templates = ref<MessageTemplateModel[]>();
   const templatesLoading = ref(false);
   const templateModalShow = ref(false);
@@ -78,8 +88,10 @@ export default function useSendMessage() {
   );
 
   const extractParams = (inputString?: string | null) => {
-    const parameters: SendMessageInput['parameters'] = {};
+    const parameters: SendMessageInput['parameters'] = {
+    };
     let match: RegExpExecArray | null;
+
     while ((match = regExp.params.exec(inputString as string)) !== null) {
       parameters[match[1]] = '';
     }
@@ -106,7 +118,9 @@ export default function useSendMessage() {
   const submitSendingToAll = async () => {
     sendingLoading.value = true;
 
-    const sendingMessageObject: SendMessageToAllInput = excludeEmptyObjectValues<SendMessageToAllInput>(sendingToAllModel);
+    const sendingMessageObject: SendMessageToAllInput = excludeEmptyObjectValues<
+      SendMessageToAllInput
+    >(sendingToAllModel);
 
     const {
       item,
@@ -117,6 +131,7 @@ export default function useSendMessage() {
     sendingLoading.value = false;
 
     if (error) return;
+
     if (item.status) {
       toast.success(t('Message-sent') + ' !');
       startSendingMessageToAll.value && await ApiNotificationMessages.changeStatusOfGroupedMessage(
@@ -155,6 +170,7 @@ export default function useSendMessage() {
     sendingLoading.value = false;
 
     if (error) return;
+
     if (item.status) {
       toast.success(t('Grouped-message-sent') + ' !');
       router.push('all-messages');

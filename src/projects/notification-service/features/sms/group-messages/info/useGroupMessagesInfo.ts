@@ -4,17 +4,11 @@ import { useRoute } from 'vue-router';
 import { usePagination } from '@/shared/composables';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import downloadFile from '@/shared/utils/functions/downloadFile';
+import type { GroupMessagesToggleStatusItem } from '@/projects/notification-service/entities/sms/group-messages/group-messages-status-chart-filters/grouped-messages-statues-chart-filters.types';
 import { ApiNotificationMessages } from '@/projects/notification-service/shared/api';
-import type {
-  GroupMessagesClient, GroupMessagesStatus
-} from '@/projects/notification-service/shared/types/group-messages.types';
-import {
-  MessageChannel
-} from '@/projects/notification-service/shared/utils/constants/enums';
+import type { GroupMessagesClient, GroupMessagesStatus } from '@/projects/notification-service/shared/types/group-messages.types';
+import { MessageChannel } from '@/projects/notification-service/shared/utils/constants/enums';
 import { messagesStatusGroupsMap } from '@/projects/notification-service/shared/utils/constants/status-groups-map';
-import type {
-  GroupMessagesToggleStatusItem
-} from '../../../../entities/sms/group-messages/group-messages-status-chart-filters/grouped-messages-statues-chart-filters.types';
 
 export default function useGroupMessagesInfo() {
   const tableRef = useTableRef();

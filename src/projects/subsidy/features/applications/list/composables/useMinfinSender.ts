@@ -1,4 +1,8 @@
-import { computed, ref, watch } from 'vue';
+import {
+  computed,
+  ref,
+  watch
+} from 'vue';
 import { useConfirmationDialog } from '@/shared/composables';
 import { ApiSubsidyApplication } from '@/projects/subsidy/shared/api';
 import { SubsidyApplicationWithSentStatus, SubsidySentStatus } from '@/projects/subsidy/shared/types/application.types';
@@ -17,9 +21,7 @@ export default function useMinfinSender(
     () => !!minfinControls.selectedApplicationIds.value.length
   );
 
-  const {
-    showConfirmationDialog
-  } = useConfirmationDialog(
+  const { showConfirmationDialog } = useConfirmationDialog(
     confirmSendToMinfin,
     'Внимание'
   );

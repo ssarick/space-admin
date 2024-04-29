@@ -37,7 +37,11 @@ export default function useUserCertificateCreationForm(
     : undefined
   );
 
-  const { formRef, validateForm, restoreFormValidation } =
+  const {
+    formRef,
+    validateForm,
+    restoreFormValidation
+  } =
     useFormRefWithValidate();
 
   const formRules: FormRules = {

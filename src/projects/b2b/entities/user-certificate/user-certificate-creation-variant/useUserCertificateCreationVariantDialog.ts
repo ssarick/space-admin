@@ -1,4 +1,10 @@
-import { h, Ref, ref, VNodeChild, watch } from 'vue';
+import {
+  h,
+  Ref,
+  ref,
+  VNodeChild,
+  watch
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
 import { NRadio, useDialog } from 'naive-ui';
@@ -62,7 +68,9 @@ export default function useUserCertificateCreationVariantDialog(
           prependVNode && prependVNode(),
           h(
             'div',
-            { class: 'mt-3' },
+            {
+              class: 'mt-3'
+            },
             h(NRadio, {
               checked:
                 selectedVariant.value === UserCertificateCreationVariant.NEW,
@@ -73,7 +81,9 @@ export default function useUserCertificateCreationVariantDialog(
           ),
           h(
             'div',
-            { class: 'pb-2' },
+            {
+              class: 'pb-2'
+            },
             h(NRadio, {
               checked:
                 selectedVariant.value ===

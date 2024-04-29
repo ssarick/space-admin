@@ -7,9 +7,7 @@ import {
   BuyerPassportDetailsFieldsEmit,
   BuyerPassportDetailsFieldsProps
 } from '@/projects/cashier/entities/buyer-passport-details-fields/buyer-passport-details-fields.types';
-import {
-  useBuyerPassportDetailsFields
-} from '@/projects/cashier/entities/buyer-passport-details-fields/useBuyerPassportDetailsFields';
+import { useBuyerPassportDetailsFields } from '@/projects/cashier/entities/buyer-passport-details-fields/useBuyerPassportDetailsFields';
 
 const props = defineProps<BuyerPassportDetailsFieldsProps>();
 const emit = defineEmits<BuyerPassportDetailsFieldsEmit>();

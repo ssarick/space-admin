@@ -8,8 +8,8 @@ import type {
 import useBaseDetailCard from './useBaseDetailCard';
 
 interface IProps {
-  head?: IBaseDetailCardHead[];
-  body?: IBaseDetailCardBody[];
+  head?: IBaseDetailCardHead[]
+  body?: IBaseDetailCardBody[]
 }
 
 const props = defineProps<IProps>();

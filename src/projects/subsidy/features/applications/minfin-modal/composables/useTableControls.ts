@@ -1,6 +1,10 @@
 import { computed, h } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { DataTableColumn, NButton, NPopover } from 'naive-ui';
+import {
+  DataTableColumn,
+  NButton,
+  NPopover
+} from 'naive-ui';
 import { StatusColor } from '@/shared/types/status.types';
 import { BaseStatusItem } from '@/shared/UI/base-status';
 import renderIcon from '@/shared/utils/render-icon';
@@ -103,7 +107,9 @@ export default function useTableControls(
       application
     );
 
-    updateApplication({ loadingForSent: true });
+    updateApplication({
+      loadingForSent: true
+    });
 
     const { items } = await ApiSubsidyApplication
       .sendToMinfin({

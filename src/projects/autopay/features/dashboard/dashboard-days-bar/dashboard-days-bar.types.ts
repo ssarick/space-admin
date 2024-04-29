@@ -18,4 +18,4 @@ export type DashboardBarChartDataset = Partial<
   ChartDataset<'bar'>
 > & {
   label: ProcessingType
-}
+};

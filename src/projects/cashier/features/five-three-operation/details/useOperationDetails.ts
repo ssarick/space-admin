@@ -4,14 +4,13 @@ import { formValidate } from '@/shared/utils/functions';
 import { regExp } from '@/shared/utils/regular-expressions';
 import {
   OperationDetailFormValues,
-  OperationTypeEmits } from '@/projects/cashier/features/five-three-operation/details/operation-details.types';
+  OperationTypeEmits
+} from '@/projects/cashier/features/five-three-operation/details/operation-details.types';
 import {
   defaultValues,
   rules
 } from '@/projects/cashier/features/five-three-operation/details/utils';
-import {
-  OperationFiveThreeFields
-} from '@/projects/cashier/pages/five-three-operation/five-three-operation.types';
+import { OperationFiveThreeFields } from '@/projects/cashier/pages/five-three-operation/five-three-operation.types';
 import { getCurrencyRate } from '@/projects/cashier/shared/api/rrn-payment';
 import {
   currencyOptions,

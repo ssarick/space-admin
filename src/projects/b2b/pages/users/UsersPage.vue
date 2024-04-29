@@ -3,7 +3,11 @@ import { NSpace } from 'naive-ui';
 import BaseInput from '@/shared/UI/base-input';
 import PageTitle from '@/shared/UI/page-title';
 import { fieldLimits } from '@/shared/utils/constants/field-limits';
-import { inputAllowLatinicAndNumber, inputAllowLogin, inputAllowOnlyNumber } from '@/shared/utils/input-allow-rules';
+import {
+  inputAllowLatinicAndNumber,
+  inputAllowLogin,
+  inputAllowOnlyNumber
+} from '@/shared/utils/input-allow-rules';
 import UsersTable from '@/projects/b2b/features/users-table/UsersTable.vue';
 import useUsers from './useUsers';
 

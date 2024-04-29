@@ -19,7 +19,7 @@ const {
 
 <template>
   <n-space
-    :size="[20, 16]"
+    :size="[ 20, 16 ]"
   >
     <n-date-picker
       v-model:value="dateFrom"

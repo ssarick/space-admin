@@ -5,7 +5,12 @@ import BaseInput from '@/shared/UI/base-input';
 import BaseSelect from '@/shared/UI/base-select';
 import { fieldLimits } from '@/shared/utils/constants/field-limits';
 import { formatPhoneNumber } from '@/shared/utils/functions';
-import { inputAllowEmail, inputAllowLatinicAndNumber, inputAllowLogin, inputAllowOnlyNumber } from '@/shared/utils/input-allow-rules';
+import {
+  inputAllowEmail,
+  inputAllowLatinicAndNumber,
+  inputAllowLogin,
+  inputAllowOnlyNumber
+} from '@/shared/utils/input-allow-rules';
 import { ApiDictionary } from '@/projects/b2b/shared/api';
 import { stateMap } from '@/projects/b2b/shared/utils/constants';
 import { IUserInfoCardProps } from './user-info-card.types';
@@ -46,7 +51,7 @@ defineExpose({
     >
       <thead>
         <tr>
-          <th></th>
+          <th />
 
           <th>{{ $t('User-data') }}</th>
         </tr>

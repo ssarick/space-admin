@@ -40,8 +40,8 @@ export interface GroupMessagesFiltersPayload extends
 
 type MessagesStatusGroupMapKey = 'error'
   | 'done'
-  | 'inProgress'
+  | 'inProgress';
 
 export type MessagesStatusGroupMap = Record<
   MessagesStatusGroupMapKey, MessageStatuses[]
->
+>;

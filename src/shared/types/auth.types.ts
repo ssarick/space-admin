@@ -29,6 +29,7 @@ export enum AuthPanel {
 
 export enum AuthRole {
   ADMIN = 'admin',
+  PARTNER = 'partner',
   APP_ASOKI_CREDIT_HISTORY_JURIDICAL_USER = 'APP_ASOKI_CREDIT_HISTORY_JURIDICAL_USER',
   APP_ASOKI_CREDIT_HISTORY_PHYSICAL_USER = 'APP_ASOKI_CREDIT_HISTORY_PHYSICAL_USER',
   APP_ASOKI_LOAN_CANCEL_USER = 'APP_ASOKI_LOAN_CANCEL_USER',
@@ -175,8 +176,8 @@ export interface IAuthPanelEventListenerOptions {
 
 export type AuthPanelEventListeners = Partial<
   Record<AuthPanelEvent, IAuthPanelEventListenerOptions[]>
->
+>;
 
 export type AuthPanelRoles = Partial<
   Record<AuthPanel, AuthRole[]>
->
+>;

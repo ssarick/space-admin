@@ -6,13 +6,18 @@ import { formValidate } from '@/shared/utils/functions';
 import { regExp } from '@/shared/utils/regular-expressions';
 import {
   OperationDetailFormValues,
-  OperationTypeEmits } from '@/projects/cashier/features/five-one-operation/details/operation-details.types';
+  OperationTypeEmits
+} from '@/projects/cashier/features/five-one-operation/details/operation-details.types';
 import {
   defaultValues,
   rules
 } from '@/projects/cashier/features/five-one-operation/details/utils';
 import { RRNData } from '@/projects/cashier/pages/five-one-operation/five-one-operation.types';
-import { getCurrencyRate, getHumoRrn, getUzcardRrn } from '@/projects/cashier/shared/api/rrn-payment';
+import {
+  getCurrencyRate,
+  getHumoRrn,
+  getUzcardRrn
+} from '@/projects/cashier/shared/api/rrn-payment';
 import {
   currencyOptions,
   paymentTypeOptions,

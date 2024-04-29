@@ -3,7 +3,8 @@ import type { ISelectResponseData } from '@/shared/types/select.types';
 import { InventoryMapper } from '@/projects/inventory/shared/mappers/inventory';
 import type {
   InventorySession,
-  InventorySessionCreatePayload, InventoryStatusesOption
+  InventorySessionCreatePayload,
+  InventoryStatusesOption
 } from '@/projects/inventory/shared/types/sessions.types';
 import type {
   InventoryApiResponse,
@@ -12,23 +13,21 @@ import type {
 import apiInventory from './instance';
 
 export const fetchSessions = async (
-  {
-    ...params
-  }: InventoryPaginationPayload
+  { ...params }: InventoryPaginationPayload
 ): Promise<IResponseData<InventorySession>> => {
   const { data } = await apiInventory
     .post(
       'Admin/sessions',
-      { ...params }
+      {
+        ...params
+      }
     );
 
   return InventoryMapper.mapToInventorySessionsData(data.item);
 };
 
 export const fetchSessionsDetails = async (
-  {
-    ...params
-  }: InventoryPaginationPayload
+  { ...params }: InventoryPaginationPayload
 ): Promise<IResponseData<InventorySession>> => {
   const { data } = await apiInventory
     .post(
@@ -37,21 +36,25 @@ export const fetchSessionsDetails = async (
         page: params.page,
         count: params.count
       },
-      { params: { sessionId: params.id } }
+      {
+        params: {
+          sessionId: params.id
+        }
+      }
     );
 
   return InventoryMapper.mapToInventorySessionsData(data.item);
 };
 
 export const createInventorySession = async (
-  {
-    ...params
-  }: InventorySessionCreatePayload
+  { ...params }: InventorySessionCreatePayload
 ): Promise<IResponseData<InventorySession>> => {
   const { data } = await apiInventory
     .post(
       'Admin/sessions/add',
-      { ...params }
+      {
+        ...params
+      }
     );
 
   return data;

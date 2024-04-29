@@ -1,8 +1,6 @@
 <script setup lang='ts'>
 import BaseDataTable from '@/shared/UI/base-data-table';
-import {
-  IUntrustedCardsListEmits, IUntrustedCardsListProps
-} from './untrusted-humo-cards-list.types';
+import { IUntrustedCardsListEmits, IUntrustedCardsListProps } from './untrusted-humo-cards-list.types';
 import useUntrustedHumoCardList from './useUntrustedHumoCardList';
 
 const props = defineProps<IUntrustedCardsListProps>();

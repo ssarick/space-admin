@@ -27,7 +27,8 @@ export default function useLogsAuditFiltersModal(
           validator: ruleRequired
         }
       }
-      : {}
+      : {
+      }
   );
 
   const handleSubmit = () => emit('submit');

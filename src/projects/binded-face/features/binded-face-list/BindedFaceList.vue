@@ -39,6 +39,7 @@ const {
         :checked="checkedRadioBtn === BindedFaceStatus.ACTIVE"
         @change="handleChange"
       > Активные </n-radio>
+
       <n-radio
         name="INACTIVE"
         :value="BindedFaceStatus.INACTIVE"

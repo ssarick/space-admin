@@ -1,5 +1,11 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref, useAttrs, watch } from 'vue';
+import {
+  onBeforeUnmount,
+  onMounted,
+  ref,
+  useAttrs,
+  watch
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { onBeforeRouteLeave } from 'vue-router';
 import { FormInst, NForm } from 'naive-ui';
@@ -28,7 +34,9 @@ if (!props.noPreventRoute) {
       window.onbeforeunload = () => true;
       isModelChanged = true;
     },
-    { deep: true }
+    {
+      deep: true
+    }
   );
 
   onBeforeRouteLeave((_, __, next) => {

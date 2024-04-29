@@ -1,7 +1,13 @@
-import { AuthPanel, AuthPanelRoles, AuthRole } from '@/shared/types/auth.types';
+import {
+  AuthPanel,
+  AuthPanelRoles,
+  AuthRole
+} from '@/shared/types/auth.types';
 
 export const authPanelRoles: AuthPanelRoles = {
-  [AuthPanel.CONTROL_PANEL]: [],
+  [AuthPanel.CONTROL_PANEL]: [
+    AuthRole.PARTNER
+  ],
   [AuthPanel.AUTOPAY]: [
     AuthRole.APP_AUTOPAYKB24_ADMIN,
     AuthRole.APP_AUTOPAYKB24_USERS

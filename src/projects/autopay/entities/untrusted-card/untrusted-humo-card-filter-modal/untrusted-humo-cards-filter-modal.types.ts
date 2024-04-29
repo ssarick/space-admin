@@ -1,13 +1,13 @@
 export interface IUntrustedCardsFilterList {
-  showModal: boolean,
+  showModal: boolean
   formValues: IUntrustedModalFilterValuesForm
 }
 
 export interface IUntrustedModalFilterValues {
-  contractId?: string | null,
-  clientId?: string | null,
-  ownerFullName?: string,
-  genesisFullName?: string,
+  contractId?: string | null
+  clientId?: string | null
+  ownerFullName?: string
+  genesisFullName?: string
   similarityFrom?: string | null
   similarityTo?: string | null
   status?: string

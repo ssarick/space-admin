@@ -1,5 +1,9 @@
 <script lang="ts" setup>
-import { NLayoutSider, NMenu, NSpace } from 'naive-ui';
+import {
+  NLayoutSider,
+  NMenu,
+  NSpace
+} from 'naive-ui';
 import BaseIcon from '@/shared/UI/base-icon';
 import BaseLogo from '@/shared/UI/base-logo/BaseLogo.vue';
 import useAppLayoutSider from './useAppLayoutSider';
@@ -34,11 +38,6 @@ const {
         <BaseLogo
           :short="menuCollapsed"
         />
-        <!--        <img-->
-        <!--          src="/icons/icon-space.svg"-->
-        <!--          alt="point logo"-->
-        <!--          width="140"-->
-        <!--        />-->
       </router-link>
     </n-space>
 

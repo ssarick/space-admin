@@ -11,9 +11,7 @@ const props = withDefaults(
   }
 );
 
-const {
-  donePercentage
-} = useBaseProgressWithControls(props);
+const { donePercentage } = useBaseProgressWithControls(props);
 </script>
 
 <template>

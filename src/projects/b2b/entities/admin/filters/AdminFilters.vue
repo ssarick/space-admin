@@ -6,7 +6,8 @@ import { fieldLimits } from '@/shared/utils/constants/field-limits';
 import { inputAllowLogin } from '@/shared/utils/input-allow-rules';
 import {
   IAdminFiltersEmits,
-  IAdminFiltersProps } from './admin-filters.types';
+  IAdminFiltersProps
+} from './admin-filters.types';
 import useAdminFilters from './useAdminFilters';
 
 const props = defineProps<IAdminFiltersProps>();

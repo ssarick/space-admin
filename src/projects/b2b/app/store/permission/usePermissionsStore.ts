@@ -5,13 +5,15 @@ import {
   AdminRole,
   Permission,
   PermissionAction,
-  PermissionTarget } from '@/projects/b2b/shared/types/permission.types';
+  PermissionTarget
+} from '@/projects/b2b/shared/types/permission.types';
 import { permissionByRoles } from './utils';
 
 export const usePermissionsStore = defineStore(
   'b2b-permissions',
   () => {
-    const permissions = ref<DeepPartial<Permission>>({});
+    const permissions = ref<DeepPartial<Permission>>({
+    });
 
     const has = (
       actions: PermissionAction
@@ -26,6 +28,7 @@ export const usePermissionsStore = defineStore(
       permission: Partial<Permission>
     ): boolean => {
       return true; // TODO mock
+
       for (const key in permission) {
         if (!has(permission[key], +key))
           return false;

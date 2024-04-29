@@ -5,7 +5,7 @@ import ApiUrlPlaceholderValue from './api-url-placeholder-value';
 export default class ApiUrlPlaceholderReplacer {
 
   protected static getters:
-    ApiUrlPlaceholderValueGetters = {
+  ApiUrlPlaceholderValueGetters = {
       [ApiUrlPlaceholder.AUTH_PANEL]: ApiUrlPlaceholderValue
         .getAuthPanel
     };

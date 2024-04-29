@@ -5,6 +5,6 @@ export default abstract class BaseApiResponseInterceptor {
 
   abstract intercept(
     response: AxiosResponse | AxiosError
-  ): Promise<AxiosResponse<IResponseData> | ApiErrorResponse>
+  ): Promise<AxiosResponse<IResponseData> | ApiErrorResponse>;
 
 }

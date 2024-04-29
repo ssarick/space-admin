@@ -1,6 +1,4 @@
-import {
-  IUntrustedModalFilterValuesForm
-} from '@/projects/autopay/entities/untrusted-card/untrusted-card-filter-modal/untrusted-cards-filter-modal.types';
+import { IUntrustedModalFilterValuesForm } from '@/projects/autopay/entities/untrusted-card/untrusted-card-filter-modal/untrusted-cards-filter-modal.types';
 
 export const formValueFields: IUntrustedModalFilterValuesForm = {
   contractId: null,

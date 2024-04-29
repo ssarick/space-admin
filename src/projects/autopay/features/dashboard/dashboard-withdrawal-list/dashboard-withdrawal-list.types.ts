@@ -7,4 +7,4 @@ export interface DashboardWithdrawalListProps {
 
 export type DashboardWithdrawalItem = {
   processingType?: ProcessingType
-} & Record<string, IPaymentStatistics>
+} & Record<string, IPaymentStatistics>;

@@ -1,4 +1,8 @@
-import { onMounted, reactive, ref } from 'vue';
+import {
+  onMounted,
+  reactive,
+  ref
+} from 'vue';
 import { usePagination } from '@/shared/composables';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import { ApiSubsidyApplication } from '@/projects/subsidy/shared/api';

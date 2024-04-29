@@ -1,9 +1,17 @@
-import { computed, ref, watch } from 'vue';
+import {
+  computed,
+  ref,
+  watch
+} from 'vue';
 import { useRoute } from 'vue-router';
 import { CustomBoolean } from '@/shared/types/common.types';
 import { ISelectOption } from '@/shared/types/select.types';
 import { isFilledObject } from '@/shared/utils/functions/object';
-import { FileManageEntity, FileManageEntityType, IFileManageItem } from '../../shared/types/file-manage.types';
+import {
+  FileManageEntity,
+  FileManageEntityType,
+  IFileManageItem
+} from '../../shared/types/file-manage.types';
 import { useFileManagerBucketsStore } from '../../app/store/useFileManagerBucketsStore';
 import useFilesDownloader from './composables/useFilesDownloader';
 import useFilesFetcher from './composables/useFilesFetcher';
@@ -75,13 +83,17 @@ export default function useFilesManage() {
   watch(
     () => filesFilters.filtersModel,
     filesFetcher.resetPaginationAndFetchEntities,
-    { deep: true }
+    {
+      deep: true
+    }
   );
 
   watch(
     bucketId,
     onChangeBucketRoute,
-    { immediate: true }
+    {
+      immediate: true
+    }
   );
 
   return {

@@ -6,7 +6,11 @@ import AmountFormatter from '@/shared/utils/amount-formatter';
 import { formValidate } from '@/shared/utils/functions';
 import { wholeAmountMaskOptions } from '@/shared/utils/mask';
 import { ruleProperSum } from '@/projects/autopay/shared/utils/validation-rules';
-import { IEmits, ILimitEditFormModel, IProps } from './limit-edit-modal.types';
+import {
+  IEmits,
+  ILimitEditFormModel,
+  IProps
+} from './limit-edit-modal.types';
 
 export default function useLimitEditModal(
   props: IProps,

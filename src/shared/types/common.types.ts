@@ -12,7 +12,7 @@ export enum CustomBoolean {
 }
 
 export type ArrayCheckerMethods = 'some'
-  | 'every'
+  | 'every';
 
 export interface IMfo {
   code?: string | null
@@ -21,7 +21,7 @@ export interface IMfo {
 
 export type BaseLink = RouteLocationRaw & {
   text: string
-}
+};
 
 export interface IDictionaryCommon<T = string | number> {
   id?: T | null
@@ -41,12 +41,12 @@ export interface IListItem<
 
 export interface UploadFileEvent {
   file: UploadFileInfo
-  fileList: UploadFileInfo[];
+  fileList: UploadFileInfo[]
 }
 
 export type ElClassName = string
   | Record<string, boolean>
-  | ElClassName[]
+  | ElClassName[];
 
 export type CommonSize = 'medium'
-  | 'large'
+  | 'large';

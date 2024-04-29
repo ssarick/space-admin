@@ -4,8 +4,8 @@ import type {
 } from '@/projects/notification-service/shared/types/send-message.types';
 
 export interface SendMessageToOneProps extends SendMessageToOneInput {
-  formValue?: SendMessageToOneInput,
-  loading?: boolean,
+  formValue?: SendMessageToOneInput
+  loading?: boolean
   selectedTemplate?: MessageTemplateModel | null
 }
 

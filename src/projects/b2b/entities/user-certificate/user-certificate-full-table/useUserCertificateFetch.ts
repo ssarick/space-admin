@@ -21,7 +21,8 @@ export default function useUserCertificateFetch(
     ApiCertificate.fetchInetBankCertificates({
       branch: user?.branch!,
       userId,
-      ...(pagination || {})
+      ...(pagination || {
+      })
     });
 
   const loadMobileCertificates = async (
@@ -29,7 +30,8 @@ export default function useUserCertificateFetch(
   ): Promise<IResponseData<ICertificate>> =>
     ApiCertificate.fetchMobileCertificates({
       userId,
-      ...(pagination || {})
+      ...(pagination || {
+      })
     });
 
   const loadCertificates = async (pagination?: IPagination) => {

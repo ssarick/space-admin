@@ -2,7 +2,8 @@
 import BaseDataTable from '@/shared/UI/base-data-table';
 import {
   ILogsClientTableEmits,
-  ILogsClientTableProps } from './logs-client-table.types';
+  ILogsClientTableProps
+} from './logs-client-table.types';
 import useLogsClientTable from './useLogsClientTable';
 
 const props = withDefaults(

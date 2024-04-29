@@ -31,7 +31,7 @@ const {
 
       <n-space
         justify="end"
-        :size="[20, 16]"
+        :size="[ 20, 16 ]"
       >
         <BaseButton
           type="primary"

@@ -22,11 +22,11 @@ export enum ApiResponseCode {
 }
 
 export interface IResponseData<T = {}> {
-  item: T;
-  items: T[];
-  totalCount: number;
-  totalPages: number;
-  error: boolean;
+  item: T
+  items: T[]
+  totalCount: number
+  totalPages: number
+  error: boolean
 }
 
 export interface ApiInstance extends
@@ -65,14 +65,14 @@ export interface ApiCreatedResponse {
 
 export type ApiErrorResponse = Partial<AxiosResponse<IResponseData>>
   | AxiosError
-  | void
+  | void;
 
-export type ApiResponseItemsValue = object | Primitive
+export type ApiResponseItemsValue = object | Primitive;
 
 export type ApiResponseItemsGetter = (
   response: AxiosResponse
-) => ApiResponseItemsValue[]
+) => ApiResponseItemsValue[];
 
 export type ApiCreatedResponseList = PromiseSettledResult<
   ApiCreatedResponse | null
->
+>;

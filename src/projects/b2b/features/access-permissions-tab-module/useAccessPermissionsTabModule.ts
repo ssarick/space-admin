@@ -1,7 +1,15 @@
-import { computed, ref, watch } from 'vue';
+import {
+  computed,
+  ref,
+  watch
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
-import { SelectOption, useDialog, useMessage } from 'naive-ui';
+import {
+  SelectOption,
+  useDialog,
+  useMessage
+} from 'naive-ui';
 import { useAuthStore } from '@/app/store/auth/useAuthStore';
 import { useClientUserOrganizationSync } from '@/projects/b2b/entities/organization-list';
 import UserAccessPermissionsList from '@/projects/b2b/entities/user-access-permissions-list/UserAccessPermissionsList.vue';
@@ -132,7 +140,9 @@ export default function useUserAccessPermissionsModule(
             branch: user?.branch!,
             businessCode: selectedOrganization.value?.clientCode || ''
           },
-          body: { stateId }
+          body: {
+            stateId
+          }
         }
       );
 

@@ -20,4 +20,4 @@ export interface ILinkListItem<T = unknown> {
 
 export type SwitchListItem = ISwitchListItemOptions & {
   [P in string]: Primitive | SwitchListItem
-}
+};

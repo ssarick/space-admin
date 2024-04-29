@@ -9,7 +9,8 @@ import {
   FileManageEntity,
   FileManageEntityType,
   IFileManageFilterUtilsForFetcher,
-  IFileManageGeneralEntity } from '@/projects/file-manager/shared/types/file-manage.types';
+  IFileManageGeneralEntity
+} from '@/projects/file-manager/shared/types/file-manage.types';
 import FileManageMapper from '@/projects/file-manager/shared/utils/mappers/file-manage-mapper';
 
 export default function useFilesFetcher(
@@ -29,10 +30,10 @@ export default function useFilesFetcher(
   const getFiltersWithPagination = <T extends object>(
     filters: T
   ): T & IPagination => ({
-      ...filters,
-      pageNumber: pageNumber.value,
-      pageSize: pageSize.value
-    });
+    ...filters,
+    pageNumber: pageNumber.value,
+    pageSize: pageSize.value
+  });
 
   const setFolderExpanded = (
     folder: IFileManageGeneralEntity<

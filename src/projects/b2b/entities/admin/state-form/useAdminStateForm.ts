@@ -4,7 +4,8 @@ import useFormRefWithValidate from '@/shared/UI/base-form/useFormRefWithValidate
 import { ruleRequired } from '@/shared/utils/validation-rules';
 import {
   IAdminStateFormEmits,
-  IAdminStateFormProps } from './admin-state-form.types';
+  IAdminStateFormProps
+} from './admin-state-form.types';
 
 export default function useAdminStateForm(
   props: IAdminStateFormProps,

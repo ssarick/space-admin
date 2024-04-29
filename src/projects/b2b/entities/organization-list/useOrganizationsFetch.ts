@@ -18,7 +18,8 @@ export default function useOrganizationsFetch(
     const response = await ApiUser.fetchUserOrganizations({
       branch: user?.branch!,
       userId: props.userId || '',
-      ...(pagination || {})
+      ...(pagination || {
+      })
     });
 
     response.error || (organizations.value = response.items);

@@ -37,7 +37,9 @@ export default function useOperDayStates(
     });
 
   const onCheckAllDocuments = (state: boolean) =>
-    emit('toggleAllDocumentsState', { state });
+    emit('toggleAllDocumentsState', {
+      state
+    });
 
   const onCheckReport = (state: boolean, row: IOperDay) =>
     emit('toggleReportState', {
@@ -46,7 +48,9 @@ export default function useOperDayStates(
     });
 
   const onCheckAllReports = (state: boolean) =>
-    emit('toggleAllReportsState', { state });
+    emit('toggleAllReportsState', {
+      state
+    });
 
   return {
     allDocumentsIsChecked,

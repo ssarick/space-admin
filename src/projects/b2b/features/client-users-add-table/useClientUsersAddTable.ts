@@ -1,4 +1,11 @@
-import { computed, h, onMounted, reactive, ref, watch } from 'vue';
+import {
+  computed,
+  h,
+  onMounted,
+  reactive,
+  ref,
+  watch
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
 import { useDebounceFn } from '@vueuse/core';
@@ -30,7 +37,8 @@ export default function useClientsTable() {
   const dataTable = ref<IUser[]>([]);
   const tableRef = useTableRef();
   const isLoading = ref(false);
-  const isAddUserLoadingMap = ref({});
+  const isAddUserLoadingMap = ref({
+  });
   const { user } = useAuthStore();
   const phoneFieldMask = FIELD_MASK.phone;
 
@@ -53,7 +61,9 @@ export default function useClientsTable() {
       tableRef.value.pagination.page = 1;
     }
 
-    fetchUsers({ ...searchForm });
+    fetchUsers({
+      ...searchForm
+    });
   };
 
   const onClear = () => Object
@@ -131,7 +141,9 @@ export default function useClientsTable() {
       width: '200px',
       render(row: IUser) {
         return [
-          h(NSpace, { justify: 'center' }, () => [
+          h(NSpace, {
+            justify: 'center'
+          }, () => [
             h(
               NPopover,
               {
@@ -150,7 +162,8 @@ export default function useClientsTable() {
                       goToUserDetail(row);
                     }
                   }),
-                default: () => h('span', {}, t('User-data'))
+                default: () => h('span', {
+                }, t('User-data'))
               }
             ),
             h(
@@ -178,7 +191,8 @@ export default function useClientsTable() {
                     },
                     () => t('Next')
                   ),
-                default: () => h('span', {}, t('Add-user'))
+                default: () => h('span', {
+                }, t('Add-user'))
               }
             )
           ])
@@ -201,7 +215,8 @@ export default function useClientsTable() {
     });
   }
 
-  async function fetchUsers(filterParams: IUserQueryParams = {}) {
+  async function fetchUsers(filterParams: IUserQueryParams = {
+  }) {
     const pagination = tableRef.value?.pagination;
 
     const pageSize = pagination?.pageSize
@@ -235,7 +250,9 @@ export default function useClientsTable() {
   watch(
     () => searchForm,
     useDebounceFn(onSearchUsers, globalConfig.debounceInMS),
-    { deep: true }
+    {
+      deep: true
+    }
   );
 
   onMounted(() => {

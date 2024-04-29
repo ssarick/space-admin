@@ -10,28 +10,28 @@ import type {
 import apiInventory from './instance';
 
 export const fetchUsers = async (
-  {
-    ...params
-  }: InventoryPaginationPayload
+  { ...params }: InventoryPaginationPayload
 ): Promise<IResponseData<InventoryUserDetail>> => {
   const { data } = await apiInventory
     .post(
       'Admin/users',
-      { ...params }
+      {
+        ...params
+      }
     );
 
   return InventoryMapper.mapToInventoryUsersData(data.item);
 };
 
 export const createInventoryUser = async (
-  {
-    ...params
-  }: InventoryUserCreatePayload
+  { ...params }: InventoryUserCreatePayload
 ): Promise<IResponseData<InventoryUser>> => {
   const { data } = await apiInventory
     .post(
       'Admin/users/add',
-      { ...params }
+      {
+        ...params
+      }
     );
 
   return data;

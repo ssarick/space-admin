@@ -1,8 +1,8 @@
 export interface IBaseDetailCardHead {
-  text?: string;
+  text?: string
 }
 
 export interface IBaseDetailCardBody extends IBaseDetailCardHead {
-  title?: string | number;
-  visibility?: boolean;
+  title?: string | number
+  visibility?: boolean
 }

@@ -35,9 +35,7 @@ export default function useAdminDelete(
     error || deleteAdminLocal(id);
   };
 
-  const {
-    showConfirmationDialog
-  } = useConfirmationDialog(
+  const { showConfirmationDialog } = useConfirmationDialog(
     deleteAdmin,
     id => t('Confirm-admin-delete', [
       findAdminById(id)?.login

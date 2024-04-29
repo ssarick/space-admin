@@ -17,7 +17,7 @@ const {
 
 <template>
   <n-space
-    :size="[ 24, 16]"
+    :size="[ 24, 16 ]"
   >
     <n-date-picker
       v-model:value="uploadDate"

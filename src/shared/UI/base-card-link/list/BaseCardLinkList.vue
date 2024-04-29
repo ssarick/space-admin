@@ -3,7 +3,8 @@ import { NGi, NGrid } from 'naive-ui';
 import BaseCardLink from '../item/BaseCardLink.vue';
 import {
   IBaseCardLinkListEmits,
-  IBaseCardLinkListProps } from './base-card-link-list.types';
+  IBaseCardLinkListProps
+} from './base-card-link-list.types';
 import useBaseCardLinkList from './useBaseCardLinkList';
 
 const props = withDefaults(
@@ -15,9 +16,7 @@ const props = withDefaults(
 
 const emit = defineEmits<IBaseCardLinkListEmits>();
 
-const {
-  onClickCardLink
-} = useBaseCardLinkList(emit);
+const { onClickCardLink } = useBaseCardLinkList(emit);
 </script>
 
 <template>

@@ -1,8 +1,19 @@
-import { computed, h, onMounted, reactive, ref } from 'vue';
+import {
+  computed,
+  h,
+  onMounted,
+  reactive,
+  ref
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
 import { useDebounceFn } from '@vueuse/core';
-import { DataTableColumns, NButton, NPopover, NSpace } from 'naive-ui';
+import {
+  DataTableColumns,
+  NButton,
+  NPopover,
+  NSpace
+} from 'naive-ui';
 import { globalConfig } from '@/shared/config/global-config';
 import { IResponseData } from '@/shared/types/api.types';
 import { IPagination } from '@/shared/types/pagination.types';
@@ -113,7 +124,8 @@ export default function useClientsTable() {
                     });
                   }
                 }),
-              default: () => h('span', {}, t('Users'))
+              default: () => h('span', {
+              }, t('Users'))
             }
           ),
           h(
@@ -138,7 +150,8 @@ export default function useClientsTable() {
                     })
                   }
                 ),
-              default: () => h('span', {}, t('Client-data'))
+              default: () => h('span', {
+              }, t('Client-data'))
             }
           )
         ]

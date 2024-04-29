@@ -10,9 +10,7 @@ import {
   watch
 } from 'vue';
 import { useDebounce } from '@vueuse/shared';
-import {
-  NDataTable
-} from 'naive-ui';
+import { NDataTable } from 'naive-ui';
 import { RowData } from 'naive-ui/es/data-table/src/interface';
 import { globalConfig } from '@/shared/config/global-config';
 import { IDataTablePagination } from '@/shared/types/data-table.types';
@@ -61,7 +59,8 @@ const renderExpandIcon = computed(
 );
 
 const rowProps = (row: object, index: number) => {
-  const rowProps: HTMLAttributes = {};
+  const rowProps: HTMLAttributes = {
+  };
 
   const declaredProps: HTMLAttributes | undefined =
     props.rowProps && props.rowProps(row, index);
@@ -163,7 +162,9 @@ watch(
       onUpdate();
     }
   },
-  { immediate: true }
+  {
+    immediate: true
+  }
 );
 
 watch([ debouncedSearchFilterValue ], onFilterInput);

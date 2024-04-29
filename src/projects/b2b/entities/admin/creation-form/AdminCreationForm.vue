@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { NFormItem, NGi, NGrid } from 'naive-ui';
+import {
+  NFormItem,
+  NGi,
+  NGrid
+} from 'naive-ui';
 import { DomainShortcuts } from '@/shared/types/common.types';
 import BaseForm from '@/shared/UI/base-form';
 import BaseInput from '@/shared/UI/base-input';
@@ -12,7 +16,8 @@ import {
 import { ApiDictionary } from '@/projects/b2b/shared/api';
 import {
   IAdminCreationFormEmits,
-  IAdminCreationFormProps } from './admin-creation-form.types';
+  IAdminCreationFormProps
+} from './admin-creation-form.types';
 import useAdminCreationForm from './useAdminCreationForm';
 
 const props = defineProps<IAdminCreationFormProps>();

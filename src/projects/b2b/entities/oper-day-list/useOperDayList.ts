@@ -9,7 +9,8 @@ import { IOperDay } from '@/projects/b2b/shared/types/oper-day.types';
 import { AdminRole } from '@/projects/b2b/shared/types/permission.types';
 import {
   IOperDayListEmits,
-  IOperDayListProps } from './oper-day-list.types';
+  IOperDayListProps
+} from './oper-day-list.types';
 import useOperDayStates from './useOperDayStates';
 import { renderOperDayDetails, renderOperDaySwitch } from './utils';
 

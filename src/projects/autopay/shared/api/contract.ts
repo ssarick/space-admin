@@ -30,7 +30,8 @@ export const fetchContracts = async (
   const { data } = await api
     .get('/clearing/contracts', {
       params,
-      ...(requestConfig || {})
+      ...(requestConfig || {
+      })
     });
 
   data.items = ContractMapper

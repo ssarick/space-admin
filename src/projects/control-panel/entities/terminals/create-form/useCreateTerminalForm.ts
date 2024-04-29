@@ -1,9 +1,7 @@
 import { useVModels } from '@vueuse/core';
 import { FormRules } from 'naive-ui';
 import useFormRefWithValidate from '@/shared/UI/base-form/useFormRefWithValidate';
-import {
-  ruleRequired
-} from '@/shared/utils/validation-rules';
+import { ruleRequired } from '@/shared/utils/validation-rules';
 import type { CreateTerminalFormEmits, CreateTerminalFormProps } from './create-terminal-form.types';
 
 export default function useCreateTerminalForm(

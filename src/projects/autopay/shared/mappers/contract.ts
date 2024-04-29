@@ -6,7 +6,9 @@ export default class ContractMapper {
   static toContracts(
     contracts: number[]
   ): IContract[] {
-    return contracts.map(id => ({ id }));
+    return contracts.map(id => ({
+      id
+    }));
   }
 
   static detailToContracts(

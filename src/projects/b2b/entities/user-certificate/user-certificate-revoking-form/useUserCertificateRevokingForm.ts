@@ -1,4 +1,8 @@
-import { computed, ref, watch } from 'vue';
+import {
+  computed,
+  ref,
+  watch
+} from 'vue';
 import { useVModels } from '@vueuse/core';
 import { FormRules } from 'naive-ui';
 import useFormRefWithValidate from '@/shared/UI/base-form/useFormRefWithValidate';
@@ -17,11 +21,21 @@ export default function useUserCertificateRevoking(
   props: IUserCertificateRevokingFormProps,
   emit: IUserCertificateRevokingFormEmit
 ) {
-  const { formRef, validateForm, restoreFormValidation } =
+  const {
+    formRef,
+    validateForm,
+    restoreFormValidation
+  } =
     useFormRefWithValidate();
 
-  const { reasonId, reasonText, customReasonText, hasCustomReasonText } =
-    useVModels(props, emit);
+  const {
+    reasonId,
+    reasonText,
+    customReasonText,
+    hasCustomReasonText
+  } =
+    useVModels(props,
+      emit);
 
   const reasonsRef = ref<InstanceType<typeof BaseSelect> | null>(null);
 

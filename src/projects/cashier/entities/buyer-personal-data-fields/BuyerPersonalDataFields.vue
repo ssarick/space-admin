@@ -6,9 +6,7 @@ import {
   BuyerPersonalDataFormEmits,
   BuyerPersonalDataFormProps
 } from '@/projects/cashier/entities/buyer-personal-data-fields/buyer-personal-data-fields.types';
-import {
-  useBuyerPersonalDataFields
-} from '@/projects/cashier/entities/buyer-personal-data-fields/useBuyerPersonalDataFields';
+import { useBuyerPersonalDataFields } from '@/projects/cashier/entities/buyer-personal-data-fields/useBuyerPersonalDataFields';
 
 const props = defineProps<BuyerPersonalDataFormProps>();
 const emit = defineEmits<BuyerPersonalDataFormEmits>();

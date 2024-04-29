@@ -1,3 +1,3 @@
 declare module NodeJS {
-  type Timeout = number
+  type Timeout = number;
 }

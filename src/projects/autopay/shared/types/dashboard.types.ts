@@ -37,16 +37,16 @@ export interface ITotalStatisticsEmpty {
 
 export type TotalStatisticsByProcessing = Record<
   ProcessingType, number
->
+>;
 
 export type TotalStatisticsListByProcessings = Record<
   ProcessingType, ITotalStatistics
->
+>;
 
 export type ISumStatisticsByProcessing = Record<
   ProcessingType, ISumStatistics
->
+>;
 
 export type ProcessingsConfigMap = Record<
   ProcessingType, StatusConfig<ProcessingType>
->
+>;

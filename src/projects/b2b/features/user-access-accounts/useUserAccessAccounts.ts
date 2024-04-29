@@ -1,4 +1,8 @@
-import { computed, ref, watch } from 'vue';
+import {
+  computed,
+  ref,
+  watch
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
 import { useMessage } from 'naive-ui';
@@ -7,7 +11,11 @@ import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import { useAuthStore } from '@/app/store/auth/useAuthStore';
 import { useClientUserOrganizationSync } from '@/projects/b2b/entities/organization-list';
 import { ApiAccount } from '@/projects/b2b/shared/api';
-import { IAccount, IAccountAccess, IAccountRelation } from '@/projects/b2b/shared/types/account.types';
+import {
+  IAccount,
+  IAccountAccess,
+  IAccountRelation
+} from '@/projects/b2b/shared/types/account.types';
 import { IUserOrganization } from '@/projects/b2b/shared/types/user.types';
 import { IUserAccessAccountsProps } from './user-access-accounts.types';
 import useUserAccessAccountsColumns from './useUserAccessAccountsColumns';
@@ -157,7 +165,10 @@ export default function useUserAccessAccounts(
           .accountRelations
           .find(
             _relation => _relation.userId === userId
-          ) || { stateId: 0, canPay: 0 };
+          ) || {
+          stateId: 0,
+          canPay: 0
+        };
 
         accounts.push({
           accountNumber: account.accountNumber,

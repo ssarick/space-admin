@@ -27,7 +27,7 @@ const {
   <n-space
     justify="space-between"
     class="mb-4"
-    :size="[20, 16]"
+    :size="[ 20, 16 ]"
   >
     <PageTitle
       no-margin

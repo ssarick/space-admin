@@ -3,9 +3,7 @@ import { useI18n } from 'vue-i18n';
 import { DataTableColumn, NCheckbox } from 'naive-ui';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
 import { IHumoCard } from '@/projects/autopay/shared/types/card.types';
-import {
-  IUntrustedCardsListEmits, IUntrustedCardsListProps
-} from './untrusted-humo-cards-list.types';
+import { IUntrustedCardsListEmits, IUntrustedCardsListProps } from './untrusted-humo-cards-list.types';
 
 export default function useUntrustedCardList(
   props: IUntrustedCardsListProps,

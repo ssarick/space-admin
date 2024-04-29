@@ -14,7 +14,9 @@ export default function useContractDetailTable(
     {
       text: `ID ${props.contract?.borrowerId}`,
       name: 'contragent-detail',
-      params: { id: props.contract?.borrowerId }
+      params: {
+        id: props.contract?.borrowerId
+      }
     }
   ]);
 
@@ -22,7 +24,9 @@ export default function useContractDetailTable(
     .coborrowers
     .map(id => ({
       name: 'contragent-detail',
-      params: { id },
+      params: {
+        id
+      },
       text: `ID ${id}`
     }))
   );

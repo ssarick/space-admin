@@ -1,5 +1,9 @@
 <script lang="ts" setup>
-import { NSpace, NSwitch, NText } from 'naive-ui';
+import {
+  NSpace,
+  NSwitch,
+  NText
+} from 'naive-ui';
 import {
   IBaseSwitchBarEmit,
   IBaseSwitchBarProps
@@ -9,7 +13,11 @@ import useBaseSwitchBar from './useBaseSwitchBar';
 const props = defineProps<IBaseSwitchBarProps>();
 const emit = defineEmits<IBaseSwitchBarEmit>();
 
-const { model, onLeftLabelClick, onRightLabelClick } = useBaseSwitchBar(
+const {
+  model,
+  onLeftLabelClick,
+  onRightLabelClick
+} = useBaseSwitchBar(
   props,
   emit
 );

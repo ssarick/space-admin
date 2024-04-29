@@ -3,7 +3,11 @@ import { useI18n } from 'vue-i18n';
 import { useMessage } from 'naive-ui';
 import { NonNullableObjectValues } from '@/shared/types/utility.types';
 import { ApiAdministration } from '@/projects/autopay/shared/api';
-import { ILimit, ILimitWithOptions, LimitType } from '@/projects/autopay/shared/types/administration.types';
+import {
+  ILimit,
+  ILimitWithOptions,
+  LimitType
+} from '@/projects/autopay/shared/types/administration.types';
 
 export default function useLimitsEdit(
   limitList: Ref<ILimitWithOptions[]>

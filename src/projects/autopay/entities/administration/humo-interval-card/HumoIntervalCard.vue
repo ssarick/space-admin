@@ -1,18 +1,22 @@
 <script lang="ts" setup>
-import { NCard, NFormItem, NSpace, NSpin } from 'naive-ui';
+import {
+  NCard,
+  NFormItem,
+  NSpace,
+  NSpin
+} from 'naive-ui';
 import BaseInput from '@/shared/UI/base-input';
 import { inputAllowOnlyNumber } from '@/shared/utils/input-allow-rules';
 import {
   IHumoIntervalCardEmits,
-  IHumoIntervalCardProps } from './humo-interval-card.types';
+  IHumoIntervalCardProps
+} from './humo-interval-card.types';
 import useHumoIntervalCard from './useHumoIntervalCard';
 
 const props = defineProps<IHumoIntervalCardProps>();
 const emit = defineEmits<IHumoIntervalCardEmits>();
 
-const {
-  amount
-} = useHumoIntervalCard(props, emit);
+const { amount } = useHumoIntervalCard(props, emit);
 </script>
 
 <template>

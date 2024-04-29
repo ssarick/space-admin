@@ -18,21 +18,21 @@ export default function useStatusRenderer(
   emit: GroupMessagesMainTableEmits
 ) {
   const playAvailableStatuses:
-    GroupedMessageStatuses[] = [
-      GroupedMessageStatuses.PAUSE,
-      GroupedMessageStatuses.NEW
-    ];
+  GroupedMessageStatuses[] = [
+    GroupedMessageStatuses.PAUSE,
+    GroupedMessageStatuses.NEW
+  ];
 
   const inProgressStatuses:
-    MessageStatuses[] = [
-      MessageStatuses.NEW,
-      MessageStatuses.IN_PROCESS
-    ];
+  MessageStatuses[] = [
+    MessageStatuses.NEW,
+    MessageStatuses.IN_PROCESS
+  ];
 
   const disableActionsStatuses:
-    MessageStatuses[] = [
-      MessageStatuses.NEW
-    ];
+  MessageStatuses[] = [
+    MessageStatuses.NEW
+  ];
 
   const { t } = useI18n();
 
@@ -43,15 +43,21 @@ export default function useStatusRenderer(
 
   const emitStop = (
     row: GroupMessagesClientInternal
-  ) => emit('stop', { ...row });
+  ) => emit('stop', {
+    ...row
+  });
 
   const emitPlay = (
     row: GroupMessagesClientInternal
-  ) => emit('play', { ...row });
+  ) => emit('play', {
+    ...row
+  });
 
   const emitPause = (
     row: GroupMessagesClientInternal
-  ) => emit('pause', { ...row });
+  ) => emit('pause', {
+    ...row
+  });
 
   const checkIsPlayAvailable = (
     row: GroupMessagesClientInternal
@@ -114,7 +120,9 @@ export default function useStatusRenderer(
               disabled: actionsDisabled,
               renderIcon: renderIcon(
                 isPlayAvailable ? 'play' : 'pause',
-                { size: 24 }
+                {
+                  size: 24
+                }
               ),
               onClick: () => isPlayAvailable
                 ? emitPlay(row)

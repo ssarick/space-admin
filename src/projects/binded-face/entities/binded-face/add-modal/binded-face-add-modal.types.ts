@@ -1,10 +1,8 @@
-import {
-  BindedFaceFormModel
-} from '@/projects/binded-face/shared/types/binded-face.types';
+import { BindedFaceFormModel } from '@/projects/binded-face/shared/types/binded-face.types';
 
 export interface BindedFaceAddModalProps extends BindedFaceFormModel {
-  modelValue?: boolean;
-  model?: BindedFaceFormModel;
+  modelValue?: boolean
+  model?: BindedFaceFormModel
   loading: boolean
 }
 

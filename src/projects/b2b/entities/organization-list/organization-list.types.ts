@@ -1,4 +1,8 @@
-import { IUser, IUserOrganization, UserStateId } from '@/projects/b2b/shared/types/user.types';
+import {
+  IUser,
+  IUserOrganization,
+  UserStateId
+} from '@/projects/b2b/shared/types/user.types';
 
 export interface IOrganizationListProps {
   organization?: IUserOrganization | null
@@ -22,4 +26,4 @@ export interface IOrganizationListEmit {
 
 export type UserStateTextMap = {
   [P in UserStateId]: string
-}
+};

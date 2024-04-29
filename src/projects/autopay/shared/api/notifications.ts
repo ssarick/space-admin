@@ -4,7 +4,7 @@ import { INotification, INotificationError } from '@/projects/superadmin/shared/
 import api from './instance';
 
 export const fetchNotifications = async():
-  Promise<IResponseData<INotification>> => {
+Promise<IResponseData<INotification>> => {
   console.warn('fetchNotifications');
   await TimerUtils.sleep(400);
 
@@ -31,7 +31,8 @@ export const fetchNotifications = async():
         text: 'Label'
       }
     ],
-    item: {},
+    item: {
+    },
     totalCount: 0,
     totalPages: 0,
     error: false
@@ -44,7 +45,7 @@ export const fetchNotifications = async():
 };
 
 export const fetchNotificationErrors = async ():
-  Promise<IResponseData<INotificationError>> => {
+Promise<IResponseData<INotificationError>> => {
   console.warn('fetchNotificationErrors');
   await TimerUtils.sleep(400);
 
@@ -71,7 +72,8 @@ export const fetchNotificationErrors = async ():
         text: 'Label'
       }
     ],
-    item: {},
+    item: {
+    },
     totalCount: 0,
     totalPages: 0,
     error: false
@@ -90,7 +92,8 @@ export const sendNotificationErrorsToAdmin = async (
   await TimerUtils.sleep(400);
 
   return {
-    item: {},
+    item: {
+    },
     totalCount: 0,
     totalPages: 0,
     error: false

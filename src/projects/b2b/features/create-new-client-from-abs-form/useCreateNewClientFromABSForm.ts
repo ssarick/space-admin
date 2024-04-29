@@ -19,7 +19,10 @@ export default function useCreateNewClientFromABSForm() {
     isLoading.value = true;
 
     const { item } = await ApiClient.fetchClientById({
-      path: { branch: user?.branch!, businessCode: searchValue.value }
+      path: {
+        branch: user?.branch!,
+        businessCode: searchValue.value
+      }
     });
 
     isLoading.value = false;
@@ -30,7 +33,10 @@ export default function useCreateNewClientFromABSForm() {
     const businessCode = clientData.value?.clientCode || '';
 
     const { error } = await ApiClient.addNewClientToClientBranch({
-      path: { branch: user?.branch!, businessCode }
+      path: {
+        branch: user?.branch!,
+        businessCode
+      }
     });
 
     if (error) return;
@@ -39,9 +45,13 @@ export default function useCreateNewClientFromABSForm() {
       isAddUserAfterCreation.value
         ? {
           name: 'client-users-add',
-          params: { businessCode }
+          params: {
+            businessCode
+          }
         }
-        : { name: 'clients' }
+        : {
+          name: 'clients'
+        }
     );
   }
 

@@ -1,8 +1,8 @@
 import { ITransaction } from '@/projects/autopay/shared/types/transaction.types';
 
 export interface ITransactionListTableProps {
-  loading: boolean,
-  transactions: ITransaction[],
+  loading: boolean
+  transactions: ITransaction[]
 }
 export interface ITransactionListTableEmits {
   (e: 'update', value?: string | null): void

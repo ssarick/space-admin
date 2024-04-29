@@ -1,7 +1,11 @@
 import { onMounted, ref } from 'vue';
 import { useConfirmationDialog } from '@/shared/composables';
 import { ApiOperDay } from '@/projects/b2b/shared/api';
-import { IOperDay, IOperDayTogglePayload, OperDayBranch } from '@/projects/b2b/shared/types/oper-day.types';
+import {
+  IOperDay,
+  IOperDayTogglePayload,
+  OperDayBranch
+} from '@/projects/b2b/shared/types/oper-day.types';
 import { setOperDayProperty } from './utils';
 
 export default function useOperDay() {

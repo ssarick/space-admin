@@ -40,7 +40,9 @@ export default function useContractDetail(
   watch(
     () => props.contractId,
     fetchContractFull,
-    { immediate: true }
+    {
+      immediate: true
+    }
   );
 
   return {
