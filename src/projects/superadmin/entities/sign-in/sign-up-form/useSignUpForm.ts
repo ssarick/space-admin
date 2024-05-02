@@ -2,16 +2,15 @@ import { useVModels } from '@vueuse/core';
 import { FormRules } from 'naive-ui';
 import useFormRefWithValidate from '@/shared/UI/base-form/useFormRefWithValidate';
 import { ruleRequired } from '@/shared/utils/validation-rules';
-import { ISignInFormEmit, ISignInFormProps } from './sign-in-form.types';
+import { ISignUpFormEmit, ISignUpFormProps } from './sign-up-form.types';
 
-export default function useSignInForm(
-  props: ISignInFormProps,
-  emit: ISignInFormEmit
+export default function useSignUpForm(
+  props: ISignUpFormProps,
+  emit: ISignUpFormEmit
 ) {
   const {
     username,
-    password,
-    rememberMe
+    password
   } = useVModels(props, emit);
 
   const formRules: FormRules = {
@@ -25,8 +24,8 @@ export default function useSignInForm(
     }
   };
 
-  const goToRegistration = () => {
-    emit('showRegister', true);
+  const goToSignIn = () => {
+    emit('showRegister', false);
   };
 
   const {
@@ -37,12 +36,11 @@ export default function useSignInForm(
 
   return {
     formRef,
-    goToRegistration,
     validateForm,
     restoreFormValidation,
+    goToSignIn,
     formRules,
     username,
-    password,
-    rememberMe
+    password
   };
 }

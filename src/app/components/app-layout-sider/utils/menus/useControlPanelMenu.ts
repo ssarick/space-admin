@@ -14,6 +14,14 @@ ComputedRef<IAppMenuOption[]> {
       route: {
         name: 'terminals-list'
       }
+    },
+    {
+      label: t('bins-add'),
+      icon: 'transactions',
+      key: 'bins-wrapper',
+      route: {
+        name: 'bins-list'
+      }
     }
     // {
     //   label: t('limits-add'),

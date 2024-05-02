@@ -2,17 +2,24 @@
 import { NCollapseTransition } from 'naive-ui';
 import SignInForm from '@/projects/superadmin/entities/sign-in/sign-in-form';
 import SignInPanels from '@/projects/superadmin/entities/sign-in/sign-in-panels';
-import useSignInModule from './useSignInModule';
+import SignUpForm from '@/projects/superadmin/entities/sign-in/sign-up-form';
+import useAuthorizationModule from '@/projects/superadmin/features/sign-in/useAuthorizationModule.ts';
 
 const {
+  signUpFormModel,
+  signUpFormRef,
+  submitButtonRegisterLoading,
+  signUp,
   signedIn,
   signInFormModel,
   signInFormRef,
   submitButtonLoading,
-  signIn,
+  showRegisterForm,
   authPanelStore,
+  showRegister,
+  signIn,
   onSelectAuthPanel
-} = useSignInModule();
+} = useAuthorizationModule();
 </script>
 
 <template>
@@ -25,15 +32,30 @@ const {
     </n-collapse-transition>
 
     <n-collapse-transition :show="!signedIn">
-      <SignInForm
-        v-model:username="signInFormModel.username"
-        v-model:password="signInFormModel.password"
-        v-model:remember-me="signInFormModel.rememberMe"
-        ref="signInFormRef"
-        :model="signInFormModel"
-        :loading="submitButtonLoading"
-        @submit.prevent="signIn"
-      />
+      <n-collapse-transition :show="showRegisterForm">
+        <SignUpForm
+          v-model:username="signUpFormModel.username"
+          v-model:password="signUpFormModel.password"
+          ref="signUpFormRef"
+          :model="signUpFormModel"
+          :loading="submitButtonRegisterLoading"
+          @show-register="showRegister"
+          @submit.prevent="signUp"
+        />
+      </n-collapse-transition>
+
+      <n-collapse-transition :show="!showRegisterForm">
+        <SignInForm
+          v-model:username="signInFormModel.username"
+          v-model:password="signInFormModel.password"
+          v-model:remember-me="signInFormModel.rememberMe"
+          ref="signInFormRef"
+          :model="signInFormModel"
+          :loading="submitButtonLoading"
+          @show-register="showRegister"
+          @submit.prevent="signIn"
+        />
+      </n-collapse-transition>
     </n-collapse-transition>
   </div>
 </template>

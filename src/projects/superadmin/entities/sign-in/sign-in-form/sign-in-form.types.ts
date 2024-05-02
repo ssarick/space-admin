@@ -10,13 +10,17 @@ export interface ISignInFormEmit {
   (
     event: 'update:username',
     value: string
-  ): void
+  )
   (
     event: 'update:password',
     value: string
-  ): void
+  )
   (
     event: 'update:rememberMe',
     value: boolean
-  ): void
+  )
+  (
+    event: 'showRegister',
+    value: boolean
+  )
 }

@@ -1,23 +1,23 @@
 <script setup lang="ts">
+import { NFormItem } from 'naive-ui';
 import BaseForm from '@/shared/UI/base-form';
-import BaseInput from '@/shared/UI/base-input/BaseInput.vue';
+import BaseInput from '@/shared/UI/base-input';
 import { inputAllowAuthCredential } from '@/shared/utils/input-allow-rules';
-import { ISignInFormEmit, ISignInFormProps } from './sign-in-form.types';
-import useSignInForm from './useSignInForm';
+import { ISignUpFormEmit, ISignUpFormProps } from './sign-up-form.types';
+import useSignUpForm from './useSignUpForm';
 
-const props = defineProps<ISignInFormProps>();
-const emit = defineEmits<ISignInFormEmit>();
+const props = defineProps<ISignUpFormProps>();
+const emit = defineEmits<ISignUpFormEmit>();
 
 const {
   validateForm,
   restoreFormValidation,
-  goToRegistration,
+  goToSignIn,
   formRules,
   formRef,
   username,
-  password,
-  rememberMe
-} = useSignInForm(props, emit);
+  password
+} = useSignUpForm(props, emit);
 
 defineExpose({
   validate: validateForm,
@@ -37,7 +37,7 @@ defineExpose({
       tag="h4"
       class="mb-4 text-center"
     >
-      {{ $t('Auth') }}
+      {{ $t('Registration') }}
     </n-text>
 
     <n-form-item
@@ -67,13 +67,6 @@ defineExpose({
       />
     </n-form-item>
 
-    <n-checkbox
-      v-model:checked="rememberMe"
-      class="mt-1"
-    >
-      {{ $t('Remember-me') }}
-    </n-checkbox>
-
     <n-button
       attr-type="submit"
       class="sign-in-form__submit"
@@ -81,17 +74,16 @@ defineExpose({
       block
       :loading="props.loading"
     >
-      {{ $t('Sign-in') }}
+      {{ $t('Sign-up') }}
     </n-button>
 
     <n-button
       class="sign-in-form__submit"
-      type="tertiary"
       block
       :loading="props.loading"
-      @click="goToRegistration"
+      @click="goToSignIn"
     >
-      {{ $t('Sign-up') }}
+      {{ $t('Back') }}
     </n-button>
   </BaseForm>
 </template>

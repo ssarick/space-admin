@@ -28,7 +28,8 @@ export const authPanelRoles: AuthPanelRoles = {
     AuthRole.APP_LOGS_AUDIT_USER
   ],
   [AuthPanel.NOTIFICATION]: [
-    AuthRole.APP_NOTIFICATION_ORCHESTRATOR_USER
+    AuthRole.APP_NOTIFICATION_ORCHESTRATOR_USER,
+    AuthRole.PARTNER
   ],
   [AuthPanel.SUBSIDY]: [
     AuthRole.APP_MORTGAGE_SUBSIDY_EXT_USER

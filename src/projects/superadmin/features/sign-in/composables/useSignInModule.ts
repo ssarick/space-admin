@@ -4,13 +4,13 @@ import {
   reactive,
   ref
 } from 'vue';
-import { useMainRoute } from '@/shared/composables/main-route/useMainRoute';
-import { AuthPanel, ISignInFormModel } from '@/shared/types/auth.types';
-import { ILinkListItem } from '@/shared/types/list.types';
-import useFormRef from '@/shared/UI/base-form/useFormRef';
+import { useMainRoute } from '@/shared/composables/main-route/useMainRoute.ts';
+import { AuthPanel, ISignInFormModel } from '@/shared/types/auth.types.ts';
+import { ILinkListItem } from '@/shared/types/list.types.ts';
+import useFormRef from '@/shared/UI/base-form/useFormRef.ts';
 import { formValidate } from '@/shared/utils/functions';
-import { useAuthPanelStore } from '@/app/store/auth/useAuthPanelStore';
-import { useAuthStore } from '@/app/store/auth/useAuthStore';
+import { useAuthPanelStore } from '@/app/store/auth/useAuthPanelStore.ts';
+import { useAuthStore } from '@/app/store/auth/useAuthStore.ts';
 
 export default function useSignInModule() {
   const authStore = useAuthStore();
@@ -47,7 +47,6 @@ export default function useSignInModule() {
         });
 
       signedIn.value = success;
-      // signedIn.value = true;
       signInLoading.value = false;
     }
   };

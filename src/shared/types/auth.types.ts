@@ -95,6 +95,12 @@ export interface ISignInParams {
   login?: string
 }
 
+export interface ISignUpParams {
+  username: string
+  password: string
+  login?: string
+}
+
 export interface IAuthRefreshParams {
   refresh_token: string
 }

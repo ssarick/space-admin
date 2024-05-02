@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import SignInModule from '@/projects/superadmin/features/sign-in/SignInModule.vue';
+import SignInModule from '@/projects/superadmin/features/sign-in';
 </script>
 
 <template>

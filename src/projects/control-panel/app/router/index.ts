@@ -1,4 +1,5 @@
 import { RouteRecordRaw } from 'vue-router';
+import binsRoutes from './bins';
 import terminalRoutes from './terminal';
 
 export default [
@@ -11,7 +12,8 @@ export default [
       }
     },
     children: [
-      ...terminalRoutes
+      ...terminalRoutes,
+      ...binsRoutes
     ]
   }
 ] as RouteRecordRaw[];
