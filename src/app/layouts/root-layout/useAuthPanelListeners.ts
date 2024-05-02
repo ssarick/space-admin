@@ -20,9 +20,10 @@ export default function useAuthPanelListeners() {
   const { fetchBuckets: fetchFileManagerBuckets } = useFileManagerBucketsStore();
 
   const {
-    fetchUnreadCount: fetchUnreadNotificationsCount,
-    fetchLastVersionNotification,
-    fetchCurrentVersion
+    fetchUnreadCount: fetchUnreadNotificationsCount
+    // todo: Notification polling is stopped for now
+    // fetchLastVersionNotification,
+    // fetchCurrentVersion
   } = useInternalNotificationStore();
 
   const checkIsAdmin = (): boolean => !!(authStore.isAuth
@@ -30,7 +31,7 @@ export default function useAuthPanelListeners() {
     && authPanelStore.selectedPanel);
 
   onMounted(() => {
-    fetchCurrentVersion();
+    // fetchCurrentVersion();
 
     addListener(
       [ AuthPanelEvent.CHANGE, AuthPanelEvent.LOAD ],
@@ -44,7 +45,9 @@ export default function useAuthPanelListeners() {
     );
 
     lastVersionIntervalId = setInterval(
-      () => checkIsAdmin() && fetchLastVersionNotification(),
+      // todo: Notification polling is stopped for now
+      // () => checkIsAdmin() && fetchLastVersionNotification(),
+      () => checkIsAdmin(),
       globalConfig.internalNotification.pollingDelayInSec *
         dateShortcuts.MS_IN_SEC
     );
