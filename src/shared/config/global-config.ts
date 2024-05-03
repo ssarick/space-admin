@@ -8,6 +8,7 @@ export const globalConfig = {
   apiAuthClientId: import.meta.env.VITE_API_AUTH_CLIENT_ID,
   apiAuthClientSecret: import.meta.env.VITE_API_AUTH_CLIENT_SECRET,
   apiBaseUrl: import.meta.env.VITE_API_BASE_URL,
+  apiControlPanelUrl: import.meta.env.VITE_API_CONTROL_PANEL_URL,
   apiAutopayUrl: import.meta.env.VITE_API_AUTOPAY_URL,
   apiB2bUrl: import.meta.env.VITE_API_B2B_URL,
   apiFileManagerUrl: import.meta.env.VITE_API_FILE_MANAGER_URL,

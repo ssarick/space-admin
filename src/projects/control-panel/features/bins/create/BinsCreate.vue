@@ -12,11 +12,12 @@ const {
 
 <template>
   <CreateBinsForm
-    v-model:merchant-id="formModel.merchantId"
-    v-model:operation-type="formModel.operationType"
-    v-model:partner="formModel.partner"
-    v-model:name="formModel.name"
-    v-model:port="formModel.port"
+    v-model:bank-id="formModel.bankId"
+    v-model:card-bin="formModel.cardBin"
+    v-model:processing="formModel.processing"
+    v-model:legal-type="formModel.legalType"
+    v-model:card-type="formModel.cardType"
+    v-model:processing-bank-id="formModel.processingBankId"
     ref="formRef"
     :model="formModel"
     :loading="loading"

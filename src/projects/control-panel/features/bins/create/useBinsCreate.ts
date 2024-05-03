@@ -2,7 +2,8 @@ import { reactive, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import useFormRef from '@/shared/UI/base-form/useFormRef';
 import { formValidate } from '@/shared/utils/functions';
-import { BinsInfoFormModel } from '@/projects/control-panel/shared/types/bins.types.ts';
+import { ApiBinsController } from '@/projects/control-panel/shared/api';
+import { BinsInfoFormModel } from '@/projects/control-panel/shared/types/bins.types';
 
 export default function useBinsCreate() {
   const router = useRouter();
@@ -12,11 +13,12 @@ export default function useBinsCreate() {
   const formModel = reactive<
     BinsInfoFormModel
   >({
-    partner: '',
-    name: '',
-    port: null,
-    operationType: '',
-    merchantId: ''
+    bankId: null,
+    cardBin: null,
+    processing: null,
+    legalType: null,
+    cardType: null,
+    processingBankId: null
   });
 
   const handleSubmit = async () => {
@@ -29,18 +31,14 @@ export default function useBinsCreate() {
 
     loading.value = true;
 
-    // const {
-    //   error
-    // } = await ApiInventoryUsers.createInventoryUser(
-    //   {
-    //     ...formModel,
-    //     email: `${formModel.email}@${DomainShortcuts.KAPITALBANK}`
-    //   }
-    // );
+    const { error } = await ApiBinsController.createBin(
+      {
+        ...formModel
+      }
+    );
 
     loading.value = false;
-
-    // if (error) return;
+    if (error) return;
 
     return router.push({
       name: 'bins-list'

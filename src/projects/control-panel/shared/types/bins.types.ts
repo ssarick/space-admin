@@ -1,17 +1,24 @@
-
 export interface BinsInfo {
-  terminalId?: string | null
-  merchantId?: string | null
-  name?: string | null
-  port?: string | null
-  operationType?: string | null
-  partner?: string | null
-  createdDate?: string | null
-  updatedDate?: string | null
+  id?: number | null
+  bankId?: number | null
+  cardBin?: number | null
+  processing?: string | null
+  legalType?: string | null
+  cardType?: string | null
+  processingBankId?: string | null
+  processingBinCentreId?: string | null
 }
 
-export interface BinsInfoCreatePayload extends
-  Omit<BinsInfo, 'terminalId' | 'createdDate' | 'updatedDate'> {}
+export interface BinsInfoPaginationPayload {
+  page: number
+  size: number
+  sort?: string[] | null
+}
 
 export interface BinsInfoFormModel extends
-  Partial<BinsInfoCreatePayload> {}
+  Omit<BinsInfo, 'id' | 'processingBinCentreId' | 'cardBin'> {
+  cardBin?: string | null
+}
+
+export interface BinsInfoCreatePayload extends BinsInfoFormModel {}
+

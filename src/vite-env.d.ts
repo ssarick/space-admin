@@ -3,6 +3,7 @@
 interface ImportMetaEnv {
   // API url
   readonly VITE_API_BASE_URL: string
+  readonly VITE_API_CONTROL_PANEL_URL: string
   readonly VITE_API_AUTOPAY_URL: string
   readonly VITE_API_B2B_URL: string
   readonly VITE_API_FILE_MANAGER_URL: string

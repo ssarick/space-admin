@@ -8,9 +8,9 @@ import BinsMainTable from '@/projects/control-panel/entities/bins/main-table/Bin
 import useBinsList from './useBinsList.ts';
 
 const {
-  fetchTerminals,
-  terminals,
-  terminalsLoading,
+  fetchBins,
+  bins,
+  binsLoading,
   tableRef,
   filtersModal,
   showModal,
@@ -74,9 +74,9 @@ const {
 
   <BinsMainTable
     ref="tableRef"
-    :data="terminals"
-    :loading="terminalsLoading"
-    @update="fetchTerminals"
+    :data="bins"
+    :loading="binsLoading"
+    @update="fetchBins"
   />
 
   <BinsFilterModal

@@ -1,4 +1,4 @@
-import { BinsInfoFormModel } from '@/projects/control-panel/shared/types/bins.types.ts';
+import { BinsInfoFormModel } from '@/projects/control-panel/shared/types/bins.types';
 
 export interface CreateBinsFormProps extends
   BinsInfoFormModel {
@@ -9,23 +9,27 @@ export interface CreateBinsFormProps extends
 
 export interface CreateBinsFormEmits {
   (
-    event: 'update:merchantId',
-    value: CreateBinsFormProps['merchantId']
+    event: 'update:bankId',
+    value: CreateBinsFormProps['bankId']
   )
   (
-    event: 'update:operationType',
-    value: CreateBinsFormProps['operationType']
+    event: 'update:cardBin',
+    value: CreateBinsFormProps['cardBin']
   )
   (
-    event: 'update:partner',
-    value: CreateBinsFormProps['partner']
+    event: 'update:processing',
+    value: CreateBinsFormProps['processing']
   )
   (
-    event: 'update:port',
-    value: CreateBinsFormProps['port']
+    event: 'update:legalType',
+    value: CreateBinsFormProps['legalType']
   )
   (
-    event: 'update:name',
-    value: CreateBinsFormProps['name']
+    event: 'update:cardType',
+    value: CreateBinsFormProps['cardType']
+  )
+  (
+    event: 'update:processingBankId',
+    value: CreateBinsFormProps['processingBankId']
   )
 }

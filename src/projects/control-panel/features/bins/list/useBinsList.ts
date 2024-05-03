@@ -1,8 +1,8 @@
 import { ref } from 'vue';
 import { usePagination } from '@/shared/composables';
 import useTableRef from '@/shared/UI/base-data-table/useTableRef';
-import { TerminalInfo } from '@/projects/control-panel/shared/types/terminals.types';
-import { ApiInventoryUsers } from '@/projects/inventory/shared/api';
+import { ApiBinsController } from '@/projects/control-panel/shared/api';
+import { BinsInfo } from '@/projects/control-panel/shared/types/bins.types.ts';
 
 export default function useBinsList() {
   const tableRef = useTableRef();
@@ -12,21 +12,26 @@ export default function useBinsList() {
     pageSize
   } = usePagination(tableRef);
 
-  const terminals = ref<TerminalInfo[]>([]);
-  const terminalsLoading = ref(false);
+  const bins = ref<BinsInfo[]>([]);
+  const binsLoading = ref(false);
   const filtersModal = ref(false);
 
-  const fetchTerminals = async () => {
-    terminalsLoading.value = true;
+  const fetchBins = async () => {
+    binsLoading.value = true;
 
-    const { totalPages } = await ApiInventoryUsers.fetchUsers({
-      page: pageNumber.value,
-      count: pageSize.value
+    const {
+      totalPages,
+      items
+    } = await ApiBinsController.fetchBins({
+      page: pageNumber.value - 1,
+      size: pageSize.value
     });
 
-    // users.value = items || [];
+    console.log(items);
+
+    bins.value = items || [];
     pageCount.value = totalPages || 0;
-    terminalsLoading.value = false;
+    binsLoading.value = false;
   };
 
   const showModal = () =>
@@ -35,13 +40,15 @@ export default function useBinsList() {
   const closeModal = () =>
     filtersModal.value = false;
 
+  onMounted(fetchBins);
+
   return {
-    terminals,
-    terminalsLoading,
+    bins,
+    binsLoading,
     tableRef,
     filtersModal,
     showModal,
     closeModal,
-    fetchTerminals
+    fetchBins
   };
 }
